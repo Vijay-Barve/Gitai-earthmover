@@ -730,6 +730,15 @@ table.dataTable thead th {
   background-color: var(--accent) !important;
 }
 
+.save-status-badge {
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.connection-badge-btn {
+  cursor: pointer;
+}
+
 @media (max-width: 576px) {
   .detail-grid {
     grid-template-columns: 1fr;

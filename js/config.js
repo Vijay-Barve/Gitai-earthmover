@@ -7,6 +7,9 @@ const CONFIG = {
   /** 'excel' = Gitai.xlsx | 'google' = Google Sheets (optional) */
   DATA_MODE: 'excel',
 
+  /** Standalone app — local Gitai.xlsx only, no Google/cloud */
+  STANDALONE: true,
+
   /** Excel database file (served from project root) */
   EXCEL_FILE: 'Gitai.xlsx',
 
@@ -18,7 +21,7 @@ const CONFIG = {
   LOCAL_STORAGE_KEY: 'earthmovers-data-v1',
 
   /** Bump when Excel schema/data changes — invalidates stale empty browser cache */
-  DATA_SNAPSHOT_VERSION: '5',
+  DATA_SNAPSHOT_VERSION: '8',
 
   /** Always use local API (no network) for excel mode */
   USE_MOCK_DATA: true,

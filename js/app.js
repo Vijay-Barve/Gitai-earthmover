@@ -224,10 +224,10 @@ const App = (function () {
       const inc = AppData.income?.length || 0;
       const exp = AppData.expenses?.length || 0;
       el.className = 'badge bg-primary connection-badge-btn';
-      el.textContent = inc || exp ? `Gitai.xlsx · ${inc} inc / ${exp} exp` : 'Gitai.xlsx';
-      el.title = inc || exp
-        ? 'Loaded from Gitai.xlsx — use Save Excel to download changes'
-        : 'No income/expense loaded — Backup → Reload Gitai.xlsx';
+      el.textContent = CONFIG.STANDALONE
+        ? (inc || exp ? `Standalone · ${inc}/${exp}` : 'Standalone · Gitai.xlsx')
+        : (inc || exp ? `Gitai.xlsx · ${inc} inc / ${exp} exp` : 'Gitai.xlsx');
+      el.title = 'Local database: Gitai.xlsx in project folder';
     } else if (CONFIG.USE_MOCK_DATA) {
       el.className = 'badge bg-info connection-badge-btn';
       el.textContent = 'Local';
@@ -243,7 +243,11 @@ const App = (function () {
     document.getElementById('btnSaveExcel')?.addEventListener('click', async () => {
       try {
         await ApiClient.saveToExcel();
-        showAlert('Downloaded ' + CONFIG.EXCEL_FILE + ' — replace the file in your project folder');
+        StandaloneModule.updateSaveStatus();
+        showAlert(
+          'Downloaded <strong>' + CONFIG.EXCEL_FILE + '</strong>. Replace the file in your project folder to keep data on disk.',
+          'success'
+        );
       } catch (err) {
         showAlert(err.message, 'danger');
       }
@@ -343,6 +347,7 @@ const App = (function () {
       populateMachineSelects();
       populateExpenseTypes();
       updateConnectionBadge();
+      StandaloneModule.updateSaveStatus();
       renderSection(currentSection);
       const inc = AppData.income.length;
       const exp = AppData.expenses.length;
@@ -449,9 +454,16 @@ const App = (function () {
     initGlobalSearch();
     initConnectionSetup();
     initExcelControls();
+    StandaloneModule.init();
     initPartnerModalTriggers();
 
-    document.getElementById('refreshData').addEventListener('click', loadData);
+    document.getElementById('refreshData').addEventListener('click', async () => {
+      if (ApiClient.isDirty() && !confirm('Reload from Gitai.xlsx? Unsaved changes will be lost.')) return;
+      localStorage.removeItem(CONFIG.LOCAL_STORAGE_KEY);
+      ApiClient.resetStore();
+      await loadData();
+      showAlert('Reloaded from Gitai.xlsx');
+    });
 
     MonthLockModule.init();
     PartnersModule.init();

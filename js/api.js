@@ -6,10 +6,24 @@ const ApiClient = (function () {
   let store = null;
   let readyPromise = null;
 
-  function persist() {
+  function persist(options) {
     if (!CONFIG.USE_LOCAL_STORAGE || !store) return;
+    const opts = options || {};
+    if (opts.markSaved) {
+      store._sessionDirty = false;
+      store._lastSavedAt = new Date().toISOString();
+    } else if (opts.markDirty === true) {
+      store._sessionDirty = true;
+    } else if (opts.markDirty !== false && store._sessionDirty === undefined) {
+      store._sessionDirty = false;
+    }
+    store._version = CONFIG.DATA_SNAPSHOT_VERSION;
+    store._lastModified = new Date().toISOString();
     try {
       localStorage.setItem(CONFIG.LOCAL_STORAGE_KEY, JSON.stringify(store));
+      if (typeof StandaloneModule !== 'undefined') {
+        StandaloneModule.updateSaveStatus();
+      }
     } catch (err) {
       console.error('Failed to persist data:', err);
     }
@@ -43,25 +57,24 @@ const ApiClient = (function () {
       }
     }
 
-    const countFinance = (s) => s ? (s.income?.length || 0) + (s.expenses?.length || 0) : 0;
-    const cacheOk = cached && cached._version === CONFIG.DATA_SNAPSHOT_VERSION;
-    const excelCount = countFinance(fromExcel);
-    const cacheCount = countFinance(cached);
+    const useCachedSession = cached
+      && cached._version === CONFIG.DATA_SNAPSHOT_VERSION
+      && cached._sessionDirty === true;
 
-    if (fromExcel && excelCount > 0 && (!cacheOk || cacheCount === 0)) {
-      store = fromExcel;
-    } else if (cacheOk && cacheCount > 0) {
+    if (useCachedSession) {
       store = cached;
     } else if (fromExcel) {
       store = fromExcel;
+      store._sessionDirty = false;
     } else if (cached) {
       store = cached;
     } else {
       store = ExcelStore.emptyStore();
+      store._sessionDirty = false;
     }
 
     store._version = CONFIG.DATA_SNAPSHOT_VERSION;
-    persist();
+    persist({ markDirty: false });
     return store;
   }
 
@@ -164,7 +177,7 @@ const ApiClient = (function () {
     }
 
     if (result.success && method !== 'GET') {
-      persist();
+      persist({ markDirty: true });
     }
     return result;
   }
@@ -175,7 +188,7 @@ const ApiClient = (function () {
     Object.keys(store).forEach(key => {
       if (Array.isArray(data[key])) store[key] = data[key];
     });
-    persist();
+    persist({ markDirty: true });
     return store;
   }
 
@@ -190,7 +203,7 @@ const ApiClient = (function () {
       machineName: machineName || CONFIG.LEGACY_MACHINE_NAME,
       sourceLabel: file.name
     });
-    persist();
+    persist({ markDirty: true });
     return stats;
   }
 
@@ -203,7 +216,21 @@ const ApiClient = (function () {
   async function saveToExcel(filename) {
     await ensureReady();
     ExcelStore.download(store, filename || CONFIG.EXCEL_FILE);
+    persist({ markSaved: true });
     return { success: true };
+  }
+
+  function isDirty() {
+    return !!(store && store._sessionDirty);
+  }
+
+  function getMeta() {
+    return {
+      sessionDirty: !!(store && store._sessionDirty),
+      lastSavedAt: store?._lastSavedAt || null,
+      lastModified: store?._lastModified || null,
+      loadedFrom: store?._loadedFrom || CONFIG.EXCEL_FILE
+    };
   }
 
   return {
@@ -218,6 +245,8 @@ const ApiClient = (function () {
     reloadFromExcel,
     saveToExcel,
     resetStore,
+    isDirty,
+    getMeta,
     _getMockStore: () => store,
 
     getConnectionMode() {
