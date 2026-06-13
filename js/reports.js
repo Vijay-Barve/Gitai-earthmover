@@ -51,7 +51,7 @@ const ReportsModule = (function () {
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Partner</th><th>Share %</th><th>Investments</th><th>Withdrawals</th>
+            <th>Partner</th><th>Share %</th><th>Investments</th><th>EMI Paid (personal)</th><th>Withdrawals</th>
             <th>Net Capital</th><th>Profit Share</th><th>Final Balance</th>
           </tr>
         </thead>
@@ -61,6 +61,7 @@ const ReportsModule = (function () {
               <td><strong>${p.name}</strong></td>
               <td>${p.sharePercent}%</td>
               <td>${formatCurrency(p.investments)}</td>
+              <td>${formatCurrency(p.emiPaidByPartner || 0)}</td>
               <td>${formatCurrency(p.withdrawals)}</td>
               <td>${formatCurrency(p.investments - p.withdrawals)}</td>
               <td>${formatCurrency(p.profitShare)}</td>
@@ -72,6 +73,7 @@ const ReportsModule = (function () {
           <tr class="table-secondary">
             <td colspan="2"><strong>Totals</strong></td>
             <td>${formatCurrency(App.getTotalPartnerInvestment())}</td>
+            <td>${formatCurrency(App.getTotalEmiFromPartners())}</td>
             <td>${formatCurrency(App.getTotalPartnerWithdrawals())}</td>
             <td>${formatCurrency(App.getTotalPartnerInvestment() - App.getTotalPartnerWithdrawals())}</td>
             <td>${formatCurrency(App.getNetProfit())}</td>
@@ -80,7 +82,7 @@ const ReportsModule = (function () {
         </tfoot>
       </table>
       <p class="text-muted small mt-2">
-        Formula: Partner Balance = Investments − Withdrawals + Profit Share<br>
+        Formula: Partner Balance = Investments − Withdrawals + Profit Share + EMI paid personally by partner<br>
         Profit Share = Net Profit × (Partner Investment ÷ Total Investment)
       </p>
     `;
@@ -274,12 +276,13 @@ const ReportsModule = (function () {
 
           <h6 class="mt-3">4. Partner Summary</h6>
           <table class="table table-bordered">
-            <thead><tr><th>Partner</th><th>Capital</th><th>Add. Capital</th><th>Withdrawals</th><th>Profit Share</th><th>Loss Share</th><th>Settlement</th></tr></thead>
+            <thead><tr><th>Partner</th><th>Capital</th><th>Add. Capital</th><th>EMI Paid</th><th>Withdrawals</th><th>Profit Share</th><th>Loss Share</th><th>Settlement</th></tr></thead>
             <tbody>${partners.map(p => `
               <tr>
                 <td><strong>${p.name}</strong></td>
                 <td>${formatCurrency(p.capitalIntroduced)}</td>
                 <td>${formatCurrency(p.additionalCapital)}</td>
+                <td>${formatCurrency(p.emiPaidByPartner || 0)}</td>
                 <td>${formatCurrency(p.withdrawals)}</td>
                 <td>${formatCurrency(p.profitShare)}</td>
                 <td>${formatCurrency(p.lossShare)}</td>
@@ -287,7 +290,7 @@ const ReportsModule = (function () {
               </tr>
             `).join('')}</tbody>
           </table>
-          <p class="small text-muted">Formula: Settlement = Capital + Additional Capital − Withdrawals + Profit Share − Loss Share</p>
+          <p class="small text-muted">Formula: Settlement = Capital + Additional Capital − Withdrawals + Profit Share − Loss Share + EMI paid by partner</p>
 
           <h6 class="mt-3">5. Attachments Summary</h6>
           <p>${docCount} documents on file across ${CONFIG.DOCUMENT_CATEGORIES.length} categories.</p>
@@ -317,6 +320,7 @@ const ReportsModule = (function () {
         <td>${p.name}</td>
         <td>${formatCurrency(p.capitalIntroduced)}</td>
         <td>${formatCurrency(p.additionalCapital)}</td>
+        <td>${formatCurrency(p.emiPaidByPartner || 0)}</td>
         <td>${formatCurrency(p.withdrawals)}</td>
         <td>${p.sharePercent}%</td>
         <td><strong>${formatCurrency(p.settlement)}</strong></td>

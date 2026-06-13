@@ -101,7 +101,7 @@ const AuthModule = (function () {
   }
 
   async function login(username, password) {
-    if (!CONFIG.USE_MOCK_DATA && !AppData.users?.length) {
+    if (!AppData.users?.length) {
       const result = await ApiClient.get('users');
       if (result.success) AppData.users = result.data || [];
     }
@@ -233,7 +233,7 @@ const AuthModule = (function () {
     if (restoreSession()) {
       hideLoginScreen();
       updateUserDisplay();
-    } else if (CONFIG.USE_MOCK_DATA) {
+    } else if (CONFIG.DATA_MODE === 'excel') {
       await login('admin', 'admin123');
       hideLoginScreen();
       updateUserDisplay();

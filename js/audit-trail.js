@@ -19,15 +19,7 @@ const AuditTrailModule = (function () {
       Remarks: remarks || ''
     };
 
-    if (CONFIG.USE_MOCK_DATA) {
-      const store = ApiClient._getMockStore?.();
-      if (store) {
-        const id = (store.audit?.length || 0) + 1;
-        store.audit.unshift({ ID: id, ...entry });
-      }
-    } else {
-      await ApiClient.post('audit', entry);
-    }
+    await ApiClient.post('audit', entry);
   }
 
   function normalizeRecord(r) {

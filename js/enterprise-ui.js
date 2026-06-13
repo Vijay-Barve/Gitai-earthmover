@@ -27,7 +27,7 @@ async function injectEnterpriseUI() {
           <div class="mb-3"><label class="form-label">Reference Module</label><select class="form-select" id="docMgmtRefModule"></select></div>
           <div class="mb-3"><label class="form-label">Reference ID</label><input type="text" class="form-control" id="docMgmtRefId"></div>
           <div class="mb-3"><label class="form-label">File Name</label><input type="text" class="form-control" id="docMgmtFileName" required></div>
-          <div class="mb-3"><label class="form-label">Google Drive Link</label><input type="url" class="form-control" id="docMgmtDriveLink"></div>
+          <div class="mb-3"><label class="form-label">File path or link</label><input type="text" class="form-control" id="docMgmtDriveLink" placeholder="documents/invoice.pdf"></div>
         </div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button><button type="submit" class="btn btn-accent">Save</button></div></form>
       </div></div></div>
       <div class="modal fade" id="docVersionModal" tabindex="-1"><div class="modal-dialog"><div class="modal-content">

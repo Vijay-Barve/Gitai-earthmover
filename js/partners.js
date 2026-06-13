@@ -46,7 +46,7 @@ const PartnersModule = (function () {
             <div class="balance">${formatCurrency(p.balance)}</div>
             <div class="details mt-2">
               Inv: ${formatCurrency(p.investments)} | Wdl: ${formatCurrency(p.withdrawals)}<br>
-              Profit Share (${p.sharePercent}%): ${formatCurrency(p.profitShare)}
+              EMI paid: ${formatCurrency(p.emiPaidByPartner || 0)} | Profit (${p.sharePercent}%): ${formatCurrency(p.profitShare)}
             </div>
           </div>
         </div>

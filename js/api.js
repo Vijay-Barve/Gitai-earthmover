@@ -37,6 +37,27 @@ const ApiClient = (function () {
     return readyPromise;
   }
 
+  function migrateStoreSchema(s) {
+    if (!s) return s;
+    (s.emi || []).forEach(row => {
+      if (row.PaymentMode === undefined || row.PaymentMode === '') {
+        const partner = parseFloat(row.PartnerPaid) || 0;
+        const business = parseFloat(row.BusinessPaid) || 0;
+        if (partner > 0 && business > 0) row.PaymentMode = 'Split';
+        else if (partner > 0) row.PaymentMode = 'Partner';
+        else row.PaymentMode = 'Business';
+      }
+      if (row.BusinessPaid === undefined || row.BusinessPaid === '') {
+        const total = parseFloat(row.TotalPaid) || 0;
+        const partner = parseFloat(row.PartnerPaid) || 0;
+        row.BusinessPaid = total > 0 && (row.Status === 'Paid' || row.PaidDate) ? Math.max(0, total - partner) : 0;
+      }
+      if (row.PartnerPaid === undefined || row.PartnerPaid === '') row.PartnerPaid = 0;
+      if (row.PaidByPartner === undefined) row.PaidByPartner = '';
+    });
+    return s;
+  }
+
   async function loadStore() {
     let fromExcel = null;
     if (CONFIG.DATA_MODE === 'excel') {
@@ -57,24 +78,26 @@ const ApiClient = (function () {
       }
     }
 
-    const useCachedSession = cached
-      && cached._version === CONFIG.DATA_SNAPSHOT_VERSION
-      && cached._sessionDirty === true;
+    /** Keep unsaved browser edits even after DATA_SNAPSHOT_VERSION bumps */
+    const useCachedSession = cached && cached._sessionDirty === true;
 
     if (useCachedSession) {
-      store = cached;
+      store = migrateStoreSchema(cached);
+      if (cached._version !== CONFIG.DATA_SNAPSHOT_VERSION) {
+        console.info('Restored unsaved session (schema v' + cached._version + ' → v' + CONFIG.DATA_SNAPSHOT_VERSION + ')');
+      }
     } else if (fromExcel) {
-      store = fromExcel;
+      store = migrateStoreSchema(fromExcel);
       store._sessionDirty = false;
     } else if (cached) {
-      store = cached;
+      store = migrateStoreSchema(cached);
     } else {
       store = ExcelStore.emptyStore();
       store._sessionDirty = false;
     }
 
     store._version = CONFIG.DATA_SNAPSHOT_VERSION;
-    persist({ markDirty: false });
+    persist({ markDirty: store._sessionDirty === true });
     return store;
   }
 

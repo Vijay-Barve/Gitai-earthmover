@@ -220,23 +220,11 @@ const App = (function () {
   function updateConnectionBadge() {
     const el = document.getElementById('connectionBadge');
     if (!el) return;
-    if (CONFIG.DATA_MODE === 'excel') {
-      const inc = AppData.income?.length || 0;
-      const exp = AppData.expenses?.length || 0;
-      el.className = 'badge bg-primary connection-badge-btn';
-      el.textContent = CONFIG.STANDALONE
-        ? (inc || exp ? `Standalone · ${inc}/${exp}` : 'Standalone · Gitai.xlsx')
-        : (inc || exp ? `Gitai.xlsx · ${inc} inc / ${exp} exp` : 'Gitai.xlsx');
-      el.title = 'Local database: Gitai.xlsx in project folder';
-    } else if (CONFIG.USE_MOCK_DATA) {
-      el.className = 'badge bg-info connection-badge-btn';
-      el.textContent = 'Local';
-      el.title = 'Local storage mode';
-    } else {
-      el.className = 'badge bg-success connection-badge-btn';
-      el.textContent = 'Google Sheets';
-      el.title = 'Connected to Google Sheets';
-    }
+    const inc = AppData.income?.length || 0;
+    const exp = AppData.expenses?.length || 0;
+    el.className = 'badge bg-primary connection-badge-btn';
+    el.textContent = inc || exp ? `Standalone · ${inc}/${exp}` : 'Standalone · Gitai.xlsx';
+    el.title = 'Local database: Gitai.xlsx in project folder';
   }
 
   function initExcelControls() {
@@ -295,48 +283,6 @@ const App = (function () {
         showAlert('Import failed: ' + err.message, 'danger');
       }
       e.target.value = '';
-    });
-  }
-
-  function initConnectionSetup() {
-    if (CONFIG.DATA_MODE === 'excel') return;
-    const badge = document.getElementById('connectionBadge');
-    const modalEl = document.getElementById('connectSheetsModal');
-    if (!badge || !modalEl) return;
-
-    const modal = new bootstrap.Modal(modalEl);
-    const urlInput = document.getElementById('connectApiUrl');
-    const errorEl = document.getElementById('connectError');
-
-    badge.addEventListener('click', () => {
-      errorEl.textContent = '';
-      try {
-        const stored = JSON.parse(localStorage.getItem('earthmovers-connection') || '{}');
-        urlInput.value = stored.apiUrl || CONFIG.API_BASE_URL || '';
-      } catch {
-        urlInput.value = CONFIG.API_BASE_URL || '';
-      }
-      modal.show();
-    });
-
-    document.getElementById('connectSaveBtn')?.addEventListener('click', () => {
-      const url = urlInput.value.trim();
-      if (!url.includes('script.google.com') || !url.endsWith('/exec')) {
-        errorEl.textContent = 'Enter a valid Apps Script Web App URL ending with /exec';
-        return;
-      }
-      localStorage.setItem('earthmovers-connection', JSON.stringify({ apiUrl: url }));
-      localStorage.removeItem('earthmovers-session');
-      modal.hide();
-      window.location.reload();
-    });
-
-    document.getElementById('connectUseDemoBtn')?.addEventListener('click', () => {
-      localStorage.removeItem('earthmovers-connection');
-      localStorage.removeItem('earthmovers-session');
-      modal.hide();
-      App.showAlert('Using local storage — data stays in this browser');
-      window.location.reload();
     });
   }
 
@@ -409,6 +355,14 @@ const App = (function () {
     return AppData.emi.reduce((s, r) => s + parseNum(r.TotalPaid), 0);
   }
 
+  function getTotalEmiFromBusiness() {
+    return EmiPaymentHelper.businessTotal(AppData.emi);
+  }
+
+  function getTotalEmiFromPartners() {
+    return EmiPaymentHelper.partnerTotal(AppData.emi);
+  }
+
   function getTotalBounceCharges() {
     return AppData.emi.reduce((s, r) => s + parseNum(r.BounceCharges) + parseNum(r.PenaltyCharges), 0);
   }
@@ -436,6 +390,7 @@ const App = (function () {
       name: p.name,
       investments: p.capitalIntroduced + p.additionalCapital,
       withdrawals: p.withdrawals,
+      emiPaidByPartner: p.emiPaidByPartner,
       profitShare: p.profitShare,
       balance: p.settlement,
       sharePercent: p.sharePercent,
@@ -452,10 +407,9 @@ const App = (function () {
     initSidebar();
     initHashRouting();
     initGlobalSearch();
-    initConnectionSetup();
+    initPartnerModalTriggers();
     initExcelControls();
     StandaloneModule.init();
-    initPartnerModalTriggers();
 
     document.getElementById('refreshData').addEventListener('click', async () => {
       if (ApiClient.isDirty() && !confirm('Reload from Gitai.xlsx? Unsaved changes will be lost.')) return;
@@ -496,6 +450,8 @@ const App = (function () {
     getNetProfit,
     getOutstandingLoans,
     getTotalEmiPaid,
+    getTotalEmiFromBusiness,
+    getTotalEmiFromPartners,
     getTotalBounceCharges,
     getTotalPartnerInvestment,
     getTotalPartnerWithdrawals,

@@ -1,33 +1,18 @@
 /**
  * Gitai Earthmovers — Application Configuration
- *
- * DATA_MODE: 'excel' → Gitai.xlsx in project folder (recommended, no Google)
+ * Standalone mode: Gitai.xlsx in project folder (local Excel database)
  */
 const CONFIG = {
-  /** 'excel' = Gitai.xlsx | 'google' = Google Sheets (optional) */
   DATA_MODE: 'excel',
-
-  /** Standalone app — local Gitai.xlsx only, no Google/cloud */
   STANDALONE: true,
-
-  /** Excel database file (served from project root) */
   EXCEL_FILE: 'Gitai.xlsx',
-
-  /** Default machine name when importing legacy register workbooks */
   LEGACY_MACHINE_NAME: 'M1- Mahindra earthmaster sx iv 2022',
 
-  /** Cache data in browser between sessions */
   USE_LOCAL_STORAGE: true,
   LOCAL_STORAGE_KEY: 'earthmovers-data-v1',
+  DATA_SNAPSHOT_VERSION: '9',
 
-  /** Bump when Excel schema/data changes — invalidates stale empty browser cache */
-  DATA_SNAPSHOT_VERSION: '8',
-
-  /** Always use local API (no network) for excel mode */
-  USE_MOCK_DATA: true,
-
-  /** Google Sheets — only if DATA_MODE is 'google' */
-  API_BASE_URL: '',
+  EMI_PAYMENT_MODES: ['Business', 'Partner', 'Split'],
 
   APP_VERSION: '2.0.0',
   BUSINESS_START_DATE: '2022-01-01',

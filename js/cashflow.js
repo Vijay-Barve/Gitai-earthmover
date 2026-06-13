@@ -5,14 +5,16 @@ const CashFlowModule = (function () {
   function calcCashFlow() {
     const received = AppData.income.reduce((s, i) => s + parseNum(i.ReceivedAmount), 0);
     const spent = AppData.expenses.reduce((s, e) => s + parseNum(e.Amount), 0);
-    const emiPaid = AppData.emi.reduce((s, e) => s + parseNum(e.TotalPaid), 0);
+    const emiPaid = App.getTotalEmiPaid();
+    const emiFromBusiness = App.getTotalEmiFromBusiness();
+    const emiFromPartners = App.getTotalEmiFromPartners();
     const partnerInv = App.getTotalPartnerInvestment();
     const partnerWdl = App.getTotalPartnerWithdrawals();
 
     const opening = partnerInv - partnerWdl;
-    const moneyIn = received + partnerInv;
-    const moneyOut = spent + emiPaid + partnerWdl;
-    const closing = opening + received - spent - emiPaid;
+    const moneyIn = received + partnerInv + emiFromPartners;
+    const moneyOut = spent + emiFromBusiness + partnerWdl;
+    const closing = opening + received - spent - emiFromBusiness;
 
     const monthly = {};
     AppData.income.forEach(i => {
@@ -28,7 +30,7 @@ const CashFlowModule = (function () {
 
     const forecast = forecast30Days();
 
-    return { opening, received, spent, emiPaid, moneyIn, moneyOut, closing, monthly, forecast };
+    return { opening, received, spent, emiPaid, emiFromBusiness, emiFromPartners, moneyIn, moneyOut, closing, monthly, forecast };
   }
 
   function forecast30Days() {
@@ -61,7 +63,7 @@ const CashFlowModule = (function () {
     document.getElementById('cashflowCards').innerHTML = `
       <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Opening Balance</div><div class="stat-value">${formatCurrency(cf.opening)}</div></div></div></div>
       <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Money Received</div><div class="stat-value text-success">${formatCurrency(cf.received)}</div></div></div></div>
-      <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Money Spent</div><div class="stat-value text-danger">${formatCurrency(cf.spent + cf.emiPaid)}</div></div></div></div>
+      <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Machine Account Out</div><div class="stat-value text-danger">${formatCurrency(cf.spent + cf.emiFromBusiness)}</div><small class="text-muted">Partner EMI: ${formatCurrency(cf.emiFromPartners)}</small></div></div></div>
       <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Closing Balance</div><div class="stat-value text-accent">${formatCurrency(cf.closing)}</div></div></div></div>
     `;
 

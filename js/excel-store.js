@@ -9,7 +9,7 @@ const ExcelStore = (function () {
     { name: 'Machines', key: 'machines', headers: ['ID', 'MachineName', 'PurchaseDate', 'PurchaseCost', 'LoanAmount', 'DownPayment', 'CurrentValue', 'Status', 'Make', 'Model', 'RegistrationNo', 'EngineNo', 'ChassisNo', 'Remarks'] },
     { name: 'Income', key: 'income', headers: ['ID', 'Date', 'Customer', 'Machine', 'Site', 'HoursWorked', 'BillAmount', 'ReceivedAmount', 'PendingAmount', 'Remarks'] },
     { name: 'Expenses', key: 'expenses', headers: ['ID', 'Date', 'ExpenseType', 'Machine', 'Amount', 'PaidBy', 'Remarks'] },
-    { name: 'EMI', key: 'emi', headers: ['ID', 'Machine', 'DueDate', 'EMIAmount', 'PaidDate', 'BounceCharges', 'PenaltyCharges', 'TotalPaid', 'Status', 'Remarks'] },
+    { name: 'EMI', key: 'emi', headers: ['ID', 'Machine', 'DueDate', 'EMIAmount', 'PaidDate', 'BounceCharges', 'PenaltyCharges', 'TotalPaid', 'PaymentMode', 'BusinessPaid', 'PartnerPaid', 'PaidByPartner', 'Status', 'Remarks'] },
     { name: 'Loans', key: 'loans', headers: ['ID', 'Machine', 'LoanAmount', 'PrincipalPaid', 'InterestPaid', 'OutstandingLoan', 'AgreementNo', 'Lender', 'CustomerID', 'DisbursalDate', 'EMIAmount', 'TenureMonths', 'BalanceTenure', 'IRR', 'InterestType', 'Applicant', 'CoApplicant', 'ProductType', 'LoanStatus', 'OverdueAmount', 'DisbursalStatus', 'Frequency', 'Remarks'] },
     { name: 'Assets', key: 'assets', headers: ['ID', 'AssetName', 'PurchaseValue', 'CurrentValue', 'Remarks'] },
     { name: 'Documents', key: 'documents', headers: ['ID', 'Category', 'ReferenceID', 'ReferenceModule', 'UploadDate', 'UploadedBy', 'FileName', 'DriveLink', 'Version', 'Date', 'DocumentType', 'GoogleDriveLink'] },
@@ -61,7 +61,7 @@ const ExcelStore = (function () {
       'Amount', 'BillAmount', 'ReceivedAmount', 'PendingAmount', 'HoursWorked',
       'PurchaseCost', 'LoanAmount', 'DownPayment', 'CurrentValue', 'EMIAmount',
       'PrincipalPaid', 'InterestPaid', 'OutstandingLoan', 'BounceCharges',
-      'PenaltyCharges', 'TotalPaid', 'IRR', 'TenureMonths', 'BalanceTenure',
+      'PenaltyCharges', 'TotalPaid', 'BusinessPaid', 'PartnerPaid', 'IRR', 'TenureMonths', 'BalanceTenure',
       'OverdueAmount', 'PurchaseValue', 'TotalPayable', 'Paid', 'Outstanding',
       'Debit', 'Credit', 'Balance', 'FileSize', 'Version', 'ReferenceID', 'DocumentID',
       'Month', 'Year', 'AvailableDays', 'WorkingDays', 'IdleDays'

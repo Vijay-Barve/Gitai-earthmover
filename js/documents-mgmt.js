@@ -113,25 +113,29 @@ const DocumentsMgmtModule = (function () {
  * Partner Settlement Engine — Enhanced formulas
  */
 const PartnerSettlementEngine = (function () {
+  function emptyPartner(name) {
+    return {
+      name,
+      capitalIntroduced: 0,
+      additionalCapital: 0,
+      withdrawals: 0,
+      emiPaidByPartner: 0,
+      profitShare: 0,
+      lossShare: 0,
+      settlement: 0
+    };
+  }
+
   function calculate() {
     const netProfit = App.getNetProfit();
     const isLoss = netProfit < 0;
     const totalCapital = App.getTotalPartnerInvestment();
+    const emiContribs = EmiPaymentHelper.partnerContributions(AppData.emi || []);
 
     const partners = {};
     AppData.partners.forEach(p => {
       const name = p.PartnerName;
-      if (!partners[name]) {
-        partners[name] = {
-          name,
-          capitalIntroduced: 0,
-          additionalCapital: 0,
-          withdrawals: 0,
-          profitShare: 0,
-          lossShare: 0,
-          settlement: 0
-        };
-      }
+      if (!partners[name]) partners[name] = emptyPartner(name);
       if (p.TransactionType === 'Investment') {
         if (partners[name].capitalIntroduced === 0) {
           partners[name].capitalIntroduced += parseNum(p.Amount);
@@ -141,6 +145,11 @@ const PartnerSettlementEngine = (function () {
       } else {
         partners[name].withdrawals += parseNum(p.Amount);
       }
+    });
+
+    Object.entries(emiContribs).forEach(([name, amount]) => {
+      if (!partners[name]) partners[name] = emptyPartner(name);
+      partners[name].emiPaidByPartner += amount;
     });
 
     Object.values(partners).forEach(p => {
@@ -156,7 +165,7 @@ const PartnerSettlementEngine = (function () {
         p.lossShare = 0;
       }
 
-      p.settlement = totalInv + p.additionalCapital - p.withdrawals + p.profitShare - p.lossShare;
+      p.settlement = totalInv + p.additionalCapital - p.withdrawals + p.profitShare - p.lossShare + p.emiPaidByPartner;
       p.netCapital = totalInv - p.withdrawals;
     });
 
