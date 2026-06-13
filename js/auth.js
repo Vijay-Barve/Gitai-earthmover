@@ -101,6 +101,11 @@ const AuthModule = (function () {
   }
 
   async function login(username, password) {
+    if (!CONFIG.USE_MOCK_DATA && !AppData.users?.length) {
+      const result = await ApiClient.get('users');
+      if (result.success) AppData.users = result.data || [];
+    }
+
     const user = findUser(username, password);
     if (!user) return { success: false, error: 'Invalid credentials' };
 
@@ -206,7 +211,7 @@ const AuthModule = (function () {
     }
   }
 
-  function init() {
+  async function init() {
     document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
       e.preventDefault();
       const username = document.getElementById('loginUsername').value.trim();
@@ -225,11 +230,15 @@ const AuthModule = (function () {
 
     document.getElementById('logoutBtn')?.addEventListener('click', () => logout());
 
-    if (!restoreSession()) {
-      showLoginScreen();
-    } else {
+    if (restoreSession()) {
       hideLoginScreen();
       updateUserDisplay();
+    } else if (CONFIG.USE_MOCK_DATA) {
+      await login('admin', 'admin123');
+      hideLoginScreen();
+      updateUserDisplay();
+    } else {
+      showLoginScreen();
     }
   }
 

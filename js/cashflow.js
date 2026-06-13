@@ -110,13 +110,56 @@ const LoanDashboardModule = (function () {
     const interestPaid = AppData.loans.reduce((s, l) => s + parseNum(l.InterestPaid), 0);
     const upcoming = getUpcomingEmis(30);
     const due7 = getUpcomingEmis(7);
+    const monthlyEmi = AppData.loans.reduce((s, l) => s + parseNum(l.EMIAmount), 0);
 
     document.getElementById('loanDashCards').innerHTML = `
-      <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Total Loan</div><div class="stat-value">${formatCurrency(totalLoan)}</div></div></div></div>
+      <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Total Financed</div><div class="stat-value">${formatCurrency(totalLoan)}</div></div></div></div>
       <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Outstanding</div><div class="stat-value text-danger">${formatCurrency(outstanding)}</div></div></div></div>
-      <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Principal Paid</div><div class="stat-value">${formatCurrency(principalPaid)}</div></div></div></div>
-      <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Interest Paid</div><div class="stat-value">${formatCurrency(interestPaid)}</div></div></div></div>
+      <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Monthly EMI</div><div class="stat-value">${formatCurrency(monthlyEmi)}</div></div></div></div>
+      <div class="col-md-3"><div class="card stat-card"><div class="card-body"><div class="stat-label">Interest Paid</div><div class="stat-value">${formatCurrency(interestPaid)}</div><div class="small text-muted">Principal ${formatCurrency(principalPaid)}</div></div></div></div>
     `;
+
+    const detailEl = document.getElementById('loanDetailCards');
+    if (detailEl) {
+      detailEl.innerHTML = AppData.loans.map(loan => {
+        const machine = AppData.machines.find(m => m.MachineName === loan.Machine);
+        const paidEmis = AppData.emi.filter(e => e.Machine === loan.Machine && e.Status === 'Paid').length;
+        const pendingEmis = AppData.emi.filter(e => e.Machine === loan.Machine && e.Status !== 'Paid').length;
+        const progress = parseNum(loan.TenureMonths) > 0
+          ? Math.round((paidEmis / parseNum(loan.TenureMonths)) * 100) : 0;
+
+        return `
+          <div class="col-lg-6">
+            <div class="card machine-detail-card h-100">
+              <div class="card-header">
+                <h5 class="mb-0">${loan.Machine} — ${loan.Lender || 'Loan'}</h5>
+                <div class="small text-muted">${loan.AgreementNo || ''}</div>
+              </div>
+              <div class="card-body">
+                <div class="detail-grid mb-3">
+                  <div><span class="detail-label">Amount Financed</span><strong>${formatCurrency(loan.LoanAmount)}</strong></div>
+                  <div><span class="detail-label">EMI</span><strong>${formatCurrency(loan.EMIAmount)}/mo</strong></div>
+                  <div><span class="detail-label">Outstanding</span><strong class="text-danger">${formatCurrency(loan.OutstandingLoan)}</strong></div>
+                  <div><span class="detail-label">Overdue</span><strong>${formatCurrency(loan.OverdueAmount || 0)}</strong></div>
+                  <div><span class="detail-label">Disbursal</span><strong>${formatDate(loan.DisbursalDate)}</strong></div>
+                  <div><span class="detail-label">IRR</span><strong>${loan.IRR ? loan.IRR + '% ' + (loan.InterestType || '') : '—'}</strong></div>
+                  <div><span class="detail-label">Tenure</span><strong>${paidEmis}/${loan.TenureMonths || '—'} paid · ${loan.BalanceTenure || pendingEmis} left</strong></div>
+                  <div><span class="detail-label">Status</span><strong>${loan.LoanStatus || 'Active'} · ${loan.DisbursalStatus || ''}</strong></div>
+                </div>
+                ${machine ? `<div class="small text-muted mb-2">${[machine.Make, machine.Model, machine.RegistrationNo].filter(Boolean).join(' · ')}</div>` : ''}
+                <div class="progress mb-2" style="height:8px"><div class="progress-bar bg-accent" style="width:${progress}%"></div></div>
+                <div class="small text-muted">${progress}% EMI schedule completed</div>
+                <div class="small mt-2">${loan.Applicant || ''}${loan.CoApplicant ? '<br>Co: ' + loan.CoApplicant : ''}</div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-sm btn-outline-accent" onclick="LoansModule.edit(${loan.ID})">Edit Loan</button>
+                <button class="btn btn-sm btn-outline-secondary" onclick="App.navigateTo('emi')">View EMIs</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
 
     document.getElementById('emiDueAlerts').innerHTML = due7.length
       ? due7.map(e => {

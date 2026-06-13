@@ -8,9 +8,12 @@
  * Spreadsheet must contain sheets: Partners, Machines, Income, Expenses, EMI, Loans, Assets, Documents, AuditLog
  */
 
-const SPREADSHEET_ID = 'YOUR_SPREADSHEET_ID_HERE';
+const SPREADSHEET_ID = '1RsNG4F2B70OV5jo1WndqN77j3lvx9Snp6kMEnPWctR8';
 const BACKUP_FOLDER_ID = 'YOUR_BACKUP_DRIVE_FOLDER_ID';
 const DOCUMENTS_FOLDER_ID = 'YOUR_DOCUMENTS_DRIVE_FOLDER_ID';
+
+/** Name of your existing income/expense tab (auto-detected if blank) */
+const LEGACY_REGISTER_SHEET = '';
 
 const SHEET_CONFIG = {
   partners: { sheet: 'Partners', headers: ['ID', 'Date', 'PartnerName', 'TransactionType', 'Amount', 'Remarks'] },
@@ -38,7 +41,11 @@ const DATE_FIELDS = { income: 'Date', expenses: 'Date', partners: 'Date', emi: '
 // ─── HTTP Handlers ───────────────────────────────────────────────────────────
 
 function doGet(e) {
-  return handleRequest(e, 'GET');
+  try {
+    return wrapJsonpResponse(handleRequest(e, 'GET'), e);
+  } catch (err) {
+    return wrapJsonpResponse(createJsonResponse({ success: false, error: err.message || String(err) }), e);
+  }
 }
 
 function doPost(e) {
@@ -66,19 +73,47 @@ function doOptions() {
 function handleRequest(e, method) {
   try {
     const params = e.parameter || {};
+
+    // Mutations via GET query params — required for browser CORS with Apps Script Web Apps
+    if (params.method) {
+      method = String(params.method).toUpperCase();
+    }
+
     let endpoint = (params.endpoint || '').toLowerCase();
     let id = params.id || null;
     let bodyData = {};
 
+    if (params.data) {
+      try {
+        bodyData = JSON.parse(params.data);
+      } catch (parseErr) {
+        return createJsonResponse({ success: false, error: 'Invalid JSON in data parameter' });
+      }
+    }
+
     if (e.postData && e.postData.contents) {
       try {
-        const body = JSON.parse(e.postData.contents);
-        bodyData = body.data || body;
+        const raw = e.postData.contents;
+        let body;
+        if (e.postData.type === 'application/x-www-form-urlencoded') {
+          const parsed = {};
+          raw.split('&').forEach(function (pair) {
+            const kv = pair.split('=');
+            parsed[decodeURIComponent(kv[0])] = decodeURIComponent((kv[1] || '').replace(/\+/g, ' '));
+          });
+          body = parsed.payload ? JSON.parse(parsed.payload) : parsed;
+        } else {
+          body = JSON.parse(raw);
+        }
+        if (!params.data) {
+          bodyData = body.data || body;
+        }
         if (body.id) id = body.id;
         if (body.endpoint) endpoint = body.endpoint.toLowerCase();
+        if (body.method) method = String(body.method).toUpperCase();
         if (body.action) params.action = body.action;
       } catch (parseErr) {
-        return createJsonResponse({ success: false, error: 'Invalid JSON body' });
+        return createJsonResponse({ success: false, error: 'Invalid request body' });
       }
     }
 
@@ -122,7 +157,27 @@ function handleRequest(e, method) {
 // ─── CRUD Operations ─────────────────────────────────────────────────────────
 
 function getSpreadsheet() {
-  return SpreadsheetApp.openById(SPREADSHEET_ID);
+  // Prefer the spreadsheet this script is bound to (Extensions → Apps Script from your sheet)
+  var active = SpreadsheetApp.getActiveSpreadsheet();
+  if (active) return active;
+
+  var id = (SPREADSHEET_ID || '').trim();
+  if (id && id !== 'YOUR_SPREADSHEET_ID_HERE') {
+    return SpreadsheetApp.openById(id);
+  }
+  throw new Error(
+    'Cannot open spreadsheet. Open your Gitai sheet → Extensions → Apps Script, paste Code.gs, Save, then run again.'
+  );
+}
+
+/**
+ * Run from Apps Script editor to verify spreadsheet access before using the Web App.
+ */
+function testSpreadsheetConnection() {
+  var ss = getSpreadsheet();
+  Logger.log('OK — connected to: ' + ss.getName());
+  Logger.log('Spreadsheet ID: ' + ss.getId());
+  Logger.log('Sheet tabs: ' + ss.getSheets().map(function (s) { return s.getName(); }).join(', '));
 }
 
 function getSheet(endpoint) {
@@ -379,6 +434,17 @@ function uploadDocumentToDrive(data) {
 
 // ─── Utilities ───────────────────────────────────────────────────────────────
 
+/** JSONP wrapper — bypasses browser CORS when calling from localhost */
+function wrapJsonpResponse(textOutput, e) {
+  var callback = e && e.parameter && e.parameter.callback;
+  if (callback && /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(callback)) {
+    return ContentService
+      .createTextOutput(callback + '(' + textOutput.getContent() + ');')
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+  return textOutput;
+}
+
 function createJsonResponse(obj) {
   return ContentService
     .createTextOutput(JSON.stringify(obj))
@@ -390,6 +456,7 @@ function createJsonResponse(obj) {
  */
 function initializeSpreadsheet() {
   Object.keys(SHEET_CONFIG).forEach(endpoint => getSheet(endpoint));
+  seedDefaultUsers();
   Logger.log('All sheets initialized successfully.');
 }
 
@@ -443,4 +510,249 @@ function testApiEndpoints() {
     const result = getAllRecords(ep);
     Logger.log(ep + ': ' + result.data.length + ' records');
   });
+}
+
+// ─── Legacy sheet migration (Gitai income-expense worksheet) ─────────────────
+
+const LEGACY_INCOME_CATEGORIES = ['work hrs', 'work hours', 'trip', 'gutta', 'us trolly'];
+const LEGACY_EXPENSE_MAP = {
+  'diesel': 'Diesel',
+  'petrol': 'Diesel',
+  'operator': 'Salary',
+  'servicing': 'Maintenance',
+  'grease': 'Maintenance',
+  'grease pump': 'Maintenance',
+  'washing': 'Maintenance',
+  'coolent water': 'Maintenance',
+  'coolent': 'Maintenance',
+  'other': 'Misc',
+  'redium': 'Misc',
+  'visiting cards': 'Misc',
+  'loan file': 'Misc',
+  'maintenance': 'Maintenance',
+  'repair': 'Repair',
+  'insurance': 'Insurance',
+  'rto': 'RTO',
+  'transport': 'Transport'
+};
+
+function seedDefaultUsers() {
+  const sheet = getSheet('users');
+  if (sheet.getLastRow() > 1) return;
+  sheet.appendRow([1, 'admin', 'admin123', 'Admin', 'Administrator', true]);
+  Logger.log('Default admin user created (admin / admin123).');
+}
+
+function findLegacyRegisterSheet() {
+  if (LEGACY_REGISTER_SHEET) {
+    const named = getSpreadsheet().getSheetByName(LEGACY_REGISTER_SHEET);
+    if (named) return named;
+  }
+
+  const ss = getSpreadsheet();
+  const reserved = Object.values(SHEET_CONFIG).map(c => c.sheet);
+  for (let i = 0; i < ss.getSheets().length; i++) {
+    const sheet = ss.getSheets()[i];
+    if (reserved.indexOf(sheet.getName()) >= 0) continue;
+    const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0].map(function (h) {
+      return String(h).toLowerCase().trim();
+    });
+    if (headers.some(function (h) { return h.indexOf('income money in') >= 0; })) {
+      return sheet;
+    }
+  }
+  throw new Error('Legacy register sheet not found. Set LEGACY_REGISTER_SHEET to your tab name (e.g. Register).');
+}
+
+function parseLegacyAmount(value) {
+  if (value === '' || value === null || value === undefined) return 0;
+  const str = String(value).replace(/,/g, '').replace(/[()]/g, '').trim();
+  const num = parseFloat(str);
+  return isNaN(num) ? 0 : Math.abs(num);
+}
+
+function parseLegacyDate(value) {
+  if (!value) return '';
+  if (Object.prototype.toString.call(value) === '[object Date]' && !isNaN(value.getTime())) {
+    return Utilities.formatDate(value, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+  }
+  const str = String(value).trim();
+  const parts = str.split(/[\/\-]/);
+  if (parts.length === 3) {
+    let day = parseInt(parts[0], 10);
+    let month = parseInt(parts[1], 10);
+    let year = parseInt(parts[2], 10);
+    if (year < 100) year += 2000;
+    if (month > 12) {
+      const tmp = day; day = month; month = tmp;
+    }
+    const pad = function (n) { return n < 10 ? '0' + n : String(n); };
+    return year + '-' + pad(month) + '-' + pad(day);
+  }
+  const d = new Date(str);
+  if (!isNaN(d.getTime())) {
+    return Utilities.formatDate(d, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+  }
+  return str;
+}
+
+function normalizeLegacyCategory(category, description) {
+  const cat = String(category || '').trim().toLowerCase();
+  if (cat) return cat;
+  return String(description || '').trim().toLowerCase();
+}
+
+function mapLegacyExpenseType(category, description) {
+  const key = normalizeLegacyCategory(category, description);
+  if (LEGACY_EXPENSE_MAP[key]) return LEGACY_EXPENSE_MAP[key];
+  if (LEGACY_INCOME_CATEGORIES.indexOf(key) >= 0) return '';
+  if (key) return 'Misc';
+  return 'Misc';
+}
+
+function isLegacyIncomeRow(category, description, incomeAmt) {
+  const key = normalizeLegacyCategory(category, description);
+  if (LEGACY_INCOME_CATEGORIES.indexOf(key) >= 0) return true;
+  if (incomeAmt <= 0) return false;
+  if (LEGACY_EXPENSE_MAP[key]) return false;
+  if (key && LEGACY_INCOME_CATEGORIES.indexOf(key) < 0 && LEGACY_EXPENSE_MAP[key] === undefined) {
+    const desc = String(description || '').trim();
+    if (desc && !LEGACY_EXPENSE_MAP[desc.toLowerCase()]) return true;
+  }
+  return false;
+}
+
+function isLegacyExpenseRow(category, description, expenseAmt, incomeAmt) {
+  const key = normalizeLegacyCategory(category, description);
+  if (LEGACY_EXPENSE_MAP[key]) return true;
+  if (LEGACY_INCOME_CATEGORIES.indexOf(key) >= 0) return false;
+  if (expenseAmt > 0 && incomeAmt <= 0) return true;
+  if (!category && LEGACY_EXPENSE_MAP[String(description || '').toLowerCase()]) return true;
+  return false;
+}
+
+function getLegacyColumnMap(headers) {
+  const map = {};
+  headers.forEach(function (h, idx) {
+    const key = String(h).toLowerCase().trim();
+    if (key === 'date') map.date = idx;
+    if (key.indexOf('description') >= 0) map.description = idx;
+    if (key === 'category') map.category = idx;
+    if (key.indexOf('income money in') >= 0) map.income = idx;
+    if (key.indexOf('expense money out') >= 0) map.expense = idx;
+    if (key.indexOf('pending balance') >= 0) map.pending = idx;
+  });
+  return map;
+}
+
+/**
+ * ONE-TIME: Import your existing Register / income-expense tab into Income + Expenses sheets.
+ * Your original tab is NOT deleted — it stays as archive.
+ *
+ * Run order:
+ *   1. initializeSpreadsheet
+ *   2. migrateLegacyIncomeExpense
+ */
+function migrateLegacyIncomeExpense() {
+  initializeSpreadsheet();
+
+  const legacySheet = findLegacyRegisterSheet();
+  Logger.log('Migrating from sheet: ' + legacySheet.getName());
+
+  const data = legacySheet.getDataRange().getValues();
+  if (data.length <= 1) {
+    Logger.log('No data rows in legacy sheet.');
+    return;
+  }
+
+  const col = getLegacyColumnMap(data[0].map(String));
+  if (col.date === undefined) throw new Error('Date column not found in legacy sheet.');
+
+  const defaultMachine = 'JCB / Earthmover';
+  let incomeCount = 0;
+  let expenseCount = 0;
+  let skipped = 0;
+
+  const incomeSheet = getSheet('income');
+  const expenseSheet = getSheet('expenses');
+
+  if (incomeSheet.getLastRow() <= 1) incomeSheet.appendRow(SHEET_CONFIG.income.headers);
+  if (expenseSheet.getLastRow() <= 1) expenseSheet.appendRow(SHEET_CONFIG.expenses.headers);
+
+  for (let i = 1; i < data.length; i++) {
+    const row = data[i];
+    if (!row.some(function (cell) { return cell !== '' && cell !== null; })) continue;
+
+    const date = parseLegacyDate(row[col.date]);
+    const description = col.description !== undefined ? String(row[col.description] || '').trim() : '';
+    const category = col.category !== undefined ? String(row[col.category] || '').trim() : '';
+    const incomeAmt = col.income !== undefined ? parseLegacyAmount(row[col.income]) : 0;
+    const expenseAmt = col.expense !== undefined ? parseLegacyAmount(row[col.expense]) : 0;
+    const pending = col.pending !== undefined ? parseLegacyAmount(row[col.pending]) : 0;
+
+    if (!date) { skipped++; continue; }
+
+    if (isLegacyIncomeRow(category, description, incomeAmt)) {
+      const bill = incomeAmt || expenseAmt;
+      if (bill <= 0) { skipped++; continue; }
+      const received = pending > 0 ? Math.max(bill - pending, 0) : bill;
+      createRecord('income', {
+        Date: date,
+        Customer: description || 'Customer',
+        Machine: defaultMachine,
+        Site: category || '',
+        HoursWorked: '',
+        BillAmount: bill,
+        ReceivedAmount: received,
+        PendingAmount: pending || Math.max(bill - received, 0),
+        Remarks: 'Imported from ' + legacySheet.getName()
+      });
+      incomeCount++;
+      continue;
+    }
+
+    if (isLegacyExpenseRow(category, description, expenseAmt, incomeAmt)) {
+      const amount = expenseAmt || incomeAmt;
+      if (amount <= 0) { skipped++; continue; }
+      createRecord('expenses', {
+        Date: date,
+        ExpenseType: mapLegacyExpenseType(category, description),
+        Machine: defaultMachine,
+        Amount: amount,
+        PaidBy: 'Cash',
+        Remarks: [description, category].filter(Boolean).join(' — ') + ' (imported)'
+      });
+      expenseCount++;
+      continue;
+    }
+
+    if (incomeAmt > 0) {
+      createRecord('income', {
+        Date: date,
+        Customer: description || 'Customer',
+        Machine: defaultMachine,
+        Site: category || '',
+        HoursWorked: '',
+        BillAmount: incomeAmt,
+        ReceivedAmount: incomeAmt,
+        PendingAmount: 0,
+        Remarks: 'Imported (fallback) from ' + legacySheet.getName()
+      });
+      incomeCount++;
+    } else if (expenseAmt > 0) {
+      createRecord('expenses', {
+        Date: date,
+        ExpenseType: mapLegacyExpenseType(category, description),
+        Machine: defaultMachine,
+        Amount: expenseAmt,
+        PaidBy: 'Cash',
+        Remarks: [description, category].filter(function (x) { return x; }).join(' — ') + ' (imported)'
+      });
+      expenseCount++;
+    } else {
+      skipped++;
+    }
+  }
+
+  Logger.log('Migration complete. Income: ' + incomeCount + ', Expenses: ' + expenseCount + ', Skipped: ' + skipped);
 }

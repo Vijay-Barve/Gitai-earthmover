@@ -54,6 +54,13 @@ const App = (function () {
         sidebar.classList.remove('open');
       });
     });
+
+    document.body.addEventListener('click', (e) => {
+      const link = e.target.closest('.nav-to-section[data-section]');
+      if (!link) return;
+      e.preventDefault();
+      navigateTo(link.dataset.section);
+    });
   }
 
   function navigateTo(section) {
@@ -213,25 +220,135 @@ const App = (function () {
   function updateConnectionBadge() {
     const el = document.getElementById('connectionBadge');
     if (!el) return;
-    if (CONFIG.USE_MOCK_DATA) {
-      el.className = 'badge bg-info';
-      el.textContent = 'Demo Mode';
-      el.title = 'Using sample data. Set USE_MOCK_DATA: false in config.js to connect Google Sheets.';
+    if (CONFIG.DATA_MODE === 'excel') {
+      const inc = AppData.income?.length || 0;
+      const exp = AppData.expenses?.length || 0;
+      el.className = 'badge bg-primary connection-badge-btn';
+      el.textContent = inc || exp ? `Gitai.xlsx · ${inc} inc / ${exp} exp` : 'Gitai.xlsx';
+      el.title = inc || exp
+        ? 'Loaded from Gitai.xlsx — use Save Excel to download changes'
+        : 'No income/expense loaded — Backup → Reload Gitai.xlsx';
+    } else if (CONFIG.USE_MOCK_DATA) {
+      el.className = 'badge bg-info connection-badge-btn';
+      el.textContent = 'Local';
+      el.title = 'Local storage mode';
     } else {
-      el.className = 'badge bg-success';
+      el.className = 'badge bg-success connection-badge-btn';
       el.textContent = 'Google Sheets';
-      el.title = 'Connected via Google Apps Script → ' + CONFIG.API_BASE_URL;
+      el.title = 'Connected to Google Sheets';
     }
+  }
+
+  function initExcelControls() {
+    document.getElementById('btnSaveExcel')?.addEventListener('click', async () => {
+      try {
+        await ApiClient.saveToExcel();
+        showAlert('Downloaded ' + CONFIG.EXCEL_FILE + ' — replace the file in your project folder');
+      } catch (err) {
+        showAlert(err.message, 'danger');
+      }
+    });
+
+    document.getElementById('btnReloadExcel')?.addEventListener('click', async () => {
+      if (!confirm('Reload from ' + CONFIG.EXCEL_FILE + '? Unsaved browser changes will be lost.')) return;
+      localStorage.removeItem(CONFIG.LOCAL_STORAGE_KEY);
+      await ApiClient.reloadFromExcel();
+      await loadData();
+      showAlert('Reloaded from ' + CONFIG.EXCEL_FILE);
+    });
+
+    document.getElementById('excelFileImport')?.addEventListener('change', async (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      try {
+        const buffer = await file.arrayBuffer();
+        const workbook = XLSX.read(buffer, { type: 'array', cellDates: true });
+        if (LegacyMigrate.isLegacyWorkbook(workbook)) {
+          const stats = await ApiClient.mergeLegacyRegister(file);
+          await loadData();
+          showAlert(`Imported ${file.name}: ${stats.income} income, ${stats.expenses} expenses → ${stats.machineName}`);
+        } else {
+          const data = await ExcelStore.importFile(file);
+          await ApiClient.importLocalData(data);
+          await loadData();
+          showAlert('Imported ' + file.name);
+        }
+      } catch (err) {
+        showAlert('Import failed: ' + err.message, 'danger');
+      }
+      e.target.value = '';
+    });
+
+    document.getElementById('legacyRegisterImport')?.addEventListener('change', async (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      const machineName = document.getElementById('legacyMachineName')?.value?.trim() || CONFIG.LEGACY_MACHINE_NAME;
+      try {
+        const stats = await ApiClient.mergeLegacyRegister(file, machineName);
+        await loadData();
+        showAlert(`Machine register imported: ${stats.income} income, ${stats.expenses} expenses → ${stats.machineName}`);
+      } catch (err) {
+        showAlert('Import failed: ' + err.message, 'danger');
+      }
+      e.target.value = '';
+    });
+  }
+
+  function initConnectionSetup() {
+    if (CONFIG.DATA_MODE === 'excel') return;
+    const badge = document.getElementById('connectionBadge');
+    const modalEl = document.getElementById('connectSheetsModal');
+    if (!badge || !modalEl) return;
+
+    const modal = new bootstrap.Modal(modalEl);
+    const urlInput = document.getElementById('connectApiUrl');
+    const errorEl = document.getElementById('connectError');
+
+    badge.addEventListener('click', () => {
+      errorEl.textContent = '';
+      try {
+        const stored = JSON.parse(localStorage.getItem('earthmovers-connection') || '{}');
+        urlInput.value = stored.apiUrl || CONFIG.API_BASE_URL || '';
+      } catch {
+        urlInput.value = CONFIG.API_BASE_URL || '';
+      }
+      modal.show();
+    });
+
+    document.getElementById('connectSaveBtn')?.addEventListener('click', () => {
+      const url = urlInput.value.trim();
+      if (!url.includes('script.google.com') || !url.endsWith('/exec')) {
+        errorEl.textContent = 'Enter a valid Apps Script Web App URL ending with /exec';
+        return;
+      }
+      localStorage.setItem('earthmovers-connection', JSON.stringify({ apiUrl: url }));
+      localStorage.removeItem('earthmovers-session');
+      modal.hide();
+      window.location.reload();
+    });
+
+    document.getElementById('connectUseDemoBtn')?.addEventListener('click', () => {
+      localStorage.removeItem('earthmovers-connection');
+      localStorage.removeItem('earthmovers-session');
+      modal.hide();
+      App.showAlert('Using local storage — data stays in this browser');
+      window.location.reload();
+    });
   }
 
   async function loadData() {
     showLoading(true);
-    updateConnectionBadge();
     try {
       await AppData.refresh();
       populateMachineSelects();
       populateExpenseTypes();
+      updateConnectionBadge();
       renderSection(currentSection);
+      const inc = AppData.income.length;
+      const exp = AppData.expenses.length;
+      if (CONFIG.DATA_MODE === 'excel' && inc === 0 && exp === 0) {
+        showAlert('No income/expense in Gitai.xlsx. Go to Backup → Reload Gitai.xlsx, or Import Machine Register.', 'warning');
+      }
     } catch (err) {
       showAlert('Failed to load data: ' + err.message, 'danger');
     } finally {
@@ -325,11 +442,13 @@ const App = (function () {
   async function init() {
     if (typeof injectEnterpriseUI === 'function') await injectEnterpriseUI();
 
-    AuthModule.init();
+    await AuthModule.init();
     initTheme();
     initSidebar();
     initHashRouting();
     initGlobalSearch();
+    initConnectionSetup();
+    initExcelControls();
     initPartnerModalTriggers();
 
     document.getElementById('refreshData').addEventListener('click', loadData);
@@ -374,19 +493,66 @@ const App = (function () {
   };
 })();
 
-/** Loans Module (inline — simple CRUD) */
+/** Loans Module */
 const LoansModule = {
+  readForm() {
+    return {
+      Machine: document.getElementById('loanMachine').value,
+      LoanAmount: parseNum(document.getElementById('loanAmount').value),
+      PrincipalPaid: parseNum(document.getElementById('loanPrincipalPaid').value),
+      InterestPaid: parseNum(document.getElementById('loanInterestPaid').value),
+      OutstandingLoan: parseNum(document.getElementById('loanOutstanding').value),
+      AgreementNo: document.getElementById('loanAgreementNo').value.trim(),
+      Lender: document.getElementById('loanLender').value.trim(),
+      CustomerID: document.getElementById('loanCustomerId').value.trim(),
+      DisbursalDate: document.getElementById('loanDisbursalDate').value,
+      EMIAmount: parseNum(document.getElementById('loanEmiAmount').value),
+      TenureMonths: parseInt(document.getElementById('loanTenure').value, 10) || 0,
+      BalanceTenure: parseInt(document.getElementById('loanBalanceTenure').value, 10) || 0,
+      IRR: parseNum(document.getElementById('loanIrr').value),
+      InterestType: document.getElementById('loanInterestType').value,
+      Applicant: document.getElementById('loanApplicant').value.trim(),
+      CoApplicant: document.getElementById('loanCoApplicant').value.trim(),
+      ProductType: document.getElementById('loanProductType').value.trim(),
+      LoanStatus: document.getElementById('loanStatus').value,
+      OverdueAmount: parseNum(document.getElementById('loanOverdue').value),
+      DisbursalStatus: document.getElementById('loanDisbursalStatus').value,
+      Frequency: document.getElementById('loanFrequency').value,
+      Remarks: document.getElementById('loanRemarks').value.trim()
+    };
+  },
+
+  fillForm(r) {
+    document.getElementById('loanId').value = r.ID || '';
+    document.getElementById('loanMachine').value = r.Machine || '';
+    document.getElementById('loanAmount').value = r.LoanAmount || '';
+    document.getElementById('loanPrincipalPaid').value = r.PrincipalPaid || '';
+    document.getElementById('loanInterestPaid').value = r.InterestPaid || '';
+    document.getElementById('loanOutstanding').value = r.OutstandingLoan || '';
+    document.getElementById('loanAgreementNo').value = r.AgreementNo || '';
+    document.getElementById('loanLender').value = r.Lender || '';
+    document.getElementById('loanCustomerId').value = r.CustomerID || '';
+    document.getElementById('loanDisbursalDate').value = r.DisbursalDate || '';
+    document.getElementById('loanEmiAmount').value = r.EMIAmount || '';
+    document.getElementById('loanTenure').value = r.TenureMonths || '';
+    document.getElementById('loanBalanceTenure').value = r.BalanceTenure || '';
+    document.getElementById('loanIrr').value = r.IRR || '';
+    document.getElementById('loanInterestType').value = r.InterestType || 'Fixed';
+    document.getElementById('loanApplicant').value = r.Applicant || '';
+    document.getElementById('loanCoApplicant').value = r.CoApplicant || '';
+    document.getElementById('loanProductType').value = r.ProductType || '';
+    document.getElementById('loanStatus').value = r.LoanStatus || 'Active';
+    document.getElementById('loanOverdue').value = r.OverdueAmount || 0;
+    document.getElementById('loanDisbursalStatus').value = r.DisbursalStatus || '';
+    document.getElementById('loanFrequency').value = r.Frequency || 'Monthly';
+    document.getElementById('loanRemarks').value = r.Remarks || '';
+  },
+
   init() {
     document.getElementById('loanForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       const id = document.getElementById('loanId').value;
-      const data = {
-        Machine: document.getElementById('loanMachine').value,
-        LoanAmount: parseNum(document.getElementById('loanAmount').value),
-        PrincipalPaid: parseNum(document.getElementById('loanPrincipalPaid').value),
-        InterestPaid: parseNum(document.getElementById('loanInterestPaid').value),
-        OutstandingLoan: parseNum(document.getElementById('loanOutstanding').value)
-      };
+      const data = this.readForm();
 
       const result = id
         ? await ApiClient.put('loans', { ...data, ID: parseInt(id) }, id)
@@ -405,37 +571,45 @@ const LoansModule = {
       if (!e.relatedTarget) return;
       document.getElementById('loanForm').reset();
       document.getElementById('loanId').value = '';
+      document.getElementById('loanInterestType').value = 'Fixed';
+      document.getElementById('loanStatus').value = 'Active';
+      document.getElementById('loanFrequency').value = 'Monthly';
     });
   },
 
   render() {
+    App.destroyDataTable('loansTable');
     const tbody = document.querySelector('#loansTable tbody');
-    tbody.innerHTML = AppData.loans.map(r => `
+    tbody.innerHTML = AppData.loans.map(r => {
+      const repaid = parseNum(r.LoanAmount) > 0
+        ? (((parseNum(r.LoanAmount) - parseNum(r.OutstandingLoan)) / parseNum(r.LoanAmount)) * 100).toFixed(0)
+        : 0;
+      return `
       <tr>
         <td>${r.ID}</td>
-        <td>${r.Machine}</td>
+        <td>
+          <strong>${r.Machine}</strong>
+          ${r.AgreementNo ? `<div class="small text-muted">${r.AgreementNo}</div>` : ''}
+        </td>
+        <td>${r.Lender || '—'}</td>
         <td>${formatCurrency(r.LoanAmount)}</td>
-        <td>${formatCurrency(r.PrincipalPaid)}</td>
-        <td>${formatCurrency(r.InterestPaid)}</td>
-        <td>${formatCurrency(r.OutstandingLoan)}</td>
+        <td>${formatCurrency(r.EMIAmount)}/mo</td>
+        <td>${formatCurrency(r.OutstandingLoan)}<div class="small text-muted">${repaid}% repaid</div></td>
+        <td><span class="badge bg-${r.LoanStatus === 'Active' ? 'success' : 'secondary'}">${r.LoanStatus || 'Active'}</span></td>
         <td>
           <button class="btn btn-sm btn-outline-accent action-btn" onclick="LoansModule.edit(${r.ID})"><i class="bi bi-pencil"></i></button>
           <button class="btn btn-sm btn-outline-danger action-btn" onclick="LoansModule.remove(${r.ID})"><i class="bi bi-trash"></i></button>
         </td>
       </tr>
-    `).join('');
+    `;
+    }).join('') || '<tr><td colspan="8" class="text-muted">No loans recorded</td></tr>';
     App.initDataTable('loansTable');
   },
 
   edit(id) {
     const r = AppData.loans.find(x => x.ID == id);
     if (!r) return;
-    document.getElementById('loanId').value = r.ID;
-    document.getElementById('loanMachine').value = r.Machine;
-    document.getElementById('loanAmount').value = r.LoanAmount;
-    document.getElementById('loanPrincipalPaid').value = r.PrincipalPaid;
-    document.getElementById('loanInterestPaid').value = r.InterestPaid;
-    document.getElementById('loanOutstanding').value = r.OutstandingLoan;
+    this.fillForm(r);
     new bootstrap.Modal(document.getElementById('loanModal')).show();
   },
 
@@ -512,8 +686,5 @@ const DocumentsModule = {
   init: () => DocumentsMgmtModule.init(),
   render: () => DocumentsMgmtModule.render()
 };
-
-/** Audit Log Module — delegates to enterprise audit trail */
-const AuditModule = { render: () => AuditTrailModule.render() };
 
 document.addEventListener('DOMContentLoaded', () => App.init());

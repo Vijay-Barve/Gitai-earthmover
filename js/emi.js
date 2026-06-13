@@ -77,6 +77,15 @@ const EmiModule = (function () {
         document.getElementById('emiStatus').value = 'Pending';
       }
     });
+
+    document.getElementById('emiMachine')?.addEventListener('change', () => {
+      const machine = document.getElementById('emiMachine').value;
+      const loan = AppData.loans.find(l => l.Machine === machine);
+      if (loan?.EMIAmount && !document.getElementById('emiId').value) {
+        document.getElementById('emiAmount').value = loan.EMIAmount;
+        calcTotalPaid();
+      }
+    });
   }
 
   function statusClass(status) {

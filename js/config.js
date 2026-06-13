@@ -1,76 +1,45 @@
 /**
  * Gitai Earthmovers — Application Configuration
  *
- * NO SEPARATE BACKEND SERVER.
- * Your database is Google Sheets. The API is Google Apps Script (see google-apps-script/Code.gs).
- *
- * Two modes:
- *   USE_MOCK_DATA: true  → Demo data in browser (no Google account needed)
- *   USE_MOCK_DATA: false → Live data via Apps Script Web App URL below
+ * DATA_MODE: 'excel' → Gitai.xlsx in project folder (recommended, no Google)
  */
 const CONFIG = {
-  /**
-   * Paste your Google Apps Script Web App URL here when connecting to Google Sheets.
-   * Get it from: Spreadsheet → Extensions → Apps Script → Deploy → Web app
-   * Example: 'https://script.google.com/macros/s/AKfycbz.../exec'
-   */
-  API_BASE_URL: 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL',
+  /** 'excel' = Gitai.xlsx | 'google' = Google Sheets (optional) */
+  DATA_MODE: 'excel',
 
-  /**
-   * true  = Demo mode (sample data, no Google Sheets connection)
-   * false = Production (requires API_BASE_URL + deployed Apps Script)
-   */
+  /** Excel database file (served from project root) */
+  EXCEL_FILE: 'Gitai.xlsx',
+
+  /** Default machine name when importing legacy register workbooks */
+  LEGACY_MACHINE_NAME: 'M1- Mahindra earthmaster sx iv 2022',
+
+  /** Cache data in browser between sessions */
+  USE_LOCAL_STORAGE: true,
+  LOCAL_STORAGE_KEY: 'earthmovers-data-v1',
+
+  /** Bump when Excel schema/data changes — invalidates stale empty browser cache */
+  DATA_SNAPSHOT_VERSION: '5',
+
+  /** Always use local API (no network) for excel mode */
   USE_MOCK_DATA: true,
 
-  /** Application version */
+  /** Google Sheets — only if DATA_MODE is 'google' */
+  API_BASE_URL: '',
+
   APP_VERSION: '2.0.0',
-
-  /** Business start date for reports */
   BUSINESS_START_DATE: '2022-01-01',
-
-  /** Currency symbol */
   CURRENCY: '₹',
 
-  /** Expense types */
-  EXPENSE_TYPES: [
-    'Diesel',
-    'Repair',
-    'Maintenance',
-    'Salary',
-    'Insurance',
-    'RTO',
-    'Transport',
-    'Misc'
-  ],
-
-  /** Partner transaction types */
+  EXPENSE_TYPES: ['Diesel', 'Repair', 'Maintenance', 'Salary', 'Insurance', 'RTO', 'Transport', 'Misc'],
   PARTNER_TRANSACTION_TYPES: ['Investment', 'Withdrawal'],
-
-  /** EMI statuses */
   EMI_STATUSES: ['Pending', 'Paid', 'Bounced', 'Overdue'],
-
-  /** Machine statuses */
   MACHINE_STATUSES: ['Active', 'Inactive', 'Sold'],
-
-  /** Document categories */
   DOCUMENT_CATEGORIES: [
-    'Diesel Bills',
-    'Repair Bills',
-    'EMI Receipts',
-    'Insurance Policies',
-    'RC Book',
-    'Customer Invoices',
-    'Vendor Bills',
-    'Agreements',
-    'Purchase Invoice',
-    'Loan Agreement',
-    'Other'
+    'Diesel Bills', 'Repair Bills', 'EMI Receipts', 'Insurance Policies', 'RC Book',
+    'Customer Invoices', 'Vendor Bills', 'Agreements', 'Purchase Invoice', 'Loan Agreement', 'Other'
   ],
-
-  /** Modules subject to month locking */
   LOCKABLE_MODULES: ['income', 'expenses', 'partners', 'emi'],
 
-  /** API endpoints mapped to sheet modules */
   ENDPOINTS: {
     partners: 'partners',
     machines: 'machines',
@@ -91,7 +60,6 @@ const CONFIG = {
     backups: 'backups'
   },
 
-  /** DataTables default options */
   DATATABLE_OPTIONS: {
     pageLength: 25,
     responsive: true,
@@ -106,24 +74,11 @@ const CONFIG = {
   }
 };
 
-/**
- * Format number as Indian currency
- * @param {number} amount
- * @returns {string}
- */
 function formatCurrency(amount) {
   const num = parseFloat(amount) || 0;
-  return CONFIG.CURRENCY + num.toLocaleString('en-IN', {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 2
-  });
+  return CONFIG.CURRENCY + num.toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
 }
 
-/**
- * Format date for display
- * @param {string} dateStr
- * @returns {string}
- */
 function formatDate(dateStr) {
   if (!dateStr) return '—';
   const d = new Date(dateStr);
@@ -131,57 +86,28 @@ function formatDate(dateStr) {
   return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
 }
 
-/**
- * Format datetime for display
- * @param {string} dateStr
- * @returns {string}
- */
 function formatDateTime(dateStr) {
   if (!dateStr) return '—';
   const d = new Date(dateStr);
   if (isNaN(d.getTime())) return dateStr;
   return d.toLocaleString('en-IN', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit'
+    day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit'
   });
 }
 
-/**
- * Get today's date as YYYY-MM-DD
- * @returns {string}
- */
 function todayISO() {
   return new Date().toISOString().split('T')[0];
 }
 
-/**
- * Parse numeric value safely
- * @param {*} val
- * @returns {number}
- */
 function parseNum(val) {
   return parseFloat(val) || 0;
 }
 
-/**
- * Get month key from date string (YYYY-MM)
- * @param {string} dateStr
- * @returns {string}
- */
 function getMonthKey(dateStr) {
   if (!dateStr) return '';
   return dateStr.substring(0, 7);
 }
 
-/**
- * Debounce utility
- * @param {Function} fn
- * @param {number} delay
- * @returns {Function}
- */
 function debounce(fn, delay = 300) {
   let timer;
   return function (...args) {

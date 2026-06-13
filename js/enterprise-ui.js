@@ -2,37 +2,18 @@
  * Inject enterprise UI sections into the SPA
  */
 async function injectEnterpriseUI() {
-  // Login overlay
-  if (!document.getElementById('loginOverlay')) {
-    document.body.insertAdjacentHTML('afterbegin', `
-      <div id="loginOverlay" class="login-overlay">
-        <div class="login-card card">
-          <div class="card-body p-4">
-            <div class="text-center mb-4">
-              <i class="bi bi-truck-front-fill brand-icon fs-1"></i>
-              <h4>Gitai Earthmovers</h4>
-              <p class="text-muted small">Audit & Settlement System v2.0</p>
-            </div>
-            <form id="loginForm">
-              <div class="mb-3"><label class="form-label">Username</label><input type="text" class="form-control" id="loginUsername" required></div>
-              <div class="mb-3"><label class="form-label">Password</label><input type="password" class="form-control" id="loginPassword" required></div>
-              <div id="loginError" class="text-danger small mb-2"></div>
-              <button type="submit" class="btn btn-accent w-100">Sign In</button>
-            </form>
-            <p class="text-muted small mt-3 mb-0 text-center">Demo: admin/admin123 · accountant/acc123</p>
-          </div>
-        </div>
-      </div>`);
-  }
+  // Login overlay is in index.html — skip duplicate injection
 
-  // Enterprise sections
-  try {
-    const resp = await fetch('partials/enterprise-sections.html');
-    if (resp.ok) {
-      document.querySelector('.content-area')?.insertAdjacentHTML('beforeend', await resp.text());
+  // Enterprise sections — skip fetch if already embedded in index.html
+  if (!document.getElementById('section-alerts')) {
+    try {
+      const resp = await fetch('partials/enterprise-sections.html');
+      if (resp.ok) {
+        document.querySelector('.content-area')?.insertAdjacentHTML('beforeend', await resp.text());
+      }
+    } catch (err) {
+      console.warn('Enterprise sections partial not loaded:', err);
     }
-  } catch (err) {
-    console.warn('Enterprise sections partial not loaded:', err);
   }
 
   // Enterprise modals

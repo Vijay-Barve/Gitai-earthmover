@@ -183,6 +183,15 @@ body {
   gap: 0.5rem;
 }
 
+.connection-badge-btn {
+  cursor: pointer;
+  user-select: none;
+}
+
+.connection-badge-btn:hover {
+  opacity: 0.85;
+}
+
 .content-area {
   flex: 1;
   padding: 1.5rem;
@@ -635,6 +644,13 @@ table.dataTable thead th {
   width: 100%;
   max-width: 400px;
   margin: 1rem;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.login-card h4 {
+  color: var(--text-primary);
 }
 
 .app-wrapper.blurred {
@@ -674,4 +690,48 @@ table.dataTable thead th {
 .audit-json {
   font-family: monospace;
   font-size: 0.75rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.15rem;
+}
+
+.machine-detail-card {
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+}
+
+.machine-detail-card .card-header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.loan-summary-box {
+  background: var(--accent-muted);
+  border-radius: 0.5rem;
+  padding: 0.875rem;
+  border: 1px solid rgba(245, 197, 24, 0.25);
+}
+
+.machine-stats-row {
+  border-color: var(--border-color) !important;
+}
+
+.progress-bar.bg-accent {
+  background-color: var(--accent) !important;
+}
+
+@media (max-width: 576px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
 }

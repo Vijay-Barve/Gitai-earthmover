@@ -121,7 +121,7 @@ Every Income, Expense, Partner entry, etc. is a **row in a sheet tab**. You can 
 | Problem | Fix |
 |---------|-----|
 | "Failed to load data" | Check `API_BASE_URL` and `USE_MOCK_DATA: false` |
-| CORS / fetch errors | Redeploy Web App as new version; URL must end with `/exec` |
+| CORS / fetch errors | Use latest `api.js` (text/plain POST); redeploy Web App; URL must end with `/exec` |
 | Empty sheets | Run `initializeSpreadsheet()` in Apps Script |
 | Changes not saving | Redeploy Apps Script after editing `Code.gs` |
 | Still in demo mode | Confirm `USE_MOCK_DATA: false` and hard-refresh browser |

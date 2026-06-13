@@ -59,6 +59,11 @@ const ExpensesModule = (function () {
   function render() {
     App.destroyDataTable('expensesTable');
     const data = getFilteredData();
+    const summary = document.getElementById('expenseSummary');
+    if (summary) {
+      const total = data.reduce((s, r) => s + parseNum(r.Amount), 0);
+      summary.textContent = `${data.length} records · Total ${formatCurrency(total)}`;
+    }
     const tbody = document.querySelector('#expensesTable tbody');
     tbody.innerHTML = data.map(r => `
       <tr>

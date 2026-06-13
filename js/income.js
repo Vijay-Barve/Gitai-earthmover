@@ -75,6 +75,11 @@ const IncomeModule = (function () {
   function render() {
     App.destroyDataTable('incomeTable');
     const data = getFilteredData();
+    const summary = document.getElementById('incomeSummary');
+    if (summary) {
+      const total = data.reduce((s, r) => s + parseNum(r.BillAmount), 0);
+      summary.textContent = `${data.length} records · Bill total ${formatCurrency(total)}`;
+    }
     const tbody = document.querySelector('#incomeTable tbody');
     tbody.innerHTML = data.map(r => `
       <tr>

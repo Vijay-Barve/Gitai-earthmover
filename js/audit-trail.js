@@ -95,6 +95,3 @@ const AuditTrailModule = (function () {
 
   return { log, render, logExport, normalizeRecord, IMMUTABLE_MODULES };
 })();
-
-/** Legacy AuditModule wrapper */
-const AuditModule = { render: () => AuditTrailModule.render() };
