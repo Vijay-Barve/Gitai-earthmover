@@ -1,0 +1,128 @@
+        <!-- Alert Center Section -->
+        <section id="section-alerts" class="content-section">
+          <div class="section-header"><h1>Alert Center</h1><p class="text-muted">Active business warnings and action items</p></div>
+          <div id="alertsFullList"></div>
+        </section>
+
+        <!-- AI Insights Section -->
+        <section id="section-insights" class="content-section">
+          <div class="section-header"><h1>AI Insights</h1><p class="text-muted">Automated business intelligence & risk warnings</p></div>
+          <div class="row g-3">
+            <div class="col-lg-6"><div class="card"><div class="card-header"><h5>Insights</h5></div><div class="card-body" id="insightsPanel"></div></div></div>
+            <div class="col-lg-6"><div class="card"><div class="card-header"><h5>Warnings</h5></div><div class="card-body" id="warningsPanel"></div></div></div>
+          </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="section-analytics" class="content-section">
+          <div class="section-header"><h1>Business Intelligence</h1><p class="text-muted">Machine profitability, utilization & diesel analysis</p></div>
+          <h5 class="mb-3">Machine Profitability Engine</h5>
+          <div class="row g-3 mb-4">
+            <div class="col-lg-8"><div class="card"><div class="card-body table-responsive"><table id="profitabilityTable" class="table table-sm"><thead><tr><th>Machine</th><th>Revenue</th><th>Diesel</th><th>Repairs</th><th>Salary</th><th>Insurance</th><th>EMI Int.</th><th>Total Exp</th><th>Profit</th><th>%</th></tr></thead><tbody></tbody></table></div></div></div>
+            <div class="col-lg-4"><div class="card chart-card"><div class="card-body"><canvas id="chartProfitCompare"></canvas></div></div></div>
+          </div>
+          <div class="card chart-card mb-4"><div class="card-header"><h5>Monthly Revenue Trend (Top Machine)</h5></div><div class="card-body"><canvas id="chartProfitTrend"></canvas></div></div>
+          <h5 class="mb-3">Machine Utilization <span class="badge badge-accent" id="avgUtilization">—</span></h5>
+          <div id="utilizationAlerts" class="mb-3"></div>
+          <div class="card mb-4"><div class="card-body table-responsive"><table id="utilizationTable" class="table table-sm"><thead><tr><th>Machine</th><th>Month</th><th>Available</th><th>Working</th><th>Idle</th><th>Utilization</th></tr></thead><tbody></tbody></table></div></div>
+          <h5 class="mb-3">Diesel Consumption Analysis</h5>
+          <div class="row g-3 mb-3" id="dieselStats"></div>
+          <div id="dieselAlerts" class="mb-3"></div>
+          <div class="card"><div class="card-body table-responsive"><table id="dieselTable" class="table table-sm"><thead><tr><th>Machine</th><th>Month</th><th>Diesel Cost</th><th>Hours</th><th>₹/Hour</th></tr></thead><tbody></tbody></table></div></div>
+        </section>
+
+        <!-- Receivables Section -->
+        <section id="section-receivables" class="content-section">
+          <div class="section-header"><h1>Customer Receivables</h1><p class="text-muted">Ledger, ageing & outstanding tracking</p></div>
+          <div class="row g-3 mb-4" id="ageingCards"></div>
+          <div class="card mb-3"><div class="card-header"><h5>Top Outstanding Customers</h5></div><div class="card-body" id="topOutstanding"></div></div>
+          <div class="card"><div class="card-body"><table id="receivablesTable" class="table table-striped w-100"><thead><tr><th>Customer</th><th>Invoiced</th><th>Received</th><th>Pending</th><th>Invoices</th><th>Ageing</th></tr></thead><tbody></tbody></table></div></div>
+        </section>
+
+        <!-- Vendors Section -->
+        <section id="section-vendors" class="content-section">
+          <div class="section-header d-flex justify-content-between flex-wrap gap-2">
+            <div><h1>Vendor Management</h1><p class="text-muted">Suppliers, mechanics & payables</p></div>
+            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#vendorModal" data-perm="vendors:create"><i class="bi bi-plus-lg"></i> Add Vendor</button>
+          </div>
+          <div class="row g-3 mb-4" id="vendorSummaryCards"></div>
+          <div class="card mb-3"><div class="card-body"><table id="vendorsTable" class="table table-striped w-100"><thead><tr><th>ID</th><th>Vendor</th><th>Type</th><th>Contact</th><th>Payable</th><th>Paid</th><th>Outstanding</th><th>Actions</th></tr></thead><tbody></tbody></table></div></div>
+          <div class="card mb-3"><div class="card-header"><h5>Vendor Ledger</h5></div><div class="card-body">
+            <form id="vendorTxnForm" class="row g-2 mb-3">
+              <div class="col-md-2"><input type="date" class="form-control" id="vendorTxnDate" required></div>
+              <div class="col-md-3"><select class="form-select" id="vendorTxnVendor" required></select></div>
+              <div class="col-md-2"><select class="form-select" id="vendorTxnType"><option value="Payable">Payable</option><option value="Payment">Payment</option></select></div>
+              <div class="col-md-2"><input type="number" class="form-control" id="vendorTxnAmount" placeholder="Amount" required></div>
+              <div class="col-md-2"><input type="text" class="form-control" id="vendorTxnRef" placeholder="Ref"></div>
+              <div class="col-md-1"><button type="submit" class="btn btn-accent w-100">Add</button></div>
+            </form>
+            <table id="vendorTxnTable" class="table table-sm"><thead><tr><th>ID</th><th>Date</th><th>Vendor</th><th>Type</th><th>Amount</th><th>Ref</th><th>Remarks</th></tr></thead><tbody></tbody></table>
+          </div></div>
+        </section>
+
+        <!-- Cash Flow Section -->
+        <section id="section-cashflow" class="content-section">
+          <div class="section-header"><h1>Cash Flow Dashboard</h1><p class="text-muted">Inflows, outflows & 30-day forecast</p></div>
+          <div class="row g-3 mb-4" id="cashflowCards"></div>
+          <div class="row g-3"><div class="col-lg-8"><div class="card chart-card"><div class="card-body"><canvas id="chartCashflow"></canvas></div></div></div><div class="col-lg-4" id="forecast30"></div></div>
+        </section>
+
+        <!-- Loan Dashboard Section -->
+        <section id="section-loan-dashboard" class="content-section">
+          <div class="section-header"><h1>Loan Management Dashboard</h1><p class="text-muted">Outstanding loans & upcoming EMIs</p></div>
+          <div class="row g-3 mb-4" id="loanDashCards"></div>
+          <div id="emiDueAlerts" class="mb-3"></div>
+          <div class="card"><div class="card-body"><table id="upcomingEmiTable" class="table table-sm"><thead><tr><th>Machine</th><th>Due Date</th><th>Amount</th><th>Status</th><th>Days Left</th></tr></thead><tbody></tbody></table></div></div>
+        </section>
+
+        <!-- Business Worth Section -->
+        <section id="section-business-worth" class="content-section">
+          <div class="section-header"><h1>Net Business Worth</h1><p class="text-muted">Assets minus liabilities</p></div>
+          <div id="worthDisplay"></div>
+        </section>
+
+        <!-- Bank Reconciliation Section -->
+        <section id="section-bank-recon" class="content-section">
+          <div class="section-header d-flex justify-content-between flex-wrap gap-2">
+            <div><h1>Bank Reconciliation</h1><p class="text-muted">Import CSV & auto-match transactions</p></div>
+            <div><label class="btn btn-accent mb-0"><i class="bi bi-upload"></i> Import CSV<input type="file" id="bankCsvInput" accept=".csv" hidden></label>
+            <button class="btn btn-outline-accent" id="btnReconReport">Export Report</button></div>
+          </div>
+          <div id="bankReconSection"><div class="row g-3 mb-4" id="reconSummary"></div><div id="unmatchedAlerts" class="mb-3"></div>
+          <div class="card"><div class="card-body"><table id="bankReconTable" class="table table-striped w-100"><thead><tr><th>ID</th><th>Date</th><th>Description</th><th>Debit</th><th>Credit</th><th>Matched</th><th>Status</th></tr></thead><tbody></tbody></table></div></div></div>
+        </section>
+
+        <!-- Month Lock Section -->
+        <section id="section-monthlock" class="content-section admin-only">
+          <div class="section-header"><h1>Month Locking</h1><p class="text-muted">Close accounting periods — Admin only</p></div>
+          <div id="monthLockContent">
+            <div class="row g-3 mb-4">
+              <div class="col-md-4"><div class="card"><div class="card-header"><h5>Close Month</h5></div><div class="card-body"><form id="closeMonthForm"><div class="mb-2"><label class="form-label">Month</label><select class="form-select" id="lockMonth"><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select></div><div class="mb-2"><label class="form-label">Year</label><input type="number" class="form-control" id="lockYear" min="2022" max="2030"></div><button type="submit" class="btn btn-accent w-100">Lock Month</button></form></div></div></div>
+              <div class="col-md-8"><div class="card"><div class="card-header"><h5>Currently Locked</h5></div><div class="card-body" id="lockedMonthsList"></div></div></div>
+            </div>
+            <div class="card"><div class="card-body"><table id="monthLocksTable" class="table table-striped w-100"><thead><tr><th>ID</th><th>Period</th><th>Status</th><th>Locked By</th><th>Locked Date</th><th>Unlocked By</th><th>Reason</th></tr></thead><tbody></tbody></table></div></div>
+          </div>
+        </section>
+
+        <!-- Partner Analysis Section -->
+        <section id="section-partner-analysis" class="content-section">
+          <div class="section-header"><h1>Partner Contribution Analysis</h1><p class="text-muted">Investment timeline & comparison</p></div>
+          <div class="row g-3 mb-4">
+            <div class="col-lg-6"><div class="card chart-card"><div class="card-header"><h5>Investment Trend</h5></div><div class="card-body"><canvas id="chartPartnerTrend"></canvas></div></div></div>
+            <div class="col-lg-6"><div class="card chart-card"><div class="card-header"><h5>Contribution Comparison</h5></div><div class="card-body"><canvas id="chartPartnerCompare"></canvas></div></div></div>
+          </div>
+          <div class="card"><div class="card-body table-responsive"><table id="partnerAnalysisTable" class="table"><thead><tr><th>Partner</th><th>Capital</th><th>Additional</th><th>Withdrawals</th><th>Share %</th><th>Settlement</th></tr></thead><tbody></tbody></table></div></div>
+        </section>
+
+        <!-- Backup Section -->
+        <section id="section-backup" class="content-section admin-only">
+          <div class="section-header"><h1>Backup System</h1><p class="text-muted">Daily backups — Admin only</p></div>
+          <div id="backupContent">
+            <div class="btn-group mb-4">
+              <button class="btn btn-accent" id="btnBackupJson"><i class="bi bi-filetype-json"></i> JSON Export</button>
+              <button class="btn btn-outline-accent" id="btnBackupExcel"><i class="bi bi-file-earmark-excel"></i> Excel/CSV</button>
+              <button class="btn btn-outline-accent" id="btnBackupSheet"><i class="bi bi-google"></i> Sheet Copy</button>
+            </div>
+            <div class="card"><div class="card-body"><table id="backupsTable" class="table table-striped w-100"><thead><tr><th>ID</th><th>DateTime</th><th>Type</th><th>Link</th><th>Created By</th><th>Status</th></tr></thead><tbody></tbody></table></div></div>
+          </div>
+        </section>
