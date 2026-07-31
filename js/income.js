@@ -117,8 +117,15 @@ const IncomeModule = (function () {
         document.getElementById('incomeForm').reset();
         document.getElementById('incomeId').value = '';
         document.getElementById('incomeDate').value = todayISO();
+        const title = document.querySelector('#incomeModal .modal-title');
+        if (title) title.textContent = 'Income Entry';
         App.populateMachineSelects?.();
       }
+    });
+
+    document.getElementById('incomeModal').addEventListener('hidden.bs.modal', () => {
+      const title = document.querySelector('#incomeModal .modal-title');
+      if (title) title.textContent = 'Income Entry';
     });
   }
 

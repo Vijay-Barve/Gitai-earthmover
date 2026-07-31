@@ -156,7 +156,7 @@ const ReceivablesModule = (function () {
 
     const note = document.getElementById('receivablesNote');
     if (note) {
-      note.textContent = 'Pending = Bill − Received from Income. Aliases merge known spellings (e.g. Gajanan Sarpanch / गजानन सरपंच → Gajanan Nannaji Dhore). Machine scope (All / M1 / M2) still filters.';
+      note.textContent = 'Pending = Bill − Received from Income. Click Edit / Settle on an open invoice to record payment (same as Income). Save to Excel after changes.';
     }
 
     document.getElementById('ageingCards').innerHTML = Object.entries(ageing).map(([bucket, amt]) => `
@@ -174,8 +174,10 @@ const ReceivablesModule = (function () {
       ? topOutstanding.map(c => {
           const maxAge = Math.max(...c.invoices.map(inv => inv.age), 0);
           const bucket = ageingBucket(maxAge);
-          return `<div class="alert ${bucket === '0-30' ? 'alert-success' : bucket === '31-60' ? 'alert-warning' : 'alert-danger'} py-2 mb-2">
-            <strong>${c.customer}</strong>: ${formatCurrency(c.pending)} outstanding (${maxAge} days · ${c.invoices.length} open)
+          const firstId = c.invoices[0]?.id;
+          return `<div class="alert ${bucket === '0-30' ? 'alert-success' : bucket === '31-60' ? 'alert-warning' : 'alert-danger'} py-2 mb-2 d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div><strong>${c.customer}</strong>: ${formatCurrency(c.pending)} outstanding (${maxAge} days · ${c.invoices.length} open)</div>
+            ${firstId ? `<button type="button" class="btn btn-sm btn-accent" onclick="ReceivablesModule.editInvoice(${firstId})">Edit / Settle</button>` : ''}
           </div>`;
         }).join('')
       : '<p class="text-muted">No outstanding receivables</p>';
@@ -185,11 +187,17 @@ const ReceivablesModule = (function () {
       const maxAge = c.invoices.length ? Math.max(...c.invoices.map(i => i.age)) : 0;
       const bucket = ageingBucket(maxAge);
       const detail = c.invoices.length
-        ? `<details class="mt-1"><summary class="small text-muted">${c.invoices.length} open invoice(s)</summary>
-            <ul class="small mb-0 ps-3">${c.invoices.map(inv =>
-              `<li>${formatDate(inv.date)} · ${formatCurrency(inv.amount)} pending`
-              + (inv.machine ? ` · ${String(inv.machine).includes('M2') ? 'M2' : 'M1'}` : '')
-              + `</li>`
+        ? `<details class="mt-1" open><summary class="small text-muted">${c.invoices.length} open invoice(s) — click Edit to settle</summary>
+            <ul class="list-unstyled small mb-0 mt-1">${c.invoices.map(inv =>
+              `<li class="d-flex flex-wrap align-items-center gap-2 py-1 border-bottom border-secondary-subtle">
+                <span>${formatDate(inv.date)} · Bill ${formatCurrency(inv.bill)} · Recv ${formatCurrency(inv.received)} · <strong class="text-warning">Pending ${formatCurrency(inv.amount)}</strong>`
+                + (inv.machine ? ` · ${String(inv.machine).includes('M2') ? 'M2' : 'M1'}` : '')
+                + `</span>
+                <span class="ms-auto d-flex gap-1">
+                  <button type="button" class="btn btn-sm btn-outline-accent" onclick="ReceivablesModule.editInvoice(${inv.id})" title="Edit income / record payment"><i class="bi bi-pencil"></i> Edit</button>
+                  <button type="button" class="btn btn-sm btn-outline-success" onclick="ReceivablesModule.settleFull(${inv.id})" title="Mark fully paid">Settle</button>
+                </span>
+              </li>`
             ).join('')}</ul></details>`
         : '';
       return `<tr>
@@ -202,6 +210,48 @@ const ReceivablesModule = (function () {
       </tr>`;
     }).join('');
     App.initDataTable('receivablesTable', { order: [[3, 'desc']] });
+  }
+
+  function editInvoice(id) {
+    if (typeof IncomeModule === 'undefined' || !IncomeModule.edit) {
+      App.showAlert('Income editor not available.', 'danger');
+      return;
+    }
+    const title = document.querySelector('#incomeModal .modal-title');
+    if (title) title.textContent = 'Settle / Edit Income';
+    IncomeModule.edit(id);
+  }
+
+  async function settleFull(id) {
+    const r = AppData.income.find(x => x.ID == id)
+      || AppData._all?.income?.find(x => x.ID == id);
+    if (!r) {
+      App.showAlert('Income record not found.', 'warning');
+      return;
+    }
+    const bill = parseNum(r.BillAmount);
+    const received = parseNum(r.ReceivedAmount);
+    const pending = Math.max(0, bill - received);
+    if (pending <= 0) {
+      App.showAlert('Already fully paid.', 'info');
+      return;
+    }
+    if (!confirm(`Mark fully paid?\n\n${displayName(r.Customer)}\nPending ${formatCurrency(pending)} → Received ${formatCurrency(bill)}`)) {
+      return;
+    }
+    const result = await ApiClient.put('income', {
+      ...r,
+      ID: parseInt(r.ID, 10),
+      Customer: typeof CustomerAliases !== 'undefined' ? CustomerAliases.canonicalize(r.Customer) : r.Customer,
+      ReceivedAmount: bill,
+      PendingAmount: 0
+    }, r.ID);
+    if (result.success) {
+      App.showAlert('Settled — marked fully paid');
+      await App.loadData();
+    } else {
+      App.showAlert(result.error || 'Could not settle', 'danger');
+    }
   }
 
   function getTotalReceivables() {
@@ -221,6 +271,8 @@ const ReceivablesModule = (function () {
   return {
     init,
     render,
+    editInvoice,
+    settleFull,
     buildCustomerLedger,
     buildAgeingReport,
     getTotalReceivables,
