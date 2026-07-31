@@ -1,0 +1,38 @@
+M2 Expenses Book 2b — Pages 1–8 Extraction Summary
+====================================================
+Source: tmp/m2-expenses-book2b/page-01.jpg through page-08.jpg
+Date range: 2023-04-07 to 2024-06-24
+
+Total rows extracted: 59
+Active rows (skip=false): 57
+Skipped rows: 2
+Active total amount: Rs 521,560
+
+Skipped entries:
+  Page 2: 2023-06-26 Rs 20,300 (page total / carry-forward, red ink)
+  Page 5: 2023-06-30 मशीन सर्व्हिसिंग Rs 26,000 (crossed out)
+
+Page totals (active only):
+  Page 1:  40,600 Rs  (2 rows) — 1/2 pagar (21–22 Jun 2023)
+  Page 2:  40,000 Rs  (16 rows) — July diesel/meals/salary detail
+  Page 3:  51,500 Rs  (3 rows) — Diesel pangara + 1-7-23 servicing
+  Page 4:   3,600 Rs  (1 row)  — Diesel (sole clear entry; mostly bleed-through)
+  Page 5:  21,710 Rs  (7 rows) — 30-6-23 maintenance & speaker
+  Page 6:  21,600 Rs  (2 rows) — Operator salary (13-11-23)
+  Page 7: 305,150 Rs  (21 rows) — Mar–May 2024 amounts (mostly undescribed)
+  Page 8:  37,400 Rs  (5 rows) — Bapu diesel (May–Jun 2024)
+
+By expense type (active):
+  Diesel      : 14 rows, Rs 100,000
+  Maintenance :  9 rows, Rs  41,260
+  Misc        : 26 rows, Rs 311,350
+  Salary      :  8 rows, Rs  68,950
+  RTO         :  0 rows, Rs       0
+
+Notes:
+  - Continuation after Book 1 (ended 2023-06-17); years 2023 and 2024 explicit on pages.
+  - Page 3 top totals (51500, 24900+26600) skipped as page arithmetic.
+  - Page 3 diesel pangara line has no written date; grouped with 1-7-23 block in remarks.
+  - Page 7: year 24 in red on Mar entries; Apr–May dates inferred as 2024.
+  - Page 7 rows without description classified as Misc (only first line says डिझेल).
+  - Bleed-through from reverse pages ignored throughout.

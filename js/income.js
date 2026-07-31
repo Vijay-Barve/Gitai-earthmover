@@ -17,13 +17,21 @@ const IncomeModule = (function () {
     const to = document.getElementById('incomeFilterTo')?.value;
     const machine = document.getElementById('incomeFilterMachine')?.value;
     const customer = document.getElementById('incomeFilterCustomer')?.value?.toLowerCase();
+    const q = (document.getElementById('incomeFilterSearch')?.value || '').trim().toLowerCase();
 
     return AppData.income.filter(r => {
       const d = String(r.Date || '');
       if (from && (!d || d < from)) return false;
       if (to && (!d || d > to)) return false;
       if (machine && r.Machine !== machine) return false;
-      if (customer && !r.Customer.toLowerCase().includes(customer)) return false;
+      if (customer && !String(r.Customer || '').toLowerCase().includes(customer)) return false;
+      if (q) {
+        const hay = [
+          r.ID, r.Date, r.Customer, r.Machine, r.Site, r.HoursWorked,
+          r.BillAmount, r.ReceivedAmount, r.PendingAmount, r.Remarks
+        ].join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
       return true;
     }).sort((a, b) => {
       const da = String(a.Date || '');
@@ -45,6 +53,7 @@ const IncomeModule = (function () {
       document.getElementById(id)?.addEventListener('change', render);
       document.getElementById(id)?.addEventListener('input', debounce(render, 300));
     });
+    document.getElementById('incomeFilterSearch')?.addEventListener('input', debounce(render, 250));
 
     document.getElementById('incomeForm').addEventListener('submit', async (e) => {
       e.preventDefault();

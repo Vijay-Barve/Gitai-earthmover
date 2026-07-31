@@ -1,0 +1,231 @@
+{
+  "src": [
+    {
+      "date": "2026-05-25",
+      "expenseType": "Misc",
+      "description": "खंडेगाव",
+      "amount": 11132,
+      "remarks": "photo IMG_4098"
+    },
+    {
+      "date": "2026-05-25",
+      "expenseType": "Misc",
+      "description": "खंडेगाव",
+      "amount": 7868,
+      "remarks": "photo IMG_4098 | date carried"
+    },
+    {
+      "date": "2026-07-25",
+      "expenseType": "Maintenance",
+      "description": "निळा पंप",
+      "amount": 6500,
+      "remarks": "photo IMG_4097"
+    },
+    {
+      "date": "2026-07-24",
+      "expenseType": "Misc",
+      "description": "निळा",
+      "amount": 20000,
+      "remarks": "photo IMG_4097 | ditto निळा"
+    },
+    {
+      "date": "2026-07-27",
+      "expenseType": "Maintenance",
+      "description": "वसमत पंप",
+      "amount": 86000,
+      "remarks": "photo IMG_4097"
+    },
+    {
+      "date": "2026-06-29",
+      "expenseType": "Misc",
+      "description": "वसमत",
+      "amount": 8000,
+      "remarks": "photo IMG_4097"
+    },
+    {
+      "date": "2026-06-29",
+      "expenseType": "Misc",
+      "description": "वसमत",
+      "amount": 14300,
+      "remarks": "photo IMG_4097"
+    },
+    {
+      "date": "2026-06-07",
+      "expenseType": "Misc",
+      "description": "वसमत",
+      "amount": 5000,
+      "remarks": "photo IMG_4097"
+    },
+    {
+      "date": "2026-06-01",
+      "expenseType": "Misc",
+      "description": "वसमत",
+      "amount": 12000,
+      "remarks": "photo IMG_4097"
+    },
+    {
+      "date": "2026-05-15",
+      "expenseType": "Misc",
+      "description": "खंडगाव",
+      "amount": 24999,
+      "remarks": "photo IMG_4097"
+    },
+    {
+      "date": "2026-05-08",
+      "expenseType": "Misc",
+      "description": "",
+      "amount": 15000,
+      "remarks": "photo IMG_4097"
+    },
+    {
+      "date": "2026-05-03",
+      "expenseType": "Misc",
+      "description": "",
+      "amount": 30000,
+      "remarks": "photo IMG_4097"
+    },
+    {
+      "date": "2026-05-03",
+      "expenseType": "Misc",
+      "description": "",
+      "amount": 649,
+      "remarks": "photo IMG_4097 | date carried from line above (undated amount)"
+    },
+    {
+      "date": "2026-03-30",
+      "expenseType": "Misc",
+      "description": "",
+      "amount": 1670,
+      "remarks": "photo IMG_4097"
+    }
+  ],
+  "imported": [
+    {
+      "ID": 1011,
+      "Date": "2026-05-25",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 11132,
+      "PaidBy": "",
+      "Remarks": "खंडेगाव | photo IMG_4098 | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1012,
+      "Date": "2026-05-25",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 7868,
+      "PaidBy": "",
+      "Remarks": "खंडेगाव | photo IMG_4098 | date carried | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1013,
+      "Date": "2026-07-25",
+      "ExpenseType": "Maintenance",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 6500,
+      "PaidBy": "",
+      "Remarks": "निळा पंप | photo IMG_4097 | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1014,
+      "Date": "2026-07-24",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 20000,
+      "PaidBy": "",
+      "Remarks": "निळा | photo IMG_4097 | ditto निळा | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1015,
+      "Date": "2026-07-27",
+      "ExpenseType": "Maintenance",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 86000,
+      "PaidBy": "",
+      "Remarks": "वसमत पंप | photo IMG_4097 | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1016,
+      "Date": "2026-06-29",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 8000,
+      "PaidBy": "",
+      "Remarks": "वसमत | photo IMG_4097 | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1017,
+      "Date": "2026-06-29",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 14300,
+      "PaidBy": "",
+      "Remarks": "वसमत | photo IMG_4097 | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1018,
+      "Date": "2026-06-07",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 5000,
+      "PaidBy": "",
+      "Remarks": "वसमत | photo IMG_4097 | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1019,
+      "Date": "2026-06-01",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 12000,
+      "PaidBy": "",
+      "Remarks": "वसमत | photo IMG_4097 | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1020,
+      "Date": "2026-05-15",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 24999,
+      "PaidBy": "",
+      "Remarks": "खंडगाव | photo IMG_4097 | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1021,
+      "Date": "2026-05-08",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 15000,
+      "PaidBy": "",
+      "Remarks": "photo IMG_4097 | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1022,
+      "Date": "2026-05-03",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 649,
+      "PaidBy": "",
+      "Remarks": "photo IMG_4097 | date carried from line above (undated amount) | imported from IMG_4097-4098 (M2 expenses photos)"
+    },
+    {
+      "ID": 1023,
+      "Date": "2026-03-30",
+      "ExpenseType": "Misc",
+      "Machine": "M2-Mahindra earthmaster sx iv 2023",
+      "Amount": 1670,
+      "PaidBy": "",
+      "Remarks": "photo IMG_4097 | imported from IMG_4097-4098 (M2 expenses photos)"
+    }
+  ],
+  "skipped": [
+    {
+      "date": "2026-05-03",
+      "expenseType": "Misc",
+      "description": "",
+      "amount": 30000,
+      "remarks": "photo IMG_4097",
+      "why": "existing"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+[
+  {"page": 10, "date": "2023-04-21", "expenseType": "Misc", "description": "", "amount": 21000, "remarks": "", "skip": false},
+  {"page": 10, "date": "2023-04-24", "expenseType": "Misc", "description": "", "amount": 20300, "remarks": "", "skip": false},
+  {"page": 10, "date": "2023-04-26", "expenseType": "Misc", "description": "", "amount": 20300, "remarks": "", "skip": false},
+
+  {"page": 11, "date": "2023-04-13", "expenseType": "Diesel", "description": "डिझेल", "amount": 5000, "remarks": "", "skip": false},
+  {"page": 11, "date": "2023-04-18", "expenseType": "Diesel", "description": "डिझेल", "amount": 2300, "remarks": "", "skip": false},
+  {"page": 11, "date": "2023-04-23", "expenseType": "Diesel", "description": "डिझेल", "amount": 5000, "remarks": "", "skip": false},
+  {"page": 11, "date": "2023-04-27", "expenseType": "Diesel", "description": "डिझेल", "amount": 8000, "remarks": "", "skip": false},
+  {"page": 11, "date": "2023-04-30", "expenseType": "Diesel", "description": "डिझेल", "amount": 20300, "remarks": "page total", "skip": true},
+
+  {"page": 12, "date": "2023-05-06", "expenseType": "Misc", "description": "", "amount": 20300, "remarks": "", "skip": false},
+
+  {"page": 13, "date": "2023-05-11", "expenseType": "Diesel", "description": "सी.एस. खा डीझेल दादा", "amount": 20000, "remarks": "", "skip": false},
+
+  {"page": 14, "date": "2023-05-12", "expenseType": "Diesel", "description": "कॅश दिली डिझेलला", "amount": 20000, "remarks": "", "skip": false},
+  {"page": 14, "date": "2023-05-15", "expenseType": "Diesel", "description": "कॅश दिली डिझेलला", "amount": 20000, "remarks": "", "skip": false},
+  {"page": 14, "date": "2023-05-17", "expenseType": "Diesel", "description": "कॅश दिली डिझेलला", "amount": 20300, "remarks": "", "skip": false},
+  {"page": 14, "date": "2023-05-20", "expenseType": "Diesel", "description": "कॅश दिली डिझेलला", "amount": 20300, "remarks": "", "skip": false},
+
+  {"page": 15, "date": "2023-05-23", "expenseType": "Diesel", "description": "डिझेल ८५ लि", "amount": 20400, "remarks": "बाळासाहेब हस्ते", "skip": false},
+  {"page": 15, "date": "2023-05-25", "expenseType": "Diesel", "description": "डिझेल ८३ लि", "amount": 20300, "remarks": "बाळासाहेब हस्ते", "skip": false},
+  {"page": 15, "date": "2023-05-27", "expenseType": "Diesel", "description": "डिझेल ८३ लि", "amount": 20300, "remarks": "बाळासाहेब हस्ते", "skip": false},
+  {"page": 15, "date": "2023-05-29", "expenseType": "Diesel", "description": "डिझेल ८३ लि", "amount": 20300, "remarks": "बाळासाहेब हस्ते", "skip": false},
+
+  {"page": 16, "date": "2023-06-01", "expenseType": "Salary", "description": "ड्रायव्हर पगार", "amount": 20300, "remarks": "दि. २७. ५/२३", "skip": false},
+  {"page": 16, "date": "2023-06-03", "expenseType": "Salary", "description": "ड्रायव्हर पगार", "amount": 20300, "remarks": "दि. २८. ५/२३", "skip": false},
+  {"page": 16, "date": "2023-06-06", "expenseType": "Salary", "description": "ड्रायव्हर पगार", "amount": 20300, "remarks": "दि. २९. ५/२३", "skip": false},
+  {"page": 16, "date": "2023-06-09", "expenseType": "Salary", "description": "ड्रायव्हर पगार", "amount": 20300, "remarks": "दि. ३०. ५/२३", "skip": false},
+
+  {"page": 17, "date": "2023-06-11", "expenseType": "Misc", "description": "", "amount": 24060, "remarks": "", "skip": false},
+  {"page": 17, "date": "2023-06-11", "expenseType": "Misc", "description": "", "amount": 20300, "remarks": "crossed out", "skip": true},
+  {"page": 17, "date": "2023-06-14", "expenseType": "Misc", "description": "", "amount": 20300, "remarks": "", "skip": false},
+  {"page": 17, "date": "2023-06-17", "expenseType": "Misc", "description": "", "amount": 20300, "remarks": "", "skip": false}
+]

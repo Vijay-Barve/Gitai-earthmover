@@ -1,0 +1,362 @@
+[
+  {
+    "page": 1,
+    "date": "2023-01-17",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2023-01-17",
+    "expenseType": "Salary",
+    "description": "बळीराम देसाई operator",
+    "amount": 5000,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2023-01-19",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 3500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2023-01-20",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 4500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2023-01-21",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 4500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2023-01-22",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 4500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2023-01-24",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 4000,
+    "remarks": "written 24-01-23",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2023-01-25",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 3700,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2023-01-25",
+    "expenseType": "Misc",
+    "description": "ड्रायव्हर खर्च",
+    "amount": 1000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2023-01-25",
+    "expenseType": "Maintenance",
+    "description": "ऑईल फिल्टर",
+    "amount": 1200,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2023-01-25",
+    "expenseType": "Maintenance",
+    "description": "मेन हब काम",
+    "amount": 31000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2023-01-25",
+    "expenseType": "Misc",
+    "description": "मजुरी",
+    "amount": 1500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2023-01-25",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 1000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2023-01-25",
+    "expenseType": "Maintenance",
+    "description": "एअर फिल्टर",
+    "amount": 2500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2023-02-09",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 3500,
+    "remarks": "circled 0025; amount reconciled to page total 28950",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2023-02-10",
+    "expenseType": "Diesel",
+    "description": "50 लीटर",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2023-02-11",
+    "expenseType": "Diesel",
+    "description": "50 लीटर",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2023-02-14",
+    "expenseType": "Diesel",
+    "description": "70 ली.",
+    "amount": 7000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2023-02-14",
+    "expenseType": "Misc",
+    "description": "कारखाना खर्च",
+    "amount": 2000,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2023-02-14",
+    "expenseType": "Maintenance",
+    "description": "मशीन वाशिंग",
+    "amount": 700,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2023-02-16",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 5750,
+    "remarks": "faint illegible text",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2023-02-20",
+    "expenseType": "Misc",
+    "description": "कॅश आसावरीकडे",
+    "amount": 10000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2023-02-20",
+    "expenseType": "Maintenance",
+    "description": "सर्व्हीसिंग",
+    "amount": 12714,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2023-02-20",
+    "expenseType": "Misc",
+    "description": "Decoration",
+    "amount": 1500,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2023-02-25",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 4500,
+    "remarks": "written 25-02-23",
+    "skip": false
+  },
+  {
+    "page": 5,
+    "date": "2023-03-05",
+    "expenseType": "Salary",
+    "description": "पगार",
+    "amount": 3500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 5,
+    "date": "2023-03-12",
+    "expenseType": "Salary",
+    "description": "पगार",
+    "amount": 3500,
+    "remarks": "ditto",
+    "skip": false
+  },
+  {
+    "page": 6,
+    "date": "2023-03-14",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 3700,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 6,
+    "date": "2023-03-15",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 3500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 7,
+    "date": "2023-03-18",
+    "expenseType": "Salary",
+    "description": "पवन डोलारे पगार",
+    "amount": 3700,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 7,
+    "date": "2023-03-21",
+    "expenseType": "Salary",
+    "description": "पवन डोलारे पगार",
+    "amount": 3700,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 7,
+    "date": "2023-03-24",
+    "expenseType": "Salary",
+    "description": "पवन डोलारे पगार",
+    "amount": 3700,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 7,
+    "date": "2023-03-25",
+    "expenseType": "Salary",
+    "description": "पवन डोलारे पगार",
+    "amount": 3700,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 8,
+    "date": "2023-03-27",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 3700,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 8,
+    "date": "2023-03-28",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 3700,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 8,
+    "date": "2023-04-02",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 4000,
+    "remarks": "written दि. 2-4.",
+    "skip": false
+  },
+  {
+    "page": 8,
+    "date": "2023-04-05",
+    "expenseType": "Misc",
+    "description": "",
+    "amount": 3700,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 9,
+    "date": "2023-04-17",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 3800,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 9,
+    "date": "2023-04-18",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 20100,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 9,
+    "date": "2023-04-19",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 6000,
+    "remarks": "",
+    "skip": false
+  }
+]

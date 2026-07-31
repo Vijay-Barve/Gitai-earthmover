@@ -1,0 +1,39 @@
+Machine 2 EXPENSE Ledger — Pages 01–09 Summary
+=================================================
+
+Total rows extracted:     40
+Active entries (skip=false): 40
+Skipped entries (skip=true):  0
+
+Active amount sum:        ₹204,564
+Date range:               2023-01-17 to 2023-04-19
+
+--- By Page (active only) ---
+Page 01:  7 entries  |  ₹31,000 (margin total 31000 matched)
+Page 02:  7 entries  |  ₹41,900
+Page 03:  7 entries  |  ₹28,950 (margin total 28950 matched; 09-02 amount read as 3500)
+Page 04:  4 entries  |  ₹28,714 (margin total 28714 matched)
+Page 05:  2 entries  |  ₹7,000
+Page 06:  2 entries  |  ₹7,200
+Page 07:  4 entries  |  ₹14,800 (margin total 14800 matched)
+Page 08:  4 entries  |  ₹15,100
+Page 09:  3 entries  |  ₹29,900
+
+--- By Expense Type (active only) ---
+Diesel:        11 entries  |  ₹63,800
+Salary:        7 entries  |  ₹26,800
+Maintenance:   5 entries  |  ₹48,114
+Misc:          17 entries  |  ₹65,850
+RTO:           0 entries  |  ₹0
+
+--- Margin Totals Skipped (not extracted as rows) ---
+31000 (page 01), 28950 (page 03), 28714 (page 04), 14800 (page 07)
+
+--- Notes ---
+- Page 01: operator line (Baliram Desai) dated from preceding 17-01 entry.
+- Page 03: 09-02 amount reconciled to 3500 via page margin total 28950.
+- Page 04: three 20-02 rows share date via ditto marks.
+- Page 05: 12-03 row is ditto पगार from 5-03 entry.
+- Page 08: four amount-only rows; no expense keyword written → Misc.
+- Bleed-through / ghost text from reverse pages ignored throughout.
+- No crossed-out entries found on pages 01–09.

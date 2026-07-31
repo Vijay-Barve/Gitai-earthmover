@@ -1,0 +1,34 @@
+M2 Expenses Book 1 — Pages 10–17 Extraction Summary
+====================================================
+Source: tmp/m2-expenses-book1/page-10.jpg through page-17.jpg
+Date range: 2023-04-13 to 2023-06-17
+
+Total rows extracted: 26
+Active rows (skip=false): 24
+Skipped rows: 2
+Active total amount: Rs 429,960
+
+Skipped entries:
+  Page 11: 2023-04-30 डिझेल Rs 20,300 (page total)
+  Page 17: 2023-06-11 Rs 20,300 (crossed out)
+
+Page totals (active only):
+  Page 10:  61,600 Rs  (3 rows) — Misc payments, no description
+  Page 11:  20,300 Rs  (4 rows) — Diesel detail for April
+  Page 12:  20,300 Rs  (1 row)  — Misc
+  Page 13:  20,000 Rs  (1 row)  — Diesel (CS kha)
+  Page 14:  80,600 Rs  (4 rows) — Diesel cash payments
+  Page 15:  81,300 Rs  (4 rows) — Diesel 83–85 L via Balasaheb
+  Page 16:  81,200 Rs  (4 rows) — Driver salary (27/5–30/5/23)
+  Page 17:  64,660 Rs  (3 rows) — Misc summary amounts
+
+By expense type (active):
+  Diesel  : 13 rows, Rs 202,200
+  Salary  :  4 rows, Rs  81,200
+  Misc    :  7 rows, Rs 146,560
+
+Notes:
+  - Year inferred as 2023 (M2 era; explicit -23 on earlier pages).
+  - Page 11 April diesel detail (13/4–27/4) sums to Rs 20,300; 30-04 line skipped as total.
+  - Page 16 red-date entries are driver salary (pagar) for work dates 27–30 May 2023.
+  - Page 17: Rs 24,060 active on 11-6; Rs 20,300 on same date crossed out.

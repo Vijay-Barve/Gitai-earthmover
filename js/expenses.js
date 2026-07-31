@@ -7,12 +7,19 @@ const ExpensesModule = (function () {
     const to = document.getElementById('expenseFilterTo')?.value;
     const machine = document.getElementById('expenseFilterMachine')?.value;
     const type = document.getElementById('expenseFilterType')?.value;
+    const q = (document.getElementById('expenseFilterSearch')?.value || '').trim().toLowerCase();
 
     return AppData.expenses.filter(r => {
       if (from && r.Date < from) return false;
       if (to && r.Date > to) return false;
       if (machine && r.Machine !== machine) return false;
       if (type && r.ExpenseType !== type) return false;
+      if (q) {
+        const hay = [
+          r.ID, r.Date, r.ExpenseType, r.Machine, r.Amount, r.PaidBy, r.Remarks
+        ].join(' ').toLowerCase();
+        if (!hay.includes(q)) return false;
+      }
       return true;
     });
   }
@@ -21,6 +28,7 @@ const ExpensesModule = (function () {
     ['expenseFilterFrom', 'expenseFilterTo', 'expenseFilterMachine', 'expenseFilterType'].forEach(id => {
       document.getElementById(id)?.addEventListener('change', render);
     });
+    document.getElementById('expenseFilterSearch')?.addEventListener('input', debounce(render, 250));
 
     document.getElementById('expenseForm').addEventListener('submit', async (e) => {
       e.preventDefault();
