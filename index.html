@@ -106,7 +106,7 @@
         <div class="global-search flex-grow-1 mx-3">
           <div class="input-group">
             <span class="input-group-text"><i class="bi bi-search"></i></span>
-            <input type="search" class="form-control" id="globalSearch" placeholder="Search income, expenses, partners, EMIs, machines..." autocomplete="off">
+            <input type="search" class="form-control" id="globalSearch" placeholder="Search by name, date (15/01/2022 or 15 Jan 2022), amount…" autocomplete="off">
           </div>
           <div id="searchResults" class="search-results dropdown-menu show d-none"></div>
         </div>
@@ -257,7 +257,7 @@
                   <label class="form-label">Search</label>
                   <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-search"></i></span>
-                    <input type="search" class="form-control" id="incomeFilterSearch" placeholder="Search customer, remarks, amount, site, date…" autocomplete="off">
+                    <input type="search" class="form-control" id="incomeFilterSearch" placeholder="Customer, remarks, amount, or date (15/01/2022, 15 Jan 2022)…" autocomplete="off">
                   </div>
                 </div>
               </div>
@@ -298,7 +298,7 @@
                   <label class="form-label">Search</label>
                   <div class="input-group">
                     <span class="input-group-text"><i class="bi bi-search"></i></span>
-                    <input type="search" class="form-control" id="expenseFilterSearch" placeholder="Search remarks, amount, type, machine, paid by, date…" autocomplete="off">
+                    <input type="search" class="form-control" id="expenseFilterSearch" placeholder="Remarks, amount, type, or date (15/01/2022, 15 Jan 2022)…" autocomplete="off">
                   </div>
                 </div>
               </div>
@@ -541,10 +541,24 @@
           <div class="card"><div class="card-body table-responsive"><table id="dieselTable" class="table table-sm"><thead><tr><th>Machine</th><th>Month</th><th>Diesel Cost</th><th>Hours</th><th>₹/Hour</th></tr></thead><tbody></tbody></table></div></div>
         </section>
         <section id="section-receivables" class="content-section">
-          <div class="section-header"><h1>Customer Receivables</h1><p class="text-muted">Ledger, ageing & outstanding tracking</p></div>
+          <div class="section-header d-flex justify-content-between flex-wrap gap-2 align-items-start">
+            <div>
+              <h1>Customer Receivables</h1>
+              <p class="text-muted mb-1">Ledger, ageing & outstanding tracking</p>
+              <p class="small text-muted mb-0" id="receivablesNote"></p>
+            </div>
+            <div>
+              <label class="form-label small mb-1">Show</label>
+              <select class="form-select form-select-sm" id="receivablesFilter" style="min-width:11rem">
+                <option value="outstanding" selected>Outstanding only</option>
+                <option value="all">All customers</option>
+              </select>
+            </div>
+          </div>
+          <div class="row g-3 mb-3" id="receivablesSummary"></div>
           <div class="row g-3 mb-4" id="ageingCards"></div>
           <div class="card mb-3"><div class="card-header"><h5>Top Outstanding Customers</h5></div><div class="card-body" id="topOutstanding"></div></div>
-          <div class="card"><div class="card-body"><table id="receivablesTable" class="table table-striped w-100"><thead><tr><th>Customer</th><th>Invoiced</th><th>Received</th><th>Pending</th><th>Invoices</th><th>Ageing</th></tr></thead><tbody></tbody></table></div></div>
+          <div class="card"><div class="card-body"><table id="receivablesTable" class="table table-striped w-100"><thead><tr><th>Customer</th><th>Invoiced</th><th>Received</th><th>Pending</th><th>Open</th><th>Ageing</th></tr></thead><tbody></tbody></table></div></div>
         </section>
         <section id="section-vendors" class="content-section">
           <div class="section-header d-flex justify-content-between flex-wrap gap-2">
@@ -703,7 +717,7 @@
               <div class="col-md-4"><label class="form-label">Customer</label><input type="text" class="form-control" id="incomeCustomer" required></div>
               <div class="col-md-4"><label class="form-label">Machine</label><select class="form-select" id="incomeMachine" required></select></div>
               <div class="col-md-4"><label class="form-label">Site</label><input type="text" class="form-control" id="incomeSite"></div>
-              <div class="col-md-4"><label class="form-label">Hours Worked</label><input type="number" class="form-control" id="incomeHours" min="0" step="0.5"></div>
+              <div class="col-md-4"><label class="form-label">Hours Worked</label><input type="number" class="form-control" id="incomeHours" min="0" step="any"></div>
               <div class="col-md-4"><label class="form-label">Bill Amount (₹)</label><input type="number" class="form-control" id="incomeBillAmount" min="0" step="0.01" required></div>
               <div class="col-md-4"><label class="form-label">Received Amount (₹)</label><input type="number" class="form-control" id="incomeReceivedAmount" min="0" step="0.01"></div>
               <div class="col-md-4"><label class="form-label">Pending Amount (₹)</label><input type="number" class="form-control" id="incomePendingAmount" readonly></div>
@@ -872,9 +886,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
   <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
-  <script src="js/config.js?v=20250731b"></script>
-  <script src="js/excel-store.js?v=20250626"></script>
-  <script src="js/legacy-migrate.js?v=20250626"></script>
+  <script src="js/config.js?v=20250801b"></script>
+  <script src="js/excel-store.js?v=20250801b"></script>
+  <script src="js/legacy-migrate.js?v=20250801b"></script>
   <script src="js/loan-utils.js?v=20250626"></script>
   <script src="js/api.js?v=20250731c"></script>
   <script src="js/standalone.js?v=20250731c"></script>
@@ -886,7 +900,7 @@
   <script src="js/alerts.js?v=20250619"></script>
   <script src="js/insights.js?v=20250619"></script>
   <script src="js/analytics.js?v=20250619"></script>
-  <script src="js/receivables.js?v=20250619"></script>
+  <script src="js/receivables.js?v=20250801c"></script>
   <script src="js/vendors.js?v=20250619"></script>
   <script src="js/cashflow.js?v=20250619"></script>
   <script src="js/bank-recon.js?v=20250619"></script>
@@ -896,11 +910,11 @@
   <script src="js/dashboard.js?v=20250619"></script>
   <script src="js/partners.js?v=20250619"></script>
   <script src="js/machines.js?v=20250619"></script>
-  <script src="js/income.js?v=20250623"></script>
-  <script src="js/expenses.js?v=20250623"></script>
+  <script src="js/income.js?v=20250801b"></script>
+  <script src="js/expenses.js?v=20250801b"></script>
   <script src="js/emi-payment.js?v=20250626"></script>
   <script src="js/emi.js?v=20250626"></script>
   <script src="js/reports.js?v=20250619"></script>
-  <script src="js/app.js?v=20250731c"></script>
+  <script src="js/app.js?v=20250801c"></script>
 </body>
 </html>

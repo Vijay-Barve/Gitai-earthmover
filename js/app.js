@@ -134,23 +134,35 @@ const App = (function () {
       const matches = [];
 
       AppData.income.forEach(r => {
-        const text = [r.Customer, r.Machine, r.Site, r.Remarks].join(' ').toLowerCase();
-        if (text.includes(q)) matches.push({ module: 'Income', label: `${r.Customer} — ${formatCurrency(r.BillAmount)}`, section: 'income', id: r.ID });
+        if (matchesSearch(q, [r.Customer, r.Machine, r.Site, r.Remarks, r.BillAmount], [r.Date])) {
+          matches.push({
+            module: 'Income',
+            label: `${formatDate(r.Date)} · ${r.Customer} — ${formatCurrency(r.BillAmount)}`,
+            section: 'income', id: r.ID
+          });
+        }
       });
 
       AppData.expenses.forEach(r => {
-        const text = [r.ExpenseType, r.Machine, r.PaidBy, r.Remarks].join(' ').toLowerCase();
-        if (text.includes(q)) matches.push({ module: 'Expense', label: `${r.ExpenseType} — ${formatCurrency(r.Amount)}`, section: 'expenses', id: r.ID });
+        if (matchesSearch(q, [r.ExpenseType, r.Machine, r.PaidBy, r.Remarks, r.Amount], [r.Date])) {
+          matches.push({
+            module: 'Expense',
+            label: `${formatDate(r.Date)} · ${r.ExpenseType} — ${formatCurrency(r.Amount)}`,
+            section: 'expenses', id: r.ID
+          });
+        }
       });
 
       AppData.partners.forEach(r => {
-        const text = [r.PartnerName, r.TransactionType, r.Remarks].join(' ').toLowerCase();
-        if (text.includes(q)) matches.push({ module: 'Partner', label: `${r.PartnerName} — ${r.TransactionType}`, section: 'partners', id: r.ID });
+        if (matchesSearch(q, [r.PartnerName, r.TransactionType, r.Remarks, r.Amount], [r.Date])) {
+          matches.push({ module: 'Partner', label: `${formatDate(r.Date)} · ${r.PartnerName} — ${r.TransactionType}`, section: 'partners', id: r.ID });
+        }
       });
 
       AppData.emi.forEach(r => {
-        const text = [r.Machine, r.Status].join(' ').toLowerCase();
-        if (text.includes(q)) matches.push({ module: 'EMI', label: `${r.Machine} — ${r.Status}`, section: 'emi', id: r.ID });
+        if (matchesSearch(q, [r.Machine, r.Status, r.EMIAmount], [r.DueDate, r.PaidDate])) {
+          matches.push({ module: 'EMI', label: `${formatDate(r.DueDate)} · ${r.Machine} — ${r.Status}`, section: 'emi', id: r.ID });
+        }
       });
 
       AppData.machines.forEach(r => {
@@ -470,6 +482,7 @@ const App = (function () {
     MachinesModule.init();
     IncomeModule.init();
     ExpensesModule.init();
+    ReceivablesModule.init();
     EmiModule.init();
     LoansModule.init();
     AssetsModule.init();

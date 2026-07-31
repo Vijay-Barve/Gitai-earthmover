@@ -33,10 +33,24 @@
 
         <!-- Receivables Section -->
         <section id="section-receivables" class="content-section">
-          <div class="section-header"><h1>Customer Receivables</h1><p class="text-muted">Ledger, ageing & outstanding tracking</p></div>
+          <div class="section-header d-flex justify-content-between flex-wrap gap-2 align-items-start">
+            <div>
+              <h1>Customer Receivables</h1>
+              <p class="text-muted mb-1">Ledger, ageing & outstanding tracking</p>
+              <p class="small text-muted mb-0" id="receivablesNote"></p>
+            </div>
+            <div>
+              <label class="form-label small mb-1">Show</label>
+              <select class="form-select form-select-sm" id="receivablesFilter" style="min-width:11rem">
+                <option value="outstanding" selected>Outstanding only</option>
+                <option value="all">All customers</option>
+              </select>
+            </div>
+          </div>
+          <div class="row g-3 mb-3" id="receivablesSummary"></div>
           <div class="row g-3 mb-4" id="ageingCards"></div>
           <div class="card mb-3"><div class="card-header"><h5>Top Outstanding Customers</h5></div><div class="card-body" id="topOutstanding"></div></div>
-          <div class="card"><div class="card-body"><table id="receivablesTable" class="table table-striped w-100"><thead><tr><th>Customer</th><th>Invoiced</th><th>Received</th><th>Pending</th><th>Invoices</th><th>Ageing</th></tr></thead><tbody></tbody></table></div></div>
+          <div class="card"><div class="card-body"><table id="receivablesTable" class="table table-striped w-100"><thead><tr><th>Customer</th><th>Invoiced</th><th>Received</th><th>Pending</th><th>Open</th><th>Ageing</th></tr></thead><tbody></tbody></table></div></div>
         </section>
 
         <!-- Vendors Section -->

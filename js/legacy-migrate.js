@@ -34,8 +34,9 @@ const LegacyMigrate = (function () {
   function parseDate(value) {
     if (!value) return '';
     if (value instanceof Date && !isNaN(value.getTime())) {
+      // Local calendar parts — UTC parts cause -1 day in IST for Excel dates
       const pad = n => (n < 10 ? '0' + n : String(n));
-      return `${value.getUTCFullYear()}-${pad(value.getUTCMonth() + 1)}-${pad(value.getUTCDate())}`;
+      return `${value.getFullYear()}-${pad(value.getMonth() + 1)}-${pad(value.getDate())}`;
     }
     const str = String(value).trim();
     if (!str) return '';

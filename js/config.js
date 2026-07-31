@@ -81,9 +81,57 @@ function formatCurrency(amount) {
 
 function formatDate(dateStr) {
   if (!dateStr) return '—';
+  const iso = String(dateStr).slice(0, 10);
+  const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (m) {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${m[3]} ${months[parseInt(m[2], 10) - 1]} ${m[1]}`;
+  }
   const d = new Date(dateStr);
   if (isNaN(d.getTime())) return dateStr;
   return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+}
+
+/** Searchable date forms: ISO + DD/MM/YYYY + "15 Jan 2022" + month/year, etc. */
+function dateSearchText(dateStr) {
+  if (!dateStr) return '';
+  const iso = String(dateStr).slice(0, 10);
+  const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!m) return iso.toLowerCase();
+  const [, y, mo, d] = m;
+  const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+  const mon = months[parseInt(mo, 10) - 1] || '';
+  const dNum = String(parseInt(d, 10));
+  const moNum = String(parseInt(mo, 10));
+  return [
+    iso,
+    `${d}/${mo}/${y}`, `${d}-${mo}-${y}`, `${d}.${mo}.${y}`,
+    `${dNum}/${moNum}/${y}`, `${dNum}-${moNum}-${y}`,
+    `${d} ${mon} ${y}`, `${dNum} ${mon} ${y}`,
+    `${mon} ${y}`, `${mo}/${y}`, `${mo}-${y}`, y
+  ].join(' ').toLowerCase();
+}
+
+/** True if query matches any field, including date-friendly typing (15/01/2022, 15 Jan 2022). */
+function matchesSearch(query, fields, dateFields) {
+  const q = String(query || '').trim().toLowerCase().replace(/\s+/g, ' ');
+  if (!q) return true;
+  const hay = [
+    ...(fields || []),
+    ...(dateFields || []).map(dateSearchText)
+  ].join(' ').toLowerCase();
+  if (hay.includes(q)) return true;
+
+  // Normalize typed dates: 15/1/22 → pad and expand
+  const dmY = q.match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{2,4})$/);
+  if (dmY) {
+    let day = dmY[1].padStart(2, '0');
+    let month = dmY[2].padStart(2, '0');
+    let year = dmY[3].length === 2 ? `20${dmY[3]}` : dmY[3];
+    const iso = `${year}-${month}-${day}`;
+    if (hay.includes(iso) || hay.includes(`${day}/${month}/${year}`)) return true;
+  }
+  return false;
 }
 
 function formatDateTime(dateStr) {

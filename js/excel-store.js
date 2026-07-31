@@ -43,8 +43,9 @@ const ExcelStore = (function () {
   function formatDateField(val) {
     if (!val) return '';
     if (val instanceof Date && !isNaN(val.getTime())) {
+      // SheetJS Excel dates are local-midnight. Using UTC parts shifts -1 day in India (IST).
       const pad = n => (n < 10 ? '0' + n : String(n));
-      return `${val.getUTCFullYear()}-${pad(val.getUTCMonth() + 1)}-${pad(val.getUTCDate())}`;
+      return `${val.getFullYear()}-${pad(val.getMonth() + 1)}-${pad(val.getDate())}`;
     }
     const str = String(val);
     const iso = str.match(/^(\d{4})-(\d{2})-(\d{2})/);

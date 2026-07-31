@@ -25,13 +25,10 @@ const IncomeModule = (function () {
       if (to && (!d || d > to)) return false;
       if (machine && r.Machine !== machine) return false;
       if (customer && !String(r.Customer || '').toLowerCase().includes(customer)) return false;
-      if (q) {
-        const hay = [
-          r.ID, r.Date, r.Customer, r.Machine, r.Site, r.HoursWorked,
-          r.BillAmount, r.ReceivedAmount, r.PendingAmount, r.Remarks
-        ].join(' ').toLowerCase();
-        if (!hay.includes(q)) return false;
-      }
+      if (q && !matchesSearch(q, [
+        r.ID, r.Customer, r.Machine, r.Site, r.HoursWorked,
+        r.BillAmount, r.ReceivedAmount, r.PendingAmount, r.Remarks
+      ], [r.Date])) return false;
       return true;
     }).sort((a, b) => {
       const da = String(a.Date || '');
@@ -57,6 +54,11 @@ const IncomeModule = (function () {
 
     document.getElementById('incomeForm').addEventListener('submit', async (e) => {
       e.preventDefault();
+      const form = e.target;
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
       const id = document.getElementById('incomeId').value;
       const bill = parseNum(document.getElementById('incomeBillAmount').value);
       const received = parseNum(document.getElementById('incomeReceivedAmount').value);
@@ -65,36 +67,46 @@ const IncomeModule = (function () {
         App.showAlert('Date is required for income records.', 'warning');
         return;
       }
+      // Disabled selects are skipped by native submit; read explicitly while scoped
+      const machineEl = document.getElementById('incomeMachine');
+      if (machineEl.disabled) machineEl.disabled = false;
       const data = {
         Date: dateVal,
         Customer: document.getElementById('incomeCustomer').value.trim(),
-        Machine: document.getElementById('incomeMachine').value,
+        Machine: machineEl.value,
         Site: document.getElementById('incomeSite').value,
-        HoursWorked: parseNum(document.getElementById('incomeHours').value),
+        HoursWorked: document.getElementById('incomeHours').value === ''
+          ? ''
+          : parseNum(document.getElementById('incomeHours').value),
         BillAmount: bill,
         ReceivedAmount: received,
         PendingAmount: Math.max(0, bill - received),
         Remarks: document.getElementById('incomeRemarks').value
       };
+      if (typeof MachineScope !== 'undefined' && MachineScope.getSelectedMachineName()) {
+        machineEl.disabled = true;
+      }
 
       const result = id
-        ? await ApiClient.put('income', { ...data, ID: parseInt(id) }, id)
+        ? await ApiClient.put('income', { ...data, ID: parseInt(id, 10) }, id)
         : await ApiClient.post('income', data);
 
       if (result.success) {
-        bootstrap.Modal.getInstance(document.getElementById('incomeModal')).hide();
+        bootstrap.Modal.getOrCreateInstance(document.getElementById('incomeModal')).hide();
         App.showAlert(id ? 'Income updated' : 'Income added');
         await App.loadData();
       } else {
-        App.showAlert(result.error, 'danger');
+        App.showAlert(result.error || 'Could not save income', 'danger');
       }
     });
 
     document.getElementById('incomeModal').addEventListener('show.bs.modal', (e) => {
-      if (e.relatedTarget && !document.getElementById('incomeId').value) {
+      // Add button sets relatedTarget; edit() opens programmatically (no relatedTarget)
+      if (e.relatedTarget) {
         document.getElementById('incomeForm').reset();
         document.getElementById('incomeId').value = '';
         document.getElementById('incomeDate').value = todayISO();
+        App.populateMachineSelects?.();
       }
     });
   }
@@ -130,19 +142,25 @@ const IncomeModule = (function () {
   }
 
   function edit(id) {
-    const r = AppData.income.find(x => x.ID == id);
-    if (!r) return;
+    const r = AppData.income.find(x => x.ID == id)
+      || AppData._all?.income?.find(x => x.ID == id);
+    if (!r) {
+      App.showAlert('Income record not found (id ' + id + '). Try Sync from Excel or refresh.', 'warning');
+      return;
+    }
     document.getElementById('incomeId').value = r.ID;
-    document.getElementById('incomeDate').value = r.Date;
-    document.getElementById('incomeCustomer').value = r.Customer;
-    document.getElementById('incomeMachine').value = r.Machine;
+    document.getElementById('incomeDate').value = r.Date || '';
+    document.getElementById('incomeCustomer').value = r.Customer || '';
+    document.getElementById('incomeMachine').value = r.Machine || '';
     document.getElementById('incomeSite').value = r.Site || '';
-    document.getElementById('incomeHours').value = r.HoursWorked || '';
+    document.getElementById('incomeHours').value =
+      r.HoursWorked === 0 || r.HoursWorked === '0' ? 0 : (r.HoursWorked || '');
     document.getElementById('incomeBillAmount').value = r.BillAmount;
     document.getElementById('incomeReceivedAmount').value = r.ReceivedAmount;
     document.getElementById('incomePendingAmount').value = r.PendingAmount;
     document.getElementById('incomeRemarks').value = r.Remarks || '';
-    new bootstrap.Modal(document.getElementById('incomeModal')).show();
+    calcPending();
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('incomeModal')).show();
   }
 
   async function remove(id) {

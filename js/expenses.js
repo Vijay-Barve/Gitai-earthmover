@@ -14,12 +14,9 @@ const ExpensesModule = (function () {
       if (to && r.Date > to) return false;
       if (machine && r.Machine !== machine) return false;
       if (type && r.ExpenseType !== type) return false;
-      if (q) {
-        const hay = [
-          r.ID, r.Date, r.ExpenseType, r.Machine, r.Amount, r.PaidBy, r.Remarks
-        ].join(' ').toLowerCase();
-        if (!hay.includes(q)) return false;
-      }
+      if (q && !matchesSearch(q, [
+        r.ID, r.ExpenseType, r.Machine, r.Amount, r.PaidBy, r.Remarks
+      ], [r.Date])) return false;
       return true;
     });
   }
@@ -32,34 +29,45 @@ const ExpensesModule = (function () {
 
     document.getElementById('expenseForm').addEventListener('submit', async (e) => {
       e.preventDefault();
+      const form = e.target;
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
       const id = document.getElementById('expenseId').value;
+      const machineEl = document.getElementById('expenseMachine');
+      if (machineEl.disabled) machineEl.disabled = false;
       const data = {
         Date: document.getElementById('expenseDate').value,
         ExpenseType: document.getElementById('expenseType').value,
-        Machine: document.getElementById('expenseMachine').value,
+        Machine: machineEl.value,
         Amount: parseNum(document.getElementById('expenseAmount').value),
         PaidBy: document.getElementById('expensePaidBy').value,
         Remarks: document.getElementById('expenseRemarks').value
       };
+      if (typeof MachineScope !== 'undefined' && MachineScope.getSelectedMachineName()) {
+        machineEl.disabled = true;
+      }
 
       const result = id
-        ? await ApiClient.put('expenses', { ...data, ID: parseInt(id) }, id)
+        ? await ApiClient.put('expenses', { ...data, ID: parseInt(id, 10) }, id)
         : await ApiClient.post('expenses', data);
 
       if (result.success) {
-        bootstrap.Modal.getInstance(document.getElementById('expenseModal')).hide();
+        bootstrap.Modal.getOrCreateInstance(document.getElementById('expenseModal')).hide();
         App.showAlert(id ? 'Expense updated' : 'Expense added');
         await App.loadData();
       } else {
-        App.showAlert(result.error, 'danger');
+        App.showAlert(result.error || 'Could not save expense', 'danger');
       }
     });
 
     document.getElementById('expenseModal').addEventListener('show.bs.modal', (e) => {
-      if (e.relatedTarget && !document.getElementById('expenseId').value) {
+      if (e.relatedTarget) {
         document.getElementById('expenseForm').reset();
         document.getElementById('expenseId').value = '';
         document.getElementById('expenseDate').value = todayISO();
+        App.populateMachineSelects?.();
       }
     });
   }
@@ -92,16 +100,24 @@ const ExpensesModule = (function () {
   }
 
   function edit(id) {
-    const r = AppData.expenses.find(x => x.ID == id);
-    if (!r) return;
+    const r = AppData.expenses.find(x => x.ID == id)
+      || AppData._all?.expenses?.find(x => x.ID == id);
+    if (!r) {
+      App.showAlert('Expense record not found (id ' + id + '). Try Sync from Excel or refresh.', 'warning');
+      return;
+    }
     document.getElementById('expenseId').value = r.ID;
-    document.getElementById('expenseDate').value = r.Date;
-    document.getElementById('expenseType').value = r.ExpenseType;
+    document.getElementById('expenseDate').value = r.Date || '';
+    const typeEl = document.getElementById('expenseType');
+    if (r.ExpenseType && ![...typeEl.options].some(o => o.value === r.ExpenseType)) {
+      typeEl.add(new Option(r.ExpenseType, r.ExpenseType));
+    }
+    typeEl.value = r.ExpenseType || '';
     document.getElementById('expenseMachine').value = r.Machine || '';
     document.getElementById('expenseAmount').value = r.Amount;
     document.getElementById('expensePaidBy').value = r.PaidBy || '';
     document.getElementById('expenseRemarks').value = r.Remarks || '';
-    new bootstrap.Modal(document.getElementById('expenseModal')).show();
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('expenseModal')).show();
   }
 
   async function remove(id) {
