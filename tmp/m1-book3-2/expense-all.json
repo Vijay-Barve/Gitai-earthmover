@@ -1,0 +1,1244 @@
+[
+  {
+    "page": 1,
+    "date": "2025-03-08",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-09",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-09",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 1,
+    "date": "2025-03-10",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3600,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-10",
+    "expenseType": "Maintenance",
+    "description": "कटर कीट",
+    "amount": 7000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-11",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-12",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-13",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-13",
+    "expenseType": "Maintenance",
+    "description": "मशीन पॅड",
+    "amount": 2600,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 1,
+    "date": "2025-03-13",
+    "expenseType": "Maintenance",
+    "description": "maintenance filter",
+    "amount": 6592,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 1,
+    "date": "2025-03-13",
+    "expenseType": "Salary",
+    "description": "साहीबा",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 1,
+    "date": "2025-03-13",
+    "expenseType": "Salary",
+    "description": "मुसा",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 1,
+    "date": "2025-03-16",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-17",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-18",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-18",
+    "expenseType": "Misc",
+    "description": "पेट्रोल",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-19",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 2400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-20",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-21",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 1,
+    "date": "2025-03-21",
+    "expenseType": "Salary",
+    "description": "ऑपरेटर",
+    "amount": 300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2025-03-23",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2025-03-24",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2025-03-25",
+    "expenseType": "Maintenance",
+    "description": "सेल्फ नवीन",
+    "amount": 9000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2025-03-25",
+    "expenseType": "Maintenance",
+    "description": "मॅकॅनीक",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 2,
+    "date": "2025-03-25",
+    "expenseType": "Misc",
+    "description": "इतर",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 2,
+    "date": "2025-03-25",
+    "expenseType": "Misc",
+    "description": "पाईप KPC",
+    "amount": 2200,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2025-03-27",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2025-03-28",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2025-03-29",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 10000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2025-03-31",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 10000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2025-03-31",
+    "expenseType": "Maintenance",
+    "description": "हायड्रोलिक ऑईल",
+    "amount": 7200,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2025-03-31",
+    "expenseType": "Salary",
+    "description": "ड्रिवर",
+    "amount": 660,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2025-03-21",
+    "expenseType": "Misc",
+    "description": "साहीबा कपडे",
+    "amount": 1100,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 3,
+    "date": "2025-04-01",
+    "expenseType": "Misc",
+    "description": "ताज सुंभ",
+    "amount": 1300,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 3,
+    "date": "2025-04-01",
+    "expenseType": "Misc",
+    "description": "साहीबा चप्पल रिचार्ज",
+    "amount": 900,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 3,
+    "date": "2025-04-01",
+    "expenseType": "Misc",
+    "description": "साईबा भेला",
+    "amount": 3200,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 3,
+    "date": "2025-04-01",
+    "expenseType": "Misc",
+    "description": "गोरख चनेरे",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 3,
+    "date": "2025-04-01",
+    "expenseType": "Maintenance",
+    "description": "Hyd oil",
+    "amount": 6860,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-05",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-06",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-02",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-02",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 4,
+    "date": "2025-04-08",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-08",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 4,
+    "date": "2025-04-07",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-14",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-14",
+    "expenseType": "Misc",
+    "description": "गोरख चौरे",
+    "amount": 600,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 4,
+    "date": "2025-04-12",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5430,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-13",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-11",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3600,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-09",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-09",
+    "expenseType": "Misc",
+    "description": "संगमेश्वर",
+    "amount": 850,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 4,
+    "date": "2025-04-20",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-18",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2025-04-21",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2025-04-22",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3600,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2025-04-22",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 5,
+    "date": "2025-04-23",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2025-04-28",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2025-04-29",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2025-04-24",
+    "expenseType": "Maintenance",
+    "description": "",
+    "amount": 14600,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2025-04-27",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-01",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-01",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 14499,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 6,
+    "date": "2025-05-01",
+    "expenseType": "Maintenance",
+    "description": "इंजीन काम",
+    "amount": 6000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 6,
+    "date": "2025-05-01",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 6,
+    "date": "2025-05-03",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 4000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-04",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 14000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-06",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-07",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 14000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-11",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 14000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-13",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 14000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-15",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 14000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-16",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 10000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-18",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3600,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-23",
+    "expenseType": "Maintenance",
+    "description": "Maintenance",
+    "amount": 14800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-19",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3600,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-20",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 14500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2025-05-22",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 14500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2025-05-26",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2025-05-27",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2025-05-29",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3600,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2025-05-30",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 12800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2025-05-30",
+    "expenseType": "Maintenance",
+    "description": "Maintenance",
+    "amount": 12000,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 7,
+    "date": "2025-05-30",
+    "expenseType": "Maintenance",
+    "description": "1500 मॅकॅनिक",
+    "amount": 1500,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 8,
+    "date": "2025-06-01",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3600,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 8,
+    "date": "2025-06-02",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 13000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 8,
+    "date": "2025-06-05",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 14500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 8,
+    "date": "2025-06-09",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 8,
+    "date": "2025-06-10",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3600,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 8,
+    "date": "2025-06-10",
+    "expenseType": "Maintenance",
+    "description": "मशीन T",
+    "amount": 4000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 9,
+    "date": "2025-06-10",
+    "expenseType": "Maintenance",
+    "description": "हायड्रोलिक ऑईल",
+    "amount": 11000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 9,
+    "date": "2025-06-10",
+    "expenseType": "Salary",
+    "description": "लोखंडे",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 9,
+    "date": "2025-06-10",
+    "expenseType": "Salary",
+    "description": "operator जेवण खर्च",
+    "amount": 41600,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 9,
+    "date": "2025-06-10",
+    "expenseType": "Salary",
+    "description": "राकेश",
+    "amount": 60400,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 9,
+    "date": "2025-06-10",
+    "expenseType": "Salary",
+    "description": "राकेश मेहुणा",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 9,
+    "date": "2025-06-10",
+    "expenseType": "Salary",
+    "description": "प्रेम पासवान",
+    "amount": 55250,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 9,
+    "date": "2025-06-10",
+    "expenseType": "Salary",
+    "description": "प्रेम पासवान",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": "-||- | dateMappedFromIncome:true"
+  },
+  {
+    "page": 9,
+    "date": "2025-06-10",
+    "expenseType": "Salary",
+    "description": "अरविंद लोखंडे",
+    "amount": 28000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 9,
+    "date": "2025-06-10",
+    "expenseType": "Salary",
+    "description": "अरविंद लोखंडे",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": "-||- | dateMappedFromIncome:true"
+  },
+  {
+    "page": 9,
+    "date": "2025-06-10",
+    "expenseType": "Salary",
+    "description": "राकेश",
+    "amount": 18000,
+    "paidBy": "",
+    "remarks": "बाकी हप्ते | dateMappedFromIncome:true"
+  },
+  {
+    "page": 11,
+    "date": "2024-02-24",
+    "expenseType": "Maintenance",
+    "description": "बॅटरी",
+    "amount": 8000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 12,
+    "date": "2024-04-26",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3700,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 12,
+    "date": "2024-04-28",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 5500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-01",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 5500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-02",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-03",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 5800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-06",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 5500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-07",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 10000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-09",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4700,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-10",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3700,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-11",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-12",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 5500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-15",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 5500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-18",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 5500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-05-19",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3700,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 16,
+    "date": "2024-05-20",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 5500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-05-20",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3700,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-05-21",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 6800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-05-22",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3850,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-05-20",
+    "expenseType": "Misc",
+    "description": "other",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 17,
+    "date": "2024-05-20",
+    "expenseType": "Misc",
+    "description": "आंबेसांगवी",
+    "amount": 39360,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 17,
+    "date": "2024-05-20",
+    "expenseType": "Misc",
+    "description": "वसमत",
+    "amount": 15000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 17,
+    "date": "2024-05-20",
+    "expenseType": "Misc",
+    "description": "उस्माननगर",
+    "amount": 37300,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 17,
+    "date": "2024-05-25",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-05-26",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3850,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2024-06-01",
+    "expenseType": "Salary",
+    "description": "अरविंद",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 18,
+    "date": "2024-06-01",
+    "expenseType": "Maintenance",
+    "description": "कटर किट",
+    "amount": 7000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 18,
+    "date": "2024-06-01",
+    "expenseType": "Maintenance",
+    "description": "ऑईल + मेंटेनन्स",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 18,
+    "date": "2024-06-01",
+    "expenseType": "Maintenance",
+    "description": "ऑईल सील",
+    "amount": 1600,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 18,
+    "date": "2024-06-01",
+    "expenseType": "Maintenance",
+    "description": "हायड्रॉलिक पाईप",
+    "amount": 2800,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 18,
+    "date": "2024-06-01",
+    "expenseType": "Maintenance",
+    "description": "चार्जिंग बोर्ड",
+    "amount": 750,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 18,
+    "date": "2024-06-01",
+    "expenseType": "Salary",
+    "description": "गोरख",
+    "amount": 1500,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 18,
+    "date": "2024-06-01",
+    "expenseType": "Misc",
+    "description": "ईतर",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 18,
+    "date": "2024-06-01",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 15000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-07-01",
+    "expenseType": "Misc",
+    "description": "payment",
+    "amount": 10000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-07-01",
+    "expenseType": "Misc",
+    "description": "राकेश",
+    "amount": 45000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 19,
+    "date": "2024-07-01",
+    "expenseType": "Salary",
+    "description": "राहूल",
+    "amount": 10000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {"page":11,"date":"2024-02-24","expenseType":"Maintenance","description":"बॅटरी","amount":8000,"paidBy":"","remarks":""},
+
+  {"page":12,"date":"2024-04-26","expenseType":"Diesel","description":"Disel","amount":3700,"paidBy":"","remarks":""},
+  {"page":12,"date":"2024-04-28","expenseType":"Diesel","description":"Disel","amount":5500,"paidBy":"","remarks":""},
+
+  {"page":13,"date":"2024-05-01","expenseType":"Diesel","description":"Disel","amount":5500,"paidBy":"","remarks":""},
+  {"page":13,"date":"2024-05-02","expenseType":"Diesel","description":"Disel","amount":2000,"paidBy":"","remarks":""},
+  {"page":13,"date":"2024-05-03","expenseType":"Diesel","description":"Disel","amount":5800,"paidBy":"","remarks":""},
+  {"page":13,"date":"2024-05-06","expenseType":"Diesel","description":"Disel","amount":5500,"paidBy":"","remarks":""},
+  {"page":13,"date":"2024-05-07","expenseType":"Diesel","description":"Disel","amount":10000,"paidBy":"","remarks":""},
+  {"page":13,"date":"2024-05-09","expenseType":"Diesel","description":"Disel","amount":4700,"paidBy":"","remarks":""},
+  {"page":13,"date":"2024-05-10","expenseType":"Diesel","description":"Disel","amount":3700,"paidBy":"","remarks":""},
+  {"page":13,"date":"2024-05-11","expenseType":"Diesel","description":"Disel","amount":5000,"paidBy":"","remarks":""},
+  {"page":13,"date":"2024-05-12","expenseType":"Diesel","description":"Disel","amount":5500,"paidBy":"","remarks":""},
+  {"page":13,"date":"2024-05-15","expenseType":"Diesel","description":"Disel","amount":5500,"paidBy":"","remarks":""},
+  {"page":13,"date":"2024-05-18","expenseType":"Diesel","description":"Disel","amount":5500,"paidBy":"","remarks":""},
+
+  {"page":14,"date":"2024-05-19","expenseType":"Diesel","description":"Disel","amount":3700,"paidBy":"","remarks":""},
+
+  {"page":16,"date":"2024-05-20","expenseType":"Diesel","description":"Disel","amount":5500,"paidBy":"","remarks":""},
+
+  {"page":17,"date":"2024-05-20","expenseType":"Diesel","description":"Disel","amount":3700,"paidBy":"","remarks":""},
+  {"page":17,"date":"2024-05-21","expenseType":"Diesel","description":"Disel","amount":6800,"paidBy":"","remarks":""},
+  {"page":17,"date":"2024-05-22","expenseType":"Diesel","description":"Disel","amount":3850,"paidBy":"","remarks":""},
+  {"page":17,"date":"","expenseType":"Misc","description":"other","amount":2000,"paidBy":"","remarks":"no date on spread"},
+  {"page":17,"date":"","expenseType":"Misc","description":"आंबेसांगवी","amount":39360,"paidBy":"","remarks":"no date on spread"},
+  {"page":17,"date":"","expenseType":"Misc","description":"वसमत","amount":15000,"paidBy":"","remarks":"no date on spread"},
+  {"page":17,"date":"","expenseType":"Misc","description":"उस्माननगर","amount":37300,"paidBy":"","remarks":"no date on spread"},
+  {"page":17,"date":"2024-05-25","expenseType":"Diesel","description":"Disel","amount":2000,"paidBy":"","remarks":""},
+  {"page":17,"date":"2024-05-26","expenseType":"Diesel","description":"Disel","amount":3850,"paidBy":"","remarks":""},
+
+  {"page":18,"date":"","expenseType":"Salary","description":"अरविंद","amount":5000,"paidBy":"","remarks":"no date on spread"},
+  {"page":18,"date":"","expenseType":"Maintenance","description":"कटर किट","amount":7000,"paidBy":"","remarks":"no date on spread"},
+  {"page":18,"date":"","expenseType":"Maintenance","description":"ऑईल + मेंटेनन्स","amount":3500,"paidBy":"","remarks":"no date on spread"},
+  {"page":18,"date":"","expenseType":"Maintenance","description":"ऑईल सील","amount":1600,"paidBy":"","remarks":"no date on spread"},
+  {"page":18,"date":"","expenseType":"Maintenance","description":"हायड्रॉलिक पाईप","amount":2800,"paidBy":"","remarks":"no date on spread"},
+  {"page":18,"date":"","expenseType":"Maintenance","description":"चार्जिंग बोर्ड","amount":750,"paidBy":"","remarks":"no date on spread"},
+  {"page":18,"date":"","expenseType":"Salary","description":"गोरख","amount":1500,"paidBy":"","remarks":"no date on spread"},
+  {"page":18,"date":"","expenseType":"Misc","description":"ईतर","amount":2000,"paidBy":"","remarks":"no date on spread"},
+  {"page":18,"date":"2024-06-01","expenseType":"Diesel","description":"Disel","amount":15000,"paidBy":"","remarks":""},
+
+  {"page":19,"date":"2024-07-01","expenseType":"Misc","description":"payment","amount":10000,"paidBy":"","remarks":""},
+  {"page":19,"date":"","expenseType":"Misc","description":"राकेश","amount":45000,"paidBy":"","remarks":"no date on spread"},
+  {"page":19,"date":"","expenseType":"Salary","description":"राहूल","amount":10000,"paidBy":"","remarks":"no date on spread"}
+]

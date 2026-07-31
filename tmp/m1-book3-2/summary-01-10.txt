@@ -1,0 +1,32 @@
+M1 Ledger — book3-2 pages 01-10
+========================================
+Income entries:  166
+Expense entries: 101
+
+Income bill total:     9,91,700
+Income received total: 7,91,800
+Income pending total:  1,99,900
+Expense amount total:  6,98,841
+
+Per-page breakdown:
+----------------------------------------
+Page 01: income 17 rows | bill 1,90,160 | received 67,160 | pending 1,23,000
+         expense  20 rows | amount 65,392
+Page 02: income 17 rows | bill 1,57,680 | received 1,14,180 | pending 43,500
+         expense  13 rows | amount 56,360
+Page 03: income 17 rows | bill 39,500 | received 39,500 | pending 0
+         expense   5 rows | amount 12,760
+Page 04: income 17 rows | bill 87,560 | received 87,560 | pending 0
+         expense  17 rows | amount 54,180
+Page 05: income 16 rows | bill 1,28,000 | received 1,17,000 | pending 11,000
+         expense   7 rows | amount 36,800
+Page 06: income 16 rows | bill 31,900 | received 31,900 | pending 0
+         expense  17 rows | amount 1,65,199
+Page 07: income 17 rows | bill 59,200 | received 59,200 | pending 0
+         expense   6 rows | amount 36,800
+Page 08: income 16 rows | bill 1,68,700 | received 1,47,500 | pending 21,200
+         expense   6 rows | amount 44,100
+Page 09: income 18 rows | bill 83,900 | received 83,900 | pending 0
+         expense  10 rows | amount 2,27,250
+Page 10: income 15 rows | bill 45,100 | received 43,900 | pending 1,200
+         expense   0 rows | amount 0

@@ -15,7 +15,7 @@ const CONFIG = {
 
   USE_LOCAL_STORAGE: true,
   LOCAL_STORAGE_KEY: 'earthmovers-data-v1',
-  DATA_SNAPSHOT_VERSION: '18',
+  DATA_SNAPSHOT_VERSION: '21',
 
   EMI_PAYMENT_MODES: ['Business', 'Partner', 'Split'],
 

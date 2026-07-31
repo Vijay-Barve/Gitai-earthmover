@@ -1,0 +1,2054 @@
+[
+  {
+    "page": 1,
+    "date": "2023-09-29",
+    "expenseType": "Misc",
+    "description": "शकुंतलाई दवाखाना नांदेड",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 1,
+    "date": "2023-09-29",
+    "expenseType": "Misc",
+    "description": "शालिण दारी",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 1,
+    "date": "2023-09-29",
+    "expenseType": "Misc",
+    "description": "शालिण दारी",
+    "amount": 1200,
+    "paidBy": "",
+    "remarks": "-||- | dateMappedFromIncome:true"
+  },
+  {
+    "page": 1,
+    "date": "2023-09-29",
+    "expenseType": "Misc",
+    "description": "शालिण दारी - ड्रेस",
+    "amount": 1500,
+    "paidBy": "",
+    "remarks": "-||- | dateMappedFromIncome:true"
+  },
+  {
+    "page": 1,
+    "date": "2023-09-28",
+    "expenseType": "Diesel",
+    "description": "disel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": "28-sep-2023"
+  },
+  {
+    "page": 1,
+    "date": "2023-09-28",
+    "expenseType": "Diesel",
+    "description": "disel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 1,
+    "date": "2023-10-10",
+    "expenseType": "Diesel",
+    "description": "disel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": "10-oct-2023"
+  },
+  {
+    "page": 1,
+    "date": "2023-10-10",
+    "expenseType": "Petrol/Misc",
+    "description": "पेट्रोल",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-11-23",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 1500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-11-26",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-04",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-06",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-05",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-07",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-07",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3240,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-08",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-09",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-10",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-16",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 12000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-18",
+    "expenseType": "Diesel",
+    "description": "Disel (नविन मशीन)",
+    "amount": 4900,
+    "paidBy": "",
+    "remarks": "new machine"
+  },
+  {
+    "page": 2,
+    "date": "2023-12-01",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 2,
+    "date": "2023-12-11",
+    "expenseType": "Maintenance",
+    "description": "फैज्जु मेकॅनिक बॅटरी",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2023-12-11",
+    "expenseType": "Misc",
+    "description": "सचिन कुंभार",
+    "amount": 3200,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2023-12-11",
+    "expenseType": "Maintenance",
+    "description": "Motorcycle Tube",
+    "amount": 300,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2023-12-11",
+    "expenseType": "Salary",
+    "description": "गजानन ड्रायव्हर operator",
+    "amount": 700,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2023-12-11",
+    "expenseType": "Maintenance",
+    "description": "नांदेड सर्व्हिसिंग",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2023-12-11",
+    "expenseType": "Misc",
+    "description": "निळा शेड फोन पे",
+    "amount": 1100,
+    "paidBy": "",
+    "remarks": "Phone Pe | dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2023-12-11",
+    "expenseType": "Salary",
+    "description": "राहुल ऑपरेटर",
+    "amount": 2800,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2023-12-11",
+    "expenseType": "Maintenance",
+    "description": "तुकाराम मेकॅनिक",
+    "amount": 2885,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 2,
+    "date": "2023-12-11",
+    "expenseType": "Diesel",
+    "description": "अब्बन डिझेल सुतेगांव",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 3,
+    "date": "2024-01-11",
+    "expenseType": "Misc",
+    "description": "बंगाली किराणा",
+    "amount": 1100,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2024-01-17",
+    "expenseType": "Diesel",
+    "description": "पुर्णा रेल्वे डिझेल",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2024-01-19",
+    "expenseType": "Misc",
+    "description": "ऑपरेटर शिदोरी",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2024-01-19",
+    "expenseType": "Misc",
+    "description": "शाम ठोरे",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 4,
+    "date": "2024-01-20",
+    "expenseType": "Diesel",
+    "description": "पुर्णा disel",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2024-01-22",
+    "expenseType": "Misc",
+    "description": "करण मोबाईल",
+    "amount": 1050,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2024-01-22",
+    "expenseType": "Misc",
+    "description": "पुर्णा खर्च",
+    "amount": 400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 4,
+    "date": "2024-01-22",
+    "expenseType": "Petrol/Misc",
+    "description": "ऑपरेटर रिचार्ज",
+    "amount": 300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-01-29",
+    "expenseType": "Diesel",
+    "description": "disel",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-01-29",
+    "expenseType": "Misc",
+    "description": "मराठा आरक्षण गुलाल व हार",
+    "amount": 1050,
+    "paidBy": "",
+    "remarks": "750+300"
+  },
+  {
+    "page": 5,
+    "date": "2024-02-01",
+    "expenseType": "Diesel",
+    "description": "disel नवीन मशीन",
+    "amount": 2400,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-02-01",
+    "expenseType": "Diesel",
+    "description": "disel जुनी मशीन",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-02-03",
+    "expenseType": "Diesel",
+    "description": "disel",
+    "amount": 2500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-02-06",
+    "expenseType": "Diesel",
+    "description": "disel",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-02-06",
+    "expenseType": "Petrol/Misc",
+    "description": "निजाम ऑपरेटर रिचार्ज",
+    "amount": 300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-02-06",
+    "expenseType": "Diesel",
+    "description": "सुधाकर गंवंदे disel",
+    "amount": 1100,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-02-06",
+    "expenseType": "Salary",
+    "description": "ऑपरेटर बिहारी",
+    "amount": 16000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-02-15",
+    "expenseType": "Diesel",
+    "description": "राहुल वसमत ऑप diesel",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-02-15",
+    "expenseType": "Diesel",
+    "description": "diesel",
+    "amount": 1500,
+    "paidBy": "",
+    "remarks": "-||- context"
+  },
+  {
+    "page": 5,
+    "date": "2024-02-29",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3200,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-03-02",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 5,
+    "date": "2024-03-05",
+    "expenseType": "Misc",
+    "description": "राहुल वसमत बजार",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2024-03-14",
+    "expenseType": "Misc",
+    "description": "राहुल मुलीसाठी दवाखाना",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "dateMappedFromIncome:true"
+  },
+  {
+    "page": 6,
+    "date": "2024-03-14",
+    "expenseType": "Misc",
+    "description": "राहुल",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2024-03-14",
+    "expenseType": "Salary",
+    "description": "अनिल ऑप.",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2024-03-14",
+    "expenseType": "Misc",
+    "description": "राहुल वंसमत vad",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2024-03-14",
+    "expenseType": "Salary",
+    "description": "अनिल ऑप.",
+    "amount": 100,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2024-03-14",
+    "expenseType": "Misc",
+    "description": "राहुल वंसमत घरभाड",
+    "amount": 1700,
+    "paidBy": "",
+    "remarks": "house rent"
+  },
+  {
+    "page": 6,
+    "date": "2024-03-14",
+    "expenseType": "Maintenance",
+    "description": "J.C.B बेल्ट",
+    "amount": 360,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 6,
+    "date": "2024-03-14",
+    "expenseType": "Salary",
+    "description": "अनिल",
+    "amount": 1200,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2024-04-01",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2024-04-02",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2024-04-02",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2024-04-02",
+    "expenseType": "Maintenance",
+    "description": "व दात बकीट",
+    "amount": 700,
+    "paidBy": "",
+    "remarks": "bucket tooth"
+  },
+  {
+    "page": 7,
+    "date": "2024-04-04",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2024-04-05",
+    "expenseType": "Diesel",
+    "description": "Disel पावती नाही (अॅगद)",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": "no receipt"
+  },
+  {
+    "page": 7,
+    "date": "2024-04-05",
+    "expenseType": "Salary",
+    "description": "अनिल ऑप.",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2024-04-06",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2024-04-07",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2024-04-08",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3200,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2024-04-08",
+    "expenseType": "Maintenance",
+    "description": "फॅन बेल्ट नवीन मशीन",
+    "amount": 350,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 7,
+    "date": "2024-04-08",
+    "expenseType": "Maintenance",
+    "description": "ग्रीस बकीट",
+    "amount": 750,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 8,
+    "date": "2024-04-09",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3200,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 8,
+    "date": "2024-04-10",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 8,
+    "date": "2024-04-10",
+    "expenseType": "Maintenance",
+    "description": "पाईप Disel 20 फुट",
+    "amount": 300,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 8,
+    "date": "2024-04-11",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 8,
+    "date": "2024-04-16",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2950,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 9,
+    "date": "2024-04-20",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 9,
+    "date": "2024-04-19",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 9,
+    "date": "2024-04-20",
+    "expenseType": "Maintenance",
+    "description": "कटर देवप्पा ट्रेडर्स दाताकीट",
+    "amount": 5120,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 9,
+    "date": "2024-04-20",
+    "expenseType": "Maintenance",
+    "description": "महिंद्रा एजन्सी 20 ली. ऑईल",
+    "amount": 6860,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 9,
+    "date": "2024-04-20",
+    "expenseType": "Maintenance",
+    "description": "पाईप सिलिंडर",
+    "amount": 200,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 9,
+    "date": "2024-04-20",
+    "expenseType": "Misc",
+    "description": "पेट्रोल",
+    "amount": 400,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 9,
+    "date": "2024-04-22",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 9,
+    "date": "2024-04-23",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 9,
+    "date": "2024-04-20",
+    "expenseType": "Salary",
+    "description": "विजय ऑप.",
+    "amount": 950,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 9,
+    "date": "2024-04-20",
+    "expenseType": "Misc",
+    "description": "कपडे आंबेडकर जयंतीसाठी",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": "-||- विजय ऑप. | no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 10,
+    "date": "2024-04-26",
+    "expenseType": "Salary",
+    "description": "राहुल धांदरे हारी",
+    "amount": 15000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 10,
+    "date": "2024-04-27",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 10,
+    "date": "2024-04-30",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 10,
+    "date": "2024-04-30",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 10,
+    "date": "2024-05-03",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 10,
+    "date": "2024-05-04",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 10,
+    "date": "2024-05-04",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 10,
+    "date": "2024-05-05",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 10,
+    "date": "2024-05-06",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 10,
+    "date": "2024-04-30",
+    "expenseType": "Maintenance",
+    "description": "नांदेड शोरुम बुश व बेल्ट",
+    "amount": 1410,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-11",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 11,
+    "date": "2024-05-12",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 11,
+    "date": "2024-05-11",
+    "expenseType": "Maintenance",
+    "description": "वाजर मशीन",
+    "amount": 450,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-11",
+    "expenseType": "Misc",
+    "description": "शकुंत वंधारे (मामा नवलक डंगल)",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-11",
+    "expenseType": "Misc",
+    "description": "राजू बुधाणे",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-14",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 8000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 11,
+    "date": "2024-05-11",
+    "expenseType": "Maintenance",
+    "description": "मशीन परडे व घोड",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-16",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 8000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 11,
+    "date": "2024-05-18",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 11,
+    "date": "2024-05-19",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 11,
+    "date": "2024-05-11",
+    "expenseType": "Maintenance",
+    "description": "राहुल मरम्मत",
+    "amount": 1800,
+    "paidBy": "",
+    "remarks": "1600+200 | no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-11",
+    "expenseType": "Maintenance",
+    "description": "रामजी गंगावले पाईप",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-21",
+    "expenseType": "Misc",
+    "description": "राहुल बोनारे",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-20",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3100,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 12,
+    "date": "2024-05-21",
+    "expenseType": "Maintenance",
+    "description": "सेल्फ दुरुस्ती + Diesel",
+    "amount": 4000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 12,
+    "date": "2024-05-21",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 12,
+    "date": "2024-05-21",
+    "expenseType": "Misc",
+    "description": "राहुल ढोणे",
+    "amount": 1600,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-23",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 12,
+    "date": "2024-05-21",
+    "expenseType": "Diesel",
+    "description": "नवीन मशीन Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-24",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 12,
+    "date": "2024-05-25",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 4000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 12,
+    "date": "2024-05-26",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 12,
+    "date": "2024-05-26",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-27",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 12,
+    "date": "2024-05-21",
+    "expenseType": "Misc",
+    "description": "राहुल ढोणे",
+    "amount": 1500,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-28",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-29",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3100,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-30",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-31",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-31",
+    "expenseType": "Misc",
+    "description": "राहुल थेंबारे (सेंडस)",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-31",
+    "expenseType": "Misc",
+    "description": "राहुल ढोले",
+    "amount": 1600,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-31",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-06-02",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-06-03",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-06-04",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-31",
+    "expenseType": "Diesel",
+    "description": "नवीन मशीन Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-31",
+    "expenseType": "Misc",
+    "description": "petrol",
+    "amount": 4500,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-31",
+    "expenseType": "Misc",
+    "description": "राहुल थेंबारे शेडवर",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 13,
+    "date": "2024-06-06",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-06-07",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 13,
+    "date": "2024-05-31",
+    "expenseType": "Misc",
+    "description": "राहुल थेंबारे recharge",
+    "amount": 740,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 14,
+    "date": "2024-06-08",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-09",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-08",
+    "expenseType": "Misc",
+    "description": "राहुल लगनारसाठी",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 14,
+    "date": "2024-06-10",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-11",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-12",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-13",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-14",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-16",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-17",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-18",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-08",
+    "expenseType": "Misc",
+    "description": "देवरे",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 14,
+    "date": "2024-06-08",
+    "expenseType": "Misc",
+    "description": "राहुल खांडवे",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 14,
+    "date": "2024-06-08",
+    "expenseType": "Maintenance",
+    "description": "महीद्रा शोरूम",
+    "amount": 1642,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 14,
+    "date": "2024-06-20",
+    "expenseType": "Diesel",
+    "description": "Disel",
+    "amount": 2500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 14,
+    "date": "2024-06-08",
+    "expenseType": "Misc",
+    "description": "राहुल खंडवे",
+    "amount": 200,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 15,
+    "date": "2024-06-08",
+    "expenseType": "Maintenance",
+    "description": "मशीन धुणे",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 15,
+    "date": "2024-06-08",
+    "expenseType": "Misc",
+    "description": "राहुल खोकारे फोन पे",
+    "amount": 400,
+    "paidBy": "PhonePe",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 15,
+    "date": "2024-06-08",
+    "expenseType": "Salary",
+    "description": "राहुल खोकारे",
+    "amount": 8600,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 15,
+    "date": "2024-06-08",
+    "expenseType": "Diesel",
+    "description": "पेट्रोल — गजानन संचय 50 रु",
+    "amount": 7000,
+    "paidBy": "",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 15,
+    "date": "2024-06-08",
+    "expenseType": "Diesel",
+    "description": "पेट्रोल — फोन पे",
+    "amount": 3000,
+    "paidBy": "PhonePe",
+    "remarks": "no date on spread | dateMappedFromIncome/spread"
+  },
+  {
+    "page": 16,
+    "date": "2024-10-05",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": "page header date"
+  },
+  {
+    "page": 16,
+    "date": "2024-10-05",
+    "expenseType": "Maintenance",
+    "description": "ऑईल धांग्रा",
+    "amount": 800,
+    "paidBy": "",
+    "remarks": "page header date"
+  },
+  {
+    "page": 16,
+    "date": "2024-10-05",
+    "expenseType": "Maintenance",
+    "description": "फॅन बेल्ट नवीन खरेदी",
+    "amount": 350,
+    "paidBy": "",
+    "remarks": "page header date"
+  },
+  {
+    "page": 16,
+    "date": "2024-12-17",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 2200,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 16,
+    "date": "2024-10-05",
+    "expenseType": "Maintenance",
+    "description": "धांग्रा",
+    "amount": 650,
+    "paidBy": "",
+    "remarks": "page header date"
+  },
+  {
+    "page": 16,
+    "date": "2024-11-17",
+    "expenseType": "Maintenance",
+    "description": "फॅन बेल्ट",
+    "amount": 350,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 16,
+    "date": "2024-10-05",
+    "expenseType": "Maintenance",
+    "description": "पॅग मेकॅनिक",
+    "amount": 1200,
+    "paidBy": "",
+    "remarks": "page header date"
+  },
+  {
+    "page": 16,
+    "date": "2024-11-18",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 16,
+    "date": "2024-12-07",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 2900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 16,
+    "date": "2024-12-08",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 16,
+    "date": "2024-12-08",
+    "expenseType": "Diesel",
+    "description": "डिझेल",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": "-||-"
+  },
+  {
+    "page": 16,
+    "date": "2024-10-05",
+    "expenseType": "Salary",
+    "description": "शिवा ऑपरेटर",
+    "amount": 1400,
+    "paidBy": "",
+    "remarks": "page header date"
+  },
+  {
+    "page": 16,
+    "date": "2024-10-05",
+    "expenseType": "Misc",
+    "description": "टेप वायर",
+    "amount": 900,
+    "paidBy": "",
+    "remarks": "page header date"
+  },
+  {
+    "page": 17,
+    "date": "2024-12-09",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-12-18",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-12-20",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 2500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-12-21",
+    "expenseType": "Maintenance",
+    "description": "Phatka pipe",
+    "amount": 1700,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-12-21",
+    "expenseType": "Maintenance",
+    "description": "Phatka pipe",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-12-25",
+    "expenseType": "Misc",
+    "description": "Mishra phiravla",
+    "amount": 800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2024-12-26",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": "Jalim"
+  },
+  {
+    "page": 17,
+    "date": "2024-12-31",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 2700,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 17,
+    "date": "2025-01-02",
+    "expenseType": "Misc",
+    "description": "Pandhari pote kolas",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2025-01-02",
+    "expenseType": "Misc",
+    "description": "Machine board lighting",
+    "amount": 700,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2025-01-02",
+    "expenseType": "Salary",
+    "description": "Pagari",
+    "amount": 1300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2025-01-02",
+    "expenseType": "Maintenance",
+    "description": "Oil",
+    "amount": 9665,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2025-01-02",
+    "expenseType": "Maintenance",
+    "description": "Coolant",
+    "amount": 275,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2025-01-05",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2025-01-03",
+    "expenseType": "Misc",
+    "description": "Hapta (installment)",
+    "amount": 32206,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2025-01-03",
+    "expenseType": "Maintenance",
+    "description": "Mechanic",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2025-01-03",
+    "expenseType": "Misc",
+    "description": "Mishra hotel dish",
+    "amount": 1500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-01-06",
+    "expenseType": "Maintenance",
+    "description": "Machine pipe",
+    "amount": 1200,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-01-06",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 2000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-01-06",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 1000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-01-06",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 1700,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-01-07",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-01-07",
+    "expenseType": "Maintenance",
+    "description": "Chota bakar",
+    "amount": 5000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-01-07",
+    "expenseType": "Maintenance",
+    "description": "Bolt",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-01-07",
+    "expenseType": "Maintenance",
+    "description": "Doka",
+    "amount": 500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 19,
+    "date": "2024-01-08",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 20,
+    "date": "2024-01-10",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 20,
+    "date": "2024-01-11",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 20,
+    "date": "2024-01-11",
+    "expenseType": "Maintenance",
+    "description": "Shitya Automobile",
+    "amount": 1700,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 20,
+    "date": "2024-01-18",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 20,
+    "date": "2024-01-19",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 6300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-01-24",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-01-25",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-01-28",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-01-27",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3000,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-02-02",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-02-03",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 2900,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-02-08",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-02-10",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-02-11",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-02-13",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 21,
+    "date": "2024-02-14",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 22,
+    "date": "2024-02-14",
+    "expenseType": "Maintenance",
+    "description": "Pankaj Tyre",
+    "amount": 800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 22,
+    "date": "2024-02-14",
+    "expenseType": "Maintenance",
+    "description": "Hel durusti",
+    "amount": 1500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 23,
+    "date": "2024-02-16",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 2800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 23,
+    "date": "2024-02-25",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 23,
+    "date": "2024-02-26",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 2800,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 23,
+    "date": "2024-02-28",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 24,
+    "date": "2024-03-01",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3300,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 24,
+    "date": "2024-03-02",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 24,
+    "date": "2024-03-03",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 24,
+    "date": "2024-03-04",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 24,
+    "date": "2024-03-05",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 24,
+    "date": "2024-03-06",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  },
+  {
+    "page": 24,
+    "date": "2024-03-07",
+    "expenseType": "Diesel",
+    "description": "Diesel",
+    "amount": 3500,
+    "paidBy": "",
+    "remarks": ""
+  }
+]
