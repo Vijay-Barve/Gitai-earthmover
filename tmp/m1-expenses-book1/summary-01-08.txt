@@ -1,0 +1,41 @@
+Machine 1 EXPENSE Ledger — Pages 01–08 Summary
+================================================
+
+Total rows extracted:     66
+Active entries (skip=false): 60
+Skipped entries (skip=true):  6
+
+Active amount sum:        ₹2,29,640
+
+--- By Page (active only) ---
+Page 01:  13 entries  |  ₹58,400  (margin total 58400 matched)
+Page 02:  13 entries  |  ₹64,700  (near-duplicate of page 01)
+Page 03:  12 entries  |  ₹24,120
+Page 04:   9 entries  |  ₹22,400  (2 crossed-out rows skipped)
+Page 05:   2 entries  |  ₹5,100   (page total 139110 skipped)
+Page 06:   5 entries  |  ₹28,870  (margin total 28870 matched; 4 skipped)
+Page 07:   4 entries  |  ₹25,050
+Page 08:   2 entries  |  ₹1,000
+
+--- By Expense Type (active only) ---
+Diesel:       28 entries
+Misc:         18 entries
+Salary:        9 entries
+Maintenance:   5 entries
+RTO:           0 entries
+
+--- Skipped Rows ---
+Page 04: ₹3,400 (7/1/22, crossed out)
+Page 04: ₹38,000 (8/1/22, crossed out)
+Page 06: ₹5,500 (23/2/22, crossed out)
+Page 06: ₹13,700 (15/2/22, X section)
+Page 06: ₹14,000 (15/2/22, X section)
+Page 06: ₹3,990 (15/2/22, Filter/ST, X section)
+
+--- Margin Totals Skipped (not extracted as rows) ---
+58400 (pages 01–02), 64360 (page 03), 28870 (page 06), 18650 (page 07), 139110 kharch (page 05)
+
+--- Notes ---
+- Pages 01 & 02 are near-duplicates; dates differ (Nov vs Jan readings).
+- Page 08: (27/2/22 5 liter Diesel / Joy sir) omitted — no explicit amount.
+- Page 08: "ekun 1000" subtotal not extracted (sum of Fayaz + chappal rows).

@@ -1,0 +1,42 @@
+Machine 1 EXPENSE Ledger — Pages 17–22
+Extracted: 2026-07-31
+Date range: 2022-05-02 to 2022-06-28
+
+COUNTS
+------
+Total rows extracted:     60
+Active entries:           59
+Skipped (crossed-out):     1
+
+Active amount sum:   ₹3,23,534
+
+BY PAGE (active only)
+---------------------
+Page 17:  6 entries  ₹ 21,800
+Page 18: 10 entries  ₹ 45,000  (page carry 45000 ✓)
+Page 19: 12 entries  ₹ 70,680  (page carry 70680 ✓)
+Page 20: 12 entries  ₹ 68,250  (page carry 68250 ✓)
+Page 21: 10 entries  ₹ 53,200  (page carry 53700; diff ₹500 — see notes)
+Page 22:  9 entries  ₹ 64,604  (page carry 65004; diff ₹400 — see notes)
+
+BY EXPENSE TYPE (active only)
+-----------------------------
+Diesel:       29 entries  ₹2,31,600
+Salary:       13 entries  ₹ 43,200
+Maintenance:   6 entries  ₹ 39,554
+Misc:         11 entries  ₹  9,180
+RTO:           0 entries  ₹      0
+
+SKIPPED ENTRIES
+---------------
+Page 17: 2022-05-05  शिव ऑटो मोबाइल्स  250  (crossed out)
+
+NOTES
+-----
+- Ditto dates (—//—, ~) carried forward from preceding dated entry.
+- Page totals and bottom calculations (12750, 1600, etc.) excluded per rules.
+- Page 17: ऑपरेटर चाटेरी recorded as ₹800 (500+300 in ledger).
+- Page 18: बॅटरी ऑपरेटर (not चाटेरी) for petrol/sound and return rows.
+- Page 21: राहूल ₹4500 with "500" annotation in description; D.J.L ₹9300 on 4/6.
+- Page 22: सर्व्हिसींग मशीन ₹26304 as written; page total 65004 implies possible 26704.
+- Page 22: राहूल on 21/6 has no separate amount — noted as remark on diesel row.

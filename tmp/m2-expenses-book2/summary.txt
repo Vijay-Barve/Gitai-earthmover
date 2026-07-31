@@ -1,0 +1,33 @@
+M2 Expenses Book 2 - Extraction Summary
+=========================================
+Source: tmp/m2-expenses-book2/page-01.jpg through page-13.jpg
+Date range: 2022-09-07 to 2023-03-16
+
+Total rows extracted: 49
+Active rows (skip=false): 47
+Skipped rows (crossed-out): 2
+Active total amount: Rs 189,390
+
+Skipped entries:
+  Page 5: 2022-12-10 डिझेल Rs 8,400 (crossed out)
+  Page 9: 2023-01-18 डिझेल Rs 3,700 (crossed out)
+
+Page totals (active only, for verification):
+  Page  1: 19,100 Rs  (6 rows)
+  Page  2:  9,900 Rs  (3 rows)
+  Page  3:  8,100 Rs  (2 rows)
+  Page  4: 12,100 Rs  (3 rows)
+  Page  5:  9,000 Rs  (2 rows)
+  Page  6:  8,400 Rs  (2 rows)
+  Page  7:  8,400 Rs  (1 rows)
+  Page  8: 11,000 Rs  (2 rows)
+  Page  9: 10,500 Rs  (3 rows)
+  Page 10: 16,000 Rs  (4 rows)
+  Page 11: 34,200 Rs  (9 rows)
+  Page 12: 37,090 Rs  (8 rows)
+  Page 13:  5,600 Rs  (2 rows)
+
+By expense type:
+  Diesel      :  29 rows, Rs  111,200
+  Maintenance :   2 rows, Rs   13,540
+  Misc        :  16 rows, Rs   64,650

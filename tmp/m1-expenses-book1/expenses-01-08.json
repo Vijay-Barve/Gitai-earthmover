@@ -1,0 +1,596 @@
+[
+  {
+    "page": 1,
+    "date": "2022-11-14",
+    "expenseType": "Diesel",
+    "description": "Nanded te Vakhari",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-11-16",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 1500,
+    "remarks": "B",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-11-16",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 2000,
+    "remarks": "G",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-11-18",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-11-21",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-11-21",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-11-21",
+    "expenseType": "Misc",
+    "description": "Kapad",
+    "amount": 1100,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-11-21",
+    "expenseType": "Misc",
+    "description": "Bihari",
+    "amount": 7500,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-02-01",
+    "expenseType": "Salary",
+    "description": "Kombade Operator",
+    "amount": 700,
+    "remarks": "written 1-2-22",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-02-01",
+    "expenseType": "Salary",
+    "description": "R K (Operator)",
+    "amount": 6000,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-02-08",
+    "expenseType": "Salary",
+    "description": "Operator",
+    "amount": 15000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-02-08",
+    "expenseType": "Salary",
+    "description": "Operator",
+    "amount": 5300,
+    "remarks": "date carried; margin note 7890",
+    "skip": false
+  },
+  {
+    "page": 1,
+    "date": "2022-02-08",
+    "expenseType": "Misc",
+    "description": "Petrol",
+    "amount": 800,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-01-14",
+    "expenseType": "Diesel",
+    "description": "Nanded te Wakhari",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-01-16",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 1500,
+    "remarks": "B",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-01-16",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 2000,
+    "remarks": "G",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-01-18",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-01-02",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-01-02",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-01-02",
+    "expenseType": "Misc",
+    "description": "Kapad",
+    "amount": 1100,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-01-02",
+    "expenseType": "Misc",
+    "description": "Bihari",
+    "amount": 7500,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-02-01",
+    "expenseType": "Salary",
+    "description": "Kamble Operator",
+    "amount": 7000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-02-01",
+    "expenseType": "Salary",
+    "description": "Arif (Operator)",
+    "amount": 6000,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-02-08",
+    "expenseType": "Salary",
+    "description": "Operator",
+    "amount": 15000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-02-08",
+    "expenseType": "Salary",
+    "description": "Operator",
+    "amount": 5300,
+    "remarks": "date carried; margin note 7890",
+    "skip": false
+  },
+  {
+    "page": 2,
+    "date": "2022-02-08",
+    "expenseType": "Misc",
+    "description": "Petrol",
+    "amount": 800,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-20",
+    "expenseType": "Diesel",
+    "description": "Vijay Sir",
+    "amount": 3520,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-22",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-25",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-27",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-01",
+    "expenseType": "Misc",
+    "description": "Phail kharch",
+    "amount": 2500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-01",
+    "expenseType": "Maintenance",
+    "description": "Gris itar",
+    "amount": 500,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-01",
+    "expenseType": "Maintenance",
+    "description": "Pump (gris)",
+    "amount": 360,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-01",
+    "expenseType": "Misc",
+    "description": "Bihari",
+    "amount": 320,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-01",
+    "expenseType": "Misc",
+    "description": "Pahila divas itar",
+    "amount": 200,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-01",
+    "expenseType": "Maintenance",
+    "description": "Radium",
+    "amount": 120,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-01",
+    "expenseType": "Misc",
+    "description": "Card",
+    "amount": 600,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 3,
+    "date": "2022-01-01",
+    "expenseType": "Misc",
+    "description": "Petrol",
+    "amount": 1000,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2022-01-29",
+    "expenseType": "Misc",
+    "description": "Washing",
+    "amount": 450,
+    "remarks": "(10080)",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2022-02-03",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "remarks": "(8008)",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2022-02-07",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5600,
+    "remarks": "(1008)",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2022-02-07",
+    "expenseType": "Misc",
+    "description": "Petrol",
+    "amount": 200,
+    "remarks": "date carried; (10800)",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2022-01-28",
+    "expenseType": "Maintenance",
+    "description": "Socket",
+    "amount": 2150,
+    "remarks": "(8001)",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2022-01-28",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 1500,
+    "remarks": "date carried; (1500)",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2022-01-28",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 1000,
+    "remarks": "date carried; (2001)",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2022-01-07",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 3400,
+    "remarks": "crossed out",
+    "skip": true
+  },
+  {
+    "page": 4,
+    "date": "2022-01-08",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 38000,
+    "remarks": "crossed out",
+    "skip": true
+  },
+  {
+    "page": 4,
+    "date": "2022-01-08",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 1500,
+    "remarks": "date carried; (1500)",
+    "skip": false
+  },
+  {
+    "page": 4,
+    "date": "2022-01-08",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "remarks": "date carried; (5000)",
+    "skip": false
+  },
+  {
+    "page": 5,
+    "date": "2022-02-11",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 5,
+    "date": "2022-02-11",
+    "expenseType": "Misc",
+    "description": "Petrol",
+    "amount": 100,
+    "remarks": "date carried",
+    "skip": false
+  },
+  {
+    "page": 6,
+    "date": "2022-02-14",
+    "expenseType": "Diesel",
+    "description": "5500 hapte",
+    "amount": 5500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 6,
+    "date": "2022-02-16",
+    "expenseType": "Maintenance",
+    "description": "Kuland pani",
+    "amount": 370,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 6,
+    "date": "2022-02-18",
+    "expenseType": "Diesel",
+    "description": "5500 Diesel",
+    "amount": 5500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 6,
+    "date": "2022-02-20",
+    "expenseType": "Salary",
+    "description": "Operator gavakade",
+    "amount": 500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 6,
+    "date": "2022-02-21",
+    "expenseType": "Misc",
+    "description": "Khate jama",
+    "amount": 17000,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 6,
+    "date": "2022-02-23",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5500,
+    "remarks": "crossed out",
+    "skip": true
+  },
+  {
+    "page": 6,
+    "date": "2022-02-15",
+    "expenseType": "Misc",
+    "description": "Khate jama",
+    "amount": 13700,
+    "remarks": "crossed out X section",
+    "skip": true
+  },
+  {
+    "page": 6,
+    "date": "2022-02-15",
+    "expenseType": "Misc",
+    "description": "Khate jama",
+    "amount": 14000,
+    "remarks": "crossed out X section",
+    "skip": true
+  },
+  {
+    "page": 6,
+    "date": "2022-02-15",
+    "expenseType": "Maintenance",
+    "description": "Filter",
+    "amount": 3990,
+    "remarks": "crossed out X section; ST",
+    "skip": true
+  },
+  {
+    "page": 7,
+    "date": "2022-02-23",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 5500,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 7,
+    "date": "2022-02-23",
+    "expenseType": "Diesel",
+    "description": "Dhonra us tali kadhne 1000 Diesel",
+    "amount": 1000,
+    "remarks": "parenthetical note",
+    "skip": false
+  },
+  {
+    "page": 7,
+    "date": "2022-02-24",
+    "expenseType": "Diesel",
+    "description": "",
+    "amount": 13150,
+    "remarks": "1300 scribbled out",
+    "skip": false
+  },
+  {
+    "page": 7,
+    "date": "2022-02-11",
+    "expenseType": "Misc",
+    "description": "Lagad Bigari",
+    "amount": 5400,
+    "remarks": "0366 Gala tube Diesel",
+    "skip": false
+  },
+  {
+    "page": 8,
+    "date": "2022-03-02",
+    "expenseType": "Misc",
+    "description": "Fayaz",
+    "amount": 750,
+    "remarks": "",
+    "skip": false
+  },
+  {
+    "page": 8,
+    "date": "2022-03-02",
+    "expenseType": "Misc",
+    "description": "Parmeshwar chappal",
+    "amount": 250,
+    "remarks": "",
+    "skip": false
+  }
+]

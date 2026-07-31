@@ -1,0 +1,14 @@
+{
+  "added": 152,
+  "addedSum": 698634,
+  "skippedExisting": 7,
+  "skippedWithinPdf": 8,
+  "skippedCrossed": 12,
+  "byType": {
+    "Diesel": 480280,
+    "Misc": 71900,
+    "Salary": 89200,
+    "Maintenance": 54254,
+    "RTO": 3000
+  }
+}

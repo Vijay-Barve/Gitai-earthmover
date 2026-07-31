@@ -1,0 +1,39 @@
+Machine 1 EXPENSE Ledger — Book 3 (Pages 01–08) Summary
+============================================================
+
+Total rows extracted:        52
+Active entries (skip=false): 51
+Skipped entries (skip=true):  1
+
+Active amount sum:           ₹1,16,870
+
+Date range (active):         2023-03-24 → 2024-08-07
+
+--- By Page (active only) ---
+Page 01:   8 entries  |  ₹34,500  (margin carry 34500 matched; 1 crossed-out ₹3700 skipped)
+Page 02:   5 entries  |  ₹18,600  (all Diesel)
+Page 03:  17 entries  |  ₹28,110  (margin 6000 skipped)
+Page 04:   1 entry    |  ₹4,500   (margin 24800 + footer 20300 GB skipped)
+Page 05:   1 entry    |  ₹2,000
+Page 06:   7 entries  |  ₹8,280
+Page 07:   7 entries  |  ₹8,280   (near-duplicate of page 06)
+Page 08:   5 entries  |  ₹16,300  (margin 16300 matched sum)
+
+--- By Expense Type (active only) ---
+Diesel:        10 entries  |  ₹28,150
+Misc:          22 entries  |  ₹53,180
+Salary:         4 entries  |  ₹12,800
+Maintenance:   13 entries  |  ₹16,740
+RTO:            2 entries  |  ₹6,000
+
+--- Skipped Rows ---
+Page 01: ₹3,700 (24-3-23, crossed out)
+
+--- Margin Totals Skipped (not extracted as rows) ---
+34500 (page 01), 6000 (page 03), 24800 (page 04), 20300 GB (page 04 footer), 16300 (page 08)
+
+--- Year Inference Notes ---
+- Pages 01–04: 2023 (explicit 9-4-23 on page 01; 2-11-23 on page 04)
+- Pages 05–08: 2024 (continuation after Nov 2023; 16-5 → May 2024, 9-6 → Jun 2024, Jul–Aug dates → 2024)
+- Page 01 amount-only rows classified as Misc (no डिझेल label); page 02 onward Diesel entries explicitly labeled
+- Pages 06 & 07 are near-duplicates (same 9-6-24 block); both extracted per page

@@ -1,0 +1,47 @@
+Machine 1 EXPENSE Ledger — Pages 09–16
+Extracted: 2026-07-31
+Date range: 2022-03-02 to 2022-04-30
+
+COUNTS
+------
+Total rows extracted:     53
+Active entries:           48
+Skipped (crossed-out):     5
+
+Active amount sum:   ₹2,23,760
+
+BY PAGE (active only)
+---------------------
+Page 09:  4 entries  ₹ 18,800  (page total 18800 ✓)
+Page 10:  3 entries  ₹ 14,300  (1 skipped: 17/03/22 डिझेल 6000)
+Page 11:  9 entries  ₹ 28,000  (page total 28000 ✓)
+Page 12:  5 entries  ₹ 35,800  (2 skipped: 07/04/22 entries 20000+5000; carry 53800 not extracted)
+Page 13:  4 entries  ₹ 15,030
+Page 14:  6 entries  ₹ 24,600  (page total 24600 ✓)
+Page 15:  9 entries  ₹ 56,250  (1 skipped: 27/04/22 D.J.L 8450)
+Page 16:  8 entries  ₹ 30,980  (1 skipped: 27/04/22 bare 500)
+
+BY EXPENSE TYPE (active only)
+-----------------------------
+Diesel:       25 entries  ₹1,73,110
+Misc:         14 entries  ₹ 23,950
+Maintenance:   6 entries  ₹ 11,700
+Salary:        2 entries  ₹ 12,000
+RTO:           1 entry    ₹  3,000
+
+SKIPPED ENTRIES
+---------------
+Page 10: 2022-03-17  डिझेल           6000  (crossed out)
+Page 12: 2022-04-07  तांबे दाजी...   20000 (crossed out)
+Page 12: 2022-04-07  पगार            5000  (crossed out)
+Page 15: 2022-04-27  D.J.L           8450  (crossed out)
+Page 16: 2022-04-27  (no desc)       500   (crossed out)
+
+NOTES
+-----
+- Page totals (18800, 28000, 53800, 24600) excluded as rows per rules.
+- Ditto dates (—//—) carried forward from preceding dated entry.
+- J.B.L. मशीन (page 10) classified Misc — abbreviation not explicitly डिझेल/D.J.L in rules.
+- Page 13 first diesel entry: location remark "लोणावळा" (partially legible).
+- Page 14: +100 on 19/04/22 listed as separate Misc row.
+- Page 16: "200 चे 300 इतर = 500/-" recorded as single ₹500 Misc row.
