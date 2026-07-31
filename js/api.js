@@ -97,6 +97,7 @@ const ApiClient = (function () {
     }
 
     store._version = CONFIG.DATA_SNAPSHOT_VERSION;
+    if (Array.isArray(store.income)) sortByDateInPlace(store.income);
     persist({ markDirty: store._sessionDirty === true });
     return store;
   }
@@ -111,6 +112,20 @@ const ApiClient = (function () {
     const items = store[module] || [];
     if (!items.length) return 1;
     return Math.max(...items.map(i => parseInt(i.ID, 10) || 0)) + 1;
+  }
+
+  /** Keep income chronologically ordered after every add/edit */
+  function sortByDateInPlace(rows, dateField) {
+    const field = dateField || 'Date';
+    rows.sort((a, b) => {
+      const da = String(a[field] || '');
+      const db = String(b[field] || '');
+      if (da !== db) return da < db ? -1 : 1;
+      const aa = /date assumed/i.test(String(a.Remarks || '')) ? 1 : 0;
+      const ab = /date assumed/i.test(String(b.Remarks || '')) ? 1 : 0;
+      if (aa !== ab) return aa - ab;
+      return (parseInt(a.ID, 10) || 0) - (parseInt(b.ID, 10) || 0);
+    });
   }
 
   function logAudit(action, module, recordId, oldVal, newVal) {
@@ -163,9 +178,13 @@ const ApiClient = (function () {
       case 'POST': {
         const lockErr = checkMonthLock(key, method, data);
         if (lockErr) return { success: false, error: lockErr };
+        if (key === 'income' && !String(data.Date || '').trim()) {
+          return { success: false, error: 'Income date is required. Undated register rows must use an assumed date first.' };
+        }
         const newId = getNextId(key);
         const record = { ...data, ID: newId };
         collection.push(record);
+        if (key === 'income') sortByDateInPlace(collection);
         if (key !== 'audit') logAudit('CREATE', key, newId, '', JSON.stringify(record));
         result = { success: true, data: record };
         break;
@@ -177,7 +196,11 @@ const ApiClient = (function () {
         const oldRecord = { ...collection[idx] };
         const lockErr = checkMonthLock(key, method, data, oldRecord);
         if (lockErr) return { success: false, error: lockErr };
+        if (key === 'income' && data.Date !== undefined && !String(data.Date || '').trim()) {
+          return { success: false, error: 'Income date is required.' };
+        }
         collection[idx] = { ...collection[idx], ...data, ID: oldRecord.ID };
+        if (key === 'income') sortByDateInPlace(collection);
         if (key !== 'audit') logAudit('UPDATE', key, oldRecord.ID, JSON.stringify(oldRecord), JSON.stringify(collection[idx]));
         result = { success: true, data: collection[idx] };
         break;
@@ -238,6 +261,8 @@ const ApiClient = (function () {
 
   async function saveToExcel(filename) {
     await ensureReady();
+    if (Array.isArray(store.income)) sortByDateInPlace(store.income);
+    if (Array.isArray(store.expenses)) sortByDateInPlace(store.expenses);
     let downloaded = [];
     if (typeof MachineScope !== 'undefined' && MachineScope.downloadAllWorkbooks && !filename) {
       downloaded = await MachineScope.downloadAllWorkbooks(store);

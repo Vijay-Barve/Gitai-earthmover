@@ -1,0 +1,2392 @@
+[
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Gopal",
+    "work": "",
+    "bill": 6700,
+    "received": 6700,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Makapur Tali",
+    "work": "ऊ क ५",
+    "bill": 2000,
+    "received": 2000,
+    "pending": 0,
+    "remarks": "; work shorthand uncertain | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Davakhana",
+    "work": "",
+    "bill": 5500,
+    "received": 5500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Davakhana",
+    "work": "T37",
+    "bill": 6600,
+    "received": 6600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Waman Tailor",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Khandare",
+    "work": "",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Boralkar",
+    "work": "",
+    "bill": 4800,
+    "received": 4800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Road",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "BJP Gyanu",
+    "work": "14 पाईप",
+    "bill": 2800,
+    "received": 2800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Babhulgaon",
+    "work": "",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Babhulgaon",
+    "work": "",
+    "bill": 6000,
+    "received": 6000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Babhulgaon",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Babhulgaon",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "; small last zero (150) | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Pandu Sarpanch",
+    "work": "",
+    "bill": 4200,
+    "received": 4200,
+    "pending": 0,
+    "remarks": "; small last zero (420) | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 1,
+    "date": "2024-05-07",
+    "customer": "Pinku",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Road Babhulgaon",
+    "work": "",
+    "bill": 3500,
+    "received": 3500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Babhulgaon",
+    "work": "",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Raju Ambhore",
+    "work": "T38",
+    "bill": 17500,
+    "received": 17500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Suresh Barve",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Raju Dhore",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Navnath Dhore",
+    "work": "",
+    "bill": 1100,
+    "received": 1100,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Prabhakar Dhore",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Davakhana",
+    "work": "",
+    "bill": 5000,
+    "received": 5000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Vithu Kaka",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Road Babhulgaon",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Raju Ambhore",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Bhagwat Dhore",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Soma Dhore",
+    "work": "ज म",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Road Babhulgaon",
+    "work": "",
+    "bill": 2000,
+    "received": 2000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 2,
+    "date": "2024-05-08",
+    "customer": "Davakhana",
+    "work": "",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Shama Dhore",
+    "work": "",
+    "bill": 15500,
+    "received": 15500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Baban Dhore Sarpanch",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Davakhana",
+    "work": "",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Amod Dhore",
+    "work": "",
+    "bill": 4400,
+    "received": 4400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Babhulgaon Rasta",
+    "work": "",
+    "bill": 2000,
+    "received": 2000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Baliram Dhore",
+    "work": "",
+    "bill": 15000,
+    "received": 15000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Chairman Shankar",
+    "work": "",
+    "bill": 2000,
+    "received": 2000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Hivra Rasta",
+    "work": "",
+    "bill": 4500,
+    "received": 4500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Baban Bepari",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Gopal Dhore",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Shekhar Khatore",
+    "work": "",
+    "bill": 4600,
+    "received": 4600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Sunil Korade",
+    "work": "",
+    "bill": 3300,
+    "received": 3300,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Karkhana",
+    "work": "",
+    "bill": 3300,
+    "received": 3300,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Halad Machine",
+    "work": "",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 3,
+    "date": "2024-05-09",
+    "customer": "Shankar Raut",
+    "work": "",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Shahaji Barve",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Gangaprasad",
+    "work": "",
+    "bill": 2000,
+    "received": 2000,
+    "pending": 0,
+    "remarks": "; 1800 crossed, 2000 below | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Baban Dhore Sarpanch",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Suresh Nana",
+    "work": "",
+    "bill": 8000,
+    "received": 8000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Suresh Mukadam",
+    "work": "",
+    "bill": 1600,
+    "received": 1600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Gopal Dhore",
+    "work": "",
+    "bill": 6600,
+    "received": 6600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Santosh Tambe",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Ananta Dhore",
+    "work": "",
+    "bill": 7700,
+    "received": 7700,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Sarkar",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "; 1200 + 300 | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Ananta and Sominath",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Mahadu Dhore",
+    "work": "",
+    "bill": 1500,
+    "received": 0,
+    "pending": 1500,
+    "remarks": "; 1500 बाकी | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Pandu Dhore",
+    "work": "",
+    "bill": 5500,
+    "received": 5500,
+    "pending": 0,
+    "remarks": "; corrected from 50500 | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Mahadu Gevade",
+    "work": "",
+    "bill": 3500,
+    "received": 3500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Babhulgaon",
+    "work": "",
+    "bill": 4500,
+    "received": 4500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 4,
+    "date": "2024-05-10",
+    "customer": "Duband",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Santosh Dhore",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Balu Dharve",
+    "work": "",
+    "bill": 600,
+    "received": 600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Sugriv Dhore",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Navnath Dhore",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Adinath Dhore",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Shankar",
+    "work": "",
+    "bill": 2000,
+    "received": 2000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Akash Dhore",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Nagesh Dhore",
+    "work": "",
+    "bill": 600,
+    "received": 600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Shiva Aba",
+    "work": "",
+    "bill": 4800,
+    "received": 4800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Shiva Aba",
+    "work": "",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "; second amount below first | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Sambhaji Panja",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Waman Tailor",
+    "work": "",
+    "bill": 7800,
+    "received": 7800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Sugriv Dhore",
+    "work": "",
+    "bill": 7800,
+    "received": 7800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Om Dhore",
+    "work": "Tipper",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Baban Sarpanch",
+    "work": "TZ",
+    "bill": 1400,
+    "received": 1400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Vishal Barve",
+    "work": "",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 5,
+    "date": "2024-05-11",
+    "customer": "Gopal Dhore",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Baban Sarpanch",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Zilla Parishad Primary School",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Dharaji Jadhav",
+    "work": "12 पाईप",
+    "bill": 2000,
+    "received": 2000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Kashinath Dhore",
+    "work": "",
+    "bill": 1600,
+    "received": 1600,
+    "pending": 0,
+    "remarks": "; amount uncertain (600 vs 1600) | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Bali Dhore",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Munjaji Dhore",
+    "work": "",
+    "bill": 1400,
+    "received": 1400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Sandip Dubba",
+    "work": "",
+    "bill": 6600,
+    "received": 6600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Raju Dubba",
+    "work": "",
+    "bill": 600,
+    "received": 600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Lokhande Satvaji",
+    "work": "",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Krishna Korade",
+    "work": "T 12",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Balu Barve",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Gapu Gangavane",
+    "work": "",
+    "bill": 5000,
+    "received": 5000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Ananta Barve",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Baban Bepari",
+    "work": "",
+    "bill": 6000,
+    "received": 6000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Taterav Lahane",
+    "work": "",
+    "bill": 4400,
+    "received": 4400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 6,
+    "date": "2024-05-12",
+    "customer": "Pindu Korade",
+    "work": "",
+    "bill": 3400,
+    "received": 3400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Mahadu Gangavale",
+    "work": "",
+    "bill": 4600,
+    "received": 4600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Baliram Dhore",
+    "work": "",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Bhagwat and Datta Malak",
+    "work": "2 तास",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Bhagwat Barve",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Karkhana",
+    "work": "",
+    "bill": 4500,
+    "received": 4500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Bhagwat and Bhagwan",
+    "work": "",
+    "bill": 4200,
+    "received": 4200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Bhagwat and Laxman",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Laxman Barve",
+    "work": "",
+    "bill": 600,
+    "received": 600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Sanjay Mule",
+    "work": "",
+    "bill": 600,
+    "received": 600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Deva Mule",
+    "work": "",
+    "bill": 1400,
+    "received": 1400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Akash Dhore",
+    "work": "",
+    "bill": 9000,
+    "received": 9000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Ramrao Dhore",
+    "work": "पाईप 50",
+    "bill": 8000,
+    "received": 8000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Waman Tailor",
+    "work": "7 पाईप",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Sopan Ba",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Gaju Lobaji",
+    "work": "",
+    "bill": 8800,
+    "received": 8800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 7,
+    "date": "2024-05-13",
+    "customer": "Gaju Lobaji",
+    "work": "",
+    "bill": 2200,
+    "received": 2200,
+    "pending": 0,
+    "remarks": "; ditto continuation (= ० =) | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Mahadu Gangavale",
+    "work": "",
+    "bill": 4600,
+    "received": 4600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Baliram Dhore",
+    "work": "",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Bhagwat and Datta Malak",
+    "work": "2 तास",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Bhagwat Barve",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Karkhana",
+    "work": "",
+    "bill": 4500,
+    "received": 4500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Bhagwat and Bhagwan",
+    "work": "",
+    "bill": 4200,
+    "received": 4200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Bhagwat and Laxman",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Laxman Barve",
+    "work": "",
+    "bill": 600,
+    "received": 600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Sanjay Mule",
+    "work": "",
+    "bill": 600,
+    "received": 600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Deva Mule",
+    "work": "",
+    "bill": 1400,
+    "received": 1400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Akash Dhore",
+    "work": "",
+    "bill": 9000,
+    "received": 9000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Ramrao Dhore",
+    "work": "पाईप 40",
+    "bill": 8000,
+    "received": 8000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Waman Tailor",
+    "work": "9 पाईप",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Sopan Ba",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Gaju Thobaji",
+    "work": "",
+    "bill": 8800,
+    "received": 8800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 8,
+    "date": "2024-05-14",
+    "customer": "Gaju Thobaji",
+    "work": "",
+    "bill": 2200,
+    "received": 2200,
+    "pending": 0,
+    "remarks": "; ditto continuation (= ० =) | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Raosaheb Dhore",
+    "work": "",
+    "bill": 400,
+    "received": 400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Gaju and Raosaheb",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Gaju Barve",
+    "work": "",
+    "bill": 2200,
+    "received": 2200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Gaju and Baban",
+    "work": "",
+    "bill": 2200,
+    "received": 2200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Baban Barve",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Gangadhar Barve",
+    "work": "",
+    "bill": 6600,
+    "received": 6600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Sainath Barve",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Satish Barve",
+    "work": "",
+    "bill": 1400,
+    "received": 1400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Balu and Satish",
+    "work": "",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Balu and Satish",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "; ditto continuation (= ० =) | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Satish Barve",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Raosab and Balu",
+    "work": "",
+    "bill": 2700,
+    "received": 2700,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Manik Ambore",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Babale and Gabade",
+    "work": "",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Manik Ambore",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Navnath Kaka",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 9,
+    "date": "2024-05-15",
+    "customer": "Balu Dhore",
+    "work": "",
+    "bill": 2500,
+    "received": 2500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Navnath Kaka",
+    "work": "",
+    "bill": 7200,
+    "received": 7200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Navnath Kaka",
+    "work": "",
+    "bill": 10800,
+    "received": 10800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Madhav Nete",
+    "work": "",
+    "bill": 400,
+    "received": 400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Navnath Kaka",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Ganesh and Sopan",
+    "work": "",
+    "bill": 4800,
+    "received": 4800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Balu Panja",
+    "work": "",
+    "bill": 4200,
+    "received": 4200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Madan Warkari",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Baban Bepari",
+    "work": "",
+    "bill": 12000,
+    "received": 12000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Raju Gowandi",
+    "work": "",
+    "bill": 1100,
+    "received": 1100,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Baban Sarpanch",
+    "work": "",
+    "bill": 3200,
+    "received": 3200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Baban Sarpanch",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "; ditto continuation (= ० =) | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Raju Kutyaba",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Datta and Madhav",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Datta and Madhav",
+    "work": "",
+    "bill": 2200,
+    "received": 2200,
+    "pending": 0,
+    "remarks": "; second amount below name | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Puja Thombare",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Shankar Gagavale",
+    "work": "",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Shankar Gagavale",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "; second amount below name | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Madhav and Keshav",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 10,
+    "date": "2024-05-16",
+    "customer": "Kiran and Kachru",
+    "work": "",
+    "bill": 5400,
+    "received": 5400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "customer": "Sheshrao Vekcharu",
+    "work": "",
+    "bill": 600,
+    "received": 600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "customer": "Suresh Nala",
+    "work": "",
+    "bill": 5100,
+    "received": 5100,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "customer": "Gavali Appa",
+    "work": "",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "customer": "Gavali Appa",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "; ditto | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "customer": "Ganesh Raut",
+    "work": "",
+    "bill": 5800,
+    "received": 5800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "customer": "Sham Dhore",
+    "work": "",
+    "bill": 3900,
+    "received": 3900,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "customer": "Anil Dhore",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "customer": "Kapil Dhore",
+    "work": "",
+    "bill": 6000,
+    "received": 6000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "customer": "Baban Bepari",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 11,
+    "date": "2024-05-17",
+    "customer": "Balu Yenja",
+    "work": "",
+    "bill": 4600,
+    "received": 4600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-18",
+    "customer": "Balu Mama",
+    "work": "Hivra Rasta",
+    "bill": 43490,
+    "received": 43490,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-18",
+    "customer": "Raosaheb and Nagorao",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-18",
+    "customer": "Subhash and Nagorao",
+    "work": "",
+    "bill": 700,
+    "received": 700,
+    "pending": 0,
+    "remarks": "; ditto | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-18",
+    "customer": "Raosaheb and Vitthal",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-18",
+    "customer": "Nagorao and Raosaheb",
+    "work": "",
+    "bill": 5800,
+    "received": 5800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-18",
+    "customer": "Pappu and Gopal",
+    "work": "",
+    "bill": 1400,
+    "received": 1400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-18",
+    "customer": "Narayan Lahane",
+    "work": "",
+    "bill": 8500,
+    "received": 8500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-18",
+    "customer": "Gopal Dhore",
+    "work": "Shed",
+    "bill": 6500,
+    "received": 6500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-18",
+    "customer": "Shivraj Dhore",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 12,
+    "date": "2024-05-18",
+    "customer": "Sandip Dhore",
+    "work": "",
+    "bill": 4800,
+    "received": 4800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-19",
+    "customer": "Vitthal Dhore",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-19",
+    "customer": "Nagorao and Vitthal",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-19",
+    "customer": "Nagorao Nirwal",
+    "work": "",
+    "bill": 2500,
+    "received": 2500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-19",
+    "customer": "Uttam Patil",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-19",
+    "customer": "Uttam Patil",
+    "work": "",
+    "bill": 40000,
+    "received": 15000,
+    "pending": 25000,
+    "remarks": "; जमा 15000 | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-19",
+    "customer": "Gangadhar and Baban",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-19",
+    "customer": "Jivan and Ganga",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-19",
+    "customer": "Baban Samarka",
+    "work": "",
+    "bill": 4200,
+    "received": 4200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-19",
+    "customer": "Navnath and Gangadhar",
+    "work": "",
+    "bill": 4200,
+    "received": 4200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 13,
+    "date": "2024-05-19",
+    "customer": "Gangadhar and Baban",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Gaju Le",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Gangadhar",
+    "work": "",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Vilas Barve",
+    "work": "",
+    "bill": 1000,
+    "received": 1000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Sandip Babhale",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Sandip Babhale",
+    "work": "",
+    "bill": 3200,
+    "received": 3200,
+    "pending": 0,
+    "remarks": "; ditto | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Satish Chudava",
+    "work": "",
+    "bill": 13200,
+    "received": 13200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Shankar Chairman",
+    "work": "",
+    "bill": 1300,
+    "received": 1300,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Pintu Kaka",
+    "work": "",
+    "bill": 1600,
+    "received": 1600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Kiran Gabade",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Jabaj and Sanjkar",
+    "work": "",
+    "bill": 1300,
+    "received": 1300,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 14,
+    "date": "2024-05-20",
+    "customer": "Pandu Sarpanch",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Pandu Sakharam",
+    "work": "",
+    "bill": 7200,
+    "received": 7200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Anasaji and Gopal",
+    "work": "5",
+    "bill": 600,
+    "received": 600,
+    "pending": 0,
+    "remarks": "; 5 may be hours/trips | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Kailas Dhore",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Kashinath Mule",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Runakar",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Runakar",
+    "work": "",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "; ditto | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Pandu Duyba",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Sandip Duyba",
+    "work": "",
+    "bill": 4200,
+    "received": 4200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Mahadu Gagavale",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Manoj Raut",
+    "work": "",
+    "bill": 6000,
+    "received": 6000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 15,
+    "date": "2024-05-21",
+    "customer": "Raosaheb and Pappu",
+    "work": "",
+    "bill": 3900,
+    "received": 3900,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Santosh Dhore",
+    "work": "",
+    "bill": 600,
+    "received": 600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Kumbhar",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Shankar Kumbhar",
+    "work": "",
+    "bill": 4000,
+    "received": 4000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Sudhakar Gavde",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Gaju Kharapach",
+    "work": "T 180 + 100 70",
+    "bill": 41400,
+    "received": 41400,
+    "pending": 0,
+    "remarks": "; corrected from 46000 | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Manika Ambore",
+    "work": "",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Ramakant Barve",
+    "work": "",
+    "bill": 4600,
+    "received": 4600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Santosh Tambe",
+    "work": "",
+    "bill": 2800,
+    "received": 2800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Shankar Gavde",
+    "work": "",
+    "bill": 9600,
+    "received": 9600,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Uddhav Barve",
+    "work": "",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 16,
+    "date": "2024-05-22",
+    "customer": "Pralhad Ambore",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 17,
+    "date": "2024-05-23",
+    "customer": "Vitthal Chavan",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 17,
+    "date": "2024-05-23",
+    "customer": "Vitthal Chavan",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "; ditto | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 17,
+    "date": "2024-05-23",
+    "customer": "Vitthal Chavan",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "; ditto | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 17,
+    "date": "2024-05-23",
+    "customer": "Vitthal Chavan",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "; ditto | date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 17,
+    "date": "2024-05-23",
+    "customer": "Babhulgaon Khede",
+    "work": "",
+    "bill": 5000,
+    "received": 5000,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 17,
+    "date": "2024-05-23",
+    "customer": "Suresh Nana",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0,
+    "remarks": "date assumed from page order before 2024-06-28"
+  },
+  {
+    "page": 18,
+    "date": "2024-06-28",
+    "customer": "Gaju Sarpanch Degav Wat",
+    "work": "7 units @1200",
+    "bill": 8400,
+    "received": 8400,
+    "pending": 0,
+    "remarks": "नवी मशीन; T230 total 41800"
+  },
+  {
+    "page": 18,
+    "date": "2024-06-29",
+    "customer": "Gaju Sarpanch Degav Wat",
+    "work": "9 units @1200",
+    "bill": 10800,
+    "received": 10800,
+    "pending": 0,
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2024-06-30",
+    "customer": "Gaju Sarpanch Degav Wat",
+    "work": "8 units @1200",
+    "bill": 9600,
+    "received": 9600,
+    "pending": 0,
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2024-07-01",
+    "customer": "Gaju Sarpanch Degav Wat",
+    "work": "8 units @1200",
+    "bill": 9600,
+    "received": 9600,
+    "pending": 0,
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2024-07-02",
+    "customer": "Gaju Sarpanch Degav Wat",
+    "work": "10 units @1200",
+    "bill": 12000,
+    "received": 12000,
+    "pending": 0,
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2024-07-03",
+    "customer": "Gaju Sarpanch Degav Wat",
+    "work": "3 units @1200",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": ""
+  },
+  {
+    "page": 18,
+    "date": "2024-07-04",
+    "customer": "Gaju Sarpanch Degav Wat",
+    "work": "2.11 units",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0,
+    "remarks": "Units 2.11 uncertain"
+  },
+  {
+    "page": 18,
+    "date": "2024-07-04",
+    "customer": "Gaju Sarpanch Degav Wat",
+    "work": "Baudhavihar Rasta 4",
+    "bill": 4800,
+    "received": 4800,
+    "pending": 0,
+    "remarks": "Date carried from prior entry"
+  },
+  {
+    "page": 18,
+    "date": "2024-07-04",
+    "customer": "Gaju Sarpanch Degav Wat",
+    "work": "Smashan Bhumi 5",
+    "bill": 6000,
+    "received": 6000,
+    "pending": 0,
+    "remarks": "Date carried from prior entry"
+  }
+]

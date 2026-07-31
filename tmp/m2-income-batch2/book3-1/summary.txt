@@ -1,0 +1,8 @@
+M2 Income Register — book3-1
+============================
+Entry count: 379
+Bill total:    18,39,130
+Received total: 18,36,730
+Pending total:  2,400
+Date range (dated entries): 2024-02-06 to 2025-11-26
+Undated entries: 66

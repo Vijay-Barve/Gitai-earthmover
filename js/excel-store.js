@@ -130,11 +130,20 @@ const ExcelStore = (function () {
     ]);
 
     SHEETS.forEach(sheetDef => {
-      const rows = store[sheetDef.key] || [];
+      let rows = store[sheetDef.key] || [];
       const ws = {};
       sheetDef.headers.forEach((h, c) => {
         ws[XLSX.utils.encode_cell({ r: 0, c })] = { t: 's', v: h };
       });
+      // Sort chronologically so Save always writes date-ascending sheets
+      if (sheetDef.key === 'income' || sheetDef.key === 'expenses') {
+        rows = [...rows].sort((a, b) => {
+          const da = String(a.Date || '');
+          const db = String(b.Date || '');
+          if (da !== db) return da < db ? -1 : 1;
+          return (parseInt(a.ID, 10) || 0) - (parseInt(b.ID, 10) || 0);
+        });
+      }
       rows.forEach((row, ri) => {
         sheetDef.headers.forEach((h, c) => {
           const val = coerceCellValue(row[h]);

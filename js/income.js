@@ -8,6 +8,10 @@ const IncomeModule = (function () {
     document.getElementById('incomePendingAmount').value = Math.max(0, bill - received);
   }
 
+  function isAssumedDate(r) {
+    return /date assumed/i.test(String(r.Remarks || ''));
+  }
+
   function getFilteredData() {
     const from = document.getElementById('incomeFilterFrom')?.value;
     const to = document.getElementById('incomeFilterTo')?.value;
@@ -15,11 +19,20 @@ const IncomeModule = (function () {
     const customer = document.getElementById('incomeFilterCustomer')?.value?.toLowerCase();
 
     return AppData.income.filter(r => {
-      if (from && r.Date < from) return false;
-      if (to && r.Date > to) return false;
+      const d = String(r.Date || '');
+      if (from && (!d || d < from)) return false;
+      if (to && (!d || d > to)) return false;
       if (machine && r.Machine !== machine) return false;
       if (customer && !r.Customer.toLowerCase().includes(customer)) return false;
       return true;
+    }).sort((a, b) => {
+      const da = String(a.Date || '');
+      const db = String(b.Date || '');
+      if (da !== db) return da < db ? -1 : 1;
+      const aa = isAssumedDate(a) ? 1 : 0;
+      const ab = isAssumedDate(b) ? 1 : 0;
+      if (aa !== ab) return aa - ab;
+      return (parseInt(a.ID, 10) || 0) - (parseInt(b.ID, 10) || 0);
     });
   }
 
@@ -38,8 +51,13 @@ const IncomeModule = (function () {
       const id = document.getElementById('incomeId').value;
       const bill = parseNum(document.getElementById('incomeBillAmount').value);
       const received = parseNum(document.getElementById('incomeReceivedAmount').value);
+      const dateVal = document.getElementById('incomeDate').value;
+      if (!dateVal) {
+        App.showAlert('Date is required for income records.', 'warning');
+        return;
+      }
       const data = {
-        Date: document.getElementById('incomeDate').value,
+        Date: dateVal,
         Customer: document.getElementById('incomeCustomer').value.trim(),
         Machine: document.getElementById('incomeMachine').value,
         Site: document.getElementById('incomeSite').value,
@@ -84,7 +102,7 @@ const IncomeModule = (function () {
     tbody.innerHTML = data.map(r => `
       <tr>
         <td>${r.ID}</td>
-        <td>${formatDate(r.Date)}</td>
+        <td>${formatDate(r.Date)}${isAssumedDate(r) ? ' <span class="badge text-bg-secondary" title="Date was missing in register; assigned to avoid clashing with real dates">assumed</span>' : ''}</td>
         <td>${r.Customer}</td>
         <td>${r.Machine}</td>
         <td>${r.Site || '—'}</td>

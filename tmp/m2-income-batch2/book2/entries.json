@@ -1,0 +1,868 @@
+[
+  {
+    "page": 1,
+    "date": "2024-06-17",
+    "customer": "केशव ढोरे",
+    "work": "4 तास",
+    "bill": 5200,
+    "received": 5200,
+    "pending": 0
+  },
+  {
+    "page": 1,
+    "date": "2024-06-17",
+    "customer": "मुंजा ढोरे",
+    "work": "30 मि",
+    "bill": 600,
+    "received": 600,
+    "pending": 0
+  },
+  {
+    "page": 1,
+    "date": "2024-06-17",
+    "customer": "माधवराव ढोरे",
+    "work": "1 ता",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0
+  },
+  {
+    "page": 1,
+    "date": "2024-06-17",
+    "customer": "राजू ढोरे",
+    "work": "30 मि",
+    "bill": 600,
+    "received": 600,
+    "pending": 0
+  },
+  {
+    "page": 1,
+    "date": "2024-06-18",
+    "customer": "रमाकांत बर्वे",
+    "work": "4 ता 30 मि",
+    "bill": 5400,
+    "received": 5400,
+    "pending": 0
+  },
+  {
+    "page": 1,
+    "date": "2024-06-18",
+    "customer": "रमाकांत बर्वे",
+    "work": "25 ट्रीप",
+    "bill": 5000,
+    "received": 5000,
+    "pending": 0
+  },
+  {
+    "page": 1,
+    "date": "2024-06-18",
+    "customer": "पांडुरंग बर्वे सरपंच",
+    "work": "2 ता",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0
+  },
+  {
+    "page": 1,
+    "date": "2024-06-19",
+    "customer": "रमाकांत बर्वे",
+    "work": "3 ता 50 मि",
+    "bill": 4600,
+    "received": 4600,
+    "pending": 0
+  },
+  {
+    "page": 1,
+    "date": "2024-06-19",
+    "customer": "रमाकांत बर्वे",
+    "work": "24 मि",
+    "bill": 480,
+    "received": 480,
+    "pending": 0
+  },
+  {
+    "page": 1,
+    "date": "2024-06-19",
+    "customer": "माधव हस्ते जिल्हा परिषद",
+    "work": "3 ता 42 मि",
+    "bill": 4440,
+    "received": 4440,
+    "pending": 0
+  },
+  {
+    "page": 1,
+    "date": "2024-06-20",
+    "customer": "बबन गंधावळे",
+    "work": "30 मि, 30 ट्रीप",
+    "bill": 7600,
+    "received": 7600,
+    "pending": 0
+  },
+  {
+    "page": 2,
+    "date": "2024-06-23",
+    "customer": "शिवाजी पांचाळ",
+    "work": "1 तास 20 मि",
+    "bill": 1600,
+    "received": 1600,
+    "pending": 0
+  },
+  {
+    "page": 2,
+    "date": "2024-06-23",
+    "customer": "कोळेकर",
+    "work": "1 तास 30 मि",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0
+  },
+  {
+    "page": 2,
+    "date": "2024-06-23",
+    "customer": "रहीम शेख घ कोळेकर",
+    "work": "30 मि",
+    "bill": 600,
+    "received": 300,
+    "pending": 300,
+    "remarks": "300 जमा 300 बाकी"
+  },
+  {
+    "page": 2,
+    "date": "2024-06-24",
+    "customer": "लालबा व नामदेव पंडा",
+    "work": "3 तास 30 मि",
+    "bill": 4200,
+    "received": 4200,
+    "pending": 0
+  },
+  {
+    "page": 2,
+    "date": "2024-06-24",
+    "customer": "बालू ढोरे व नामदेव",
+    "work": "2 तास 50 मि",
+    "bill": 3400,
+    "received": 3400,
+    "pending": 0
+  },
+  {
+    "page": 2,
+    "date": "2024-06-24",
+    "customer": "भास्कर ढोरे",
+    "work": "54 मि",
+    "bill": 1080,
+    "received": 1080,
+    "pending": 0
+  },
+  {
+    "page": 2,
+    "date": "2024-06-24",
+    "customer": "अनिल बबन ढोरे",
+    "work": "1 तास 24 मि",
+    "bill": 1680,
+    "received": 1680,
+    "pending": 0
+  },
+  {
+    "page": 2,
+    "date": "2024-06-25",
+    "customer": "राजू नवघरे",
+    "work": "27 ट्रीप",
+    "bill": 5800,
+    "received": 5800,
+    "pending": 0
+  },
+  {
+    "page": 2,
+    "date": "2024-06-25",
+    "customer": "राजू नवघरे",
+    "work": "1 तास 30 मि",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0
+  },
+  {
+    "page": 2,
+    "date": "2024-06-25",
+    "customer": "गजू मारोती ढोरे",
+    "work": "25 मि",
+    "bill": 500,
+    "received": 500,
+    "pending": 0
+  },
+  {
+    "page": 3,
+    "date": "2024-06-27",
+    "customer": "गजरकाका",
+    "work": "5 तास 48 मि",
+    "bill": 6960,
+    "received": 6960,
+    "pending": 0,
+    "remarks": "amount calculated at 1200/hr; not written on page"
+  },
+  {
+    "page": 3,
+    "date": "2024-06-29",
+    "customer": "वडर वसमत",
+    "work": "6 तास",
+    "bill": 7200,
+    "received": 7200,
+    "pending": 0
+  },
+  {
+    "page": 3,
+    "date": "2024-06-29",
+    "customer": "रंगनाथ अंभोरे",
+    "work": "35 पाईप",
+    "bill": 7000,
+    "received": 7000,
+    "pending": 0
+  },
+  {
+    "page": 4,
+    "date": "2023-04-05",
+    "customer": "गोकु हरणे",
+    "work": "1 ता 15 मि",
+    "bill": 1500,
+    "received": 1500,
+    "pending": 0,
+    "remarks": "uncertain - no amount on page; calculated at 1200/hr"
+  },
+  {
+    "page": 4,
+    "date": "2023-04-06",
+    "customer": "प्रभाकर हरणे",
+    "work": "3 तास",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0,
+    "remarks": "uncertain - no amount on page; calculated at 1200/hr"
+  },
+  {
+    "page": 4,
+    "date": "2023-04-07",
+    "customer": "गोकु",
+    "work": "8 ता 12 मि",
+    "bill": 9840,
+    "received": 9840,
+    "pending": 0,
+    "remarks": "uncertain - no amount on page; calculated at 1200/hr"
+  },
+  {
+    "page": 4,
+    "date": "2023-04-10",
+    "customer": "गोकु",
+    "work": "8 ता 36 मि",
+    "bill": 10320,
+    "received": 10320,
+    "pending": 0,
+    "remarks": "uncertain - no amount on page; calculated at 1200/hr"
+  },
+  {
+    "page": 4,
+    "date": "2023-04-11",
+    "customer": "गोकु",
+    "work": "7 ता 36 मि",
+    "bill": 9120,
+    "received": 9120,
+    "pending": 0,
+    "remarks": "uncertain - no amount on page; calculated at 1200/hr"
+  },
+  {
+    "page": 4,
+    "date": "2023-04-12",
+    "customer": "गोकु",
+    "work": "7 ता 42 मि",
+    "bill": 9240,
+    "received": 9240,
+    "pending": 0,
+    "remarks": "uncertain - no amount on page; calculated at 1200/hr"
+  },
+  {
+    "page": 4,
+    "date": "2023-04-13",
+    "customer": "रावसाहेब हरणे",
+    "work": "6 ता 20 मि",
+    "bill": 7600,
+    "received": 7600,
+    "pending": 0,
+    "remarks": "uncertain - no amount on page; calculated at 1200/hr"
+  },
+  {
+    "page": 4,
+    "date": "2023-04-13",
+    "customer": "बाळू व रमेश हरणे",
+    "work": "1 ता 30 मि",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0,
+    "remarks": "uncertain - no amount on page; calculated at 1200/hr"
+  },
+  {
+    "page": 4,
+    "date": "2023-04-15",
+    "customer": "रमेश हरणे",
+    "work": "4 ता 48 मि",
+    "bill": 5760,
+    "received": 5760,
+    "pending": 0,
+    "remarks": "uncertain - no amount on page; calculated at 1200/hr"
+  },
+  {
+    "page": 4,
+    "date": "2023-04-15",
+    "customer": "दत्ता मामा",
+    "work": "2 ता",
+    "bill": 2400,
+    "received": 2400,
+    "pending": 0,
+    "remarks": "uncertain - no amount on page; calculated at 1200/hr"
+  },
+  {
+    "page": 5,
+    "date": "2024-06-30",
+    "customer": "पांडूरंग बर्वे सरपंच",
+    "work": "40 पाईप",
+    "bill": 11000,
+    "received": 11000,
+    "pending": 0
+  },
+  {
+    "page": 5,
+    "date": "2024-07-27",
+    "customer": "डी. पी.",
+    "work": "",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0
+  },
+  {
+    "page": 5,
+    "date": "2024-11-03",
+    "customer": "सुकेशव मोरे",
+    "work": "1 तास 12 मि",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0
+  },
+  {
+    "page": 5,
+    "date": "2024-11-03",
+    "customer": "कठाढू शेख",
+    "work": "3 तास",
+    "bill": 4000,
+    "received": 4000,
+    "pending": 0
+  },
+  {
+    "page": 5,
+    "date": "2024-11-28",
+    "customer": "बक्कूराव शंकर",
+    "work": "2 तास",
+    "bill": 2000,
+    "received": 2000,
+    "pending": 0
+  },
+  {
+    "page": 5,
+    "date": "2024-11-29",
+    "customer": "नांदेडकर",
+    "work": "7 तास",
+    "bill": 7700,
+    "received": 7700,
+    "pending": 0
+  },
+  {
+    "page": 5,
+    "date": "2024-11-29",
+    "customer": "बबन बेपारी",
+    "work": "1 तास",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0
+  },
+  {
+    "page": 5,
+    "date": "2024-11-30",
+    "customer": "भगवान गवई",
+    "work": "53 पाईप",
+    "bill": 7750,
+    "received": 7750,
+    "pending": 0,
+    "remarks": "date written 31/11 likely Nov 30"
+  },
+  {
+    "page": 5,
+    "date": "2024-11-13",
+    "customer": "पप्पू मोरे",
+    "work": "",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0
+  },
+  {
+    "page": 5,
+    "date": "2024-11-13",
+    "customer": "उत्तम अंभोरे",
+    "work": "गाय खड्डा",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0
+  },
+  {
+    "page": 5,
+    "date": "2024-11-13",
+    "customer": "माधव मोरे",
+    "work": "3 तास",
+    "bill": 3600,
+    "received": 3600,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-11-03",
+    "customer": "केशव ठोरे",
+    "work": "8 पा",
+    "bill": 1200,
+    "received": 1200,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-11-03",
+    "customer": "हरीभाऊ",
+    "work": "8.0 पा",
+    "bill": 9600,
+    "received": 9600,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-11-03",
+    "customer": "बाभुळगाव",
+    "work": "17 पा",
+    "bill": 3200,
+    "received": 3200,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-11-03",
+    "customer": "गोविंद होळकर",
+    "work": "1.30",
+    "bill": 1800,
+    "received": 1800,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-11-03",
+    "customer": "बाळू पंजारा",
+    "work": "11 खेडे",
+    "bill": 3300,
+    "received": 3300,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-11-03",
+    "customer": "ईनूस शेख",
+    "work": "27 पाईप",
+    "bill": 4600,
+    "received": 4600,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-12-05",
+    "customer": "गजू ठोरे सरपंच",
+    "work": "7 ता 30 मि",
+    "bill": 9000,
+    "received": 9000,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-12-06",
+    "customer": "गजू ठोरे सरपंच",
+    "work": "8 ता 10 मि",
+    "bill": 9800,
+    "received": 9800,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-12-07",
+    "customer": "गजू ठोरे सरपंच",
+    "work": "6 तास",
+    "bill": 7200,
+    "received": 7200,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-12-07",
+    "customer": "जबन ठोरे",
+    "work": "",
+    "bill": 6400,
+    "received": 6400,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-12-08",
+    "customer": "गजू ठोरे",
+    "work": "9 तास",
+    "bill": 10800,
+    "received": 10800,
+    "pending": 0
+  },
+  {
+    "page": 6,
+    "date": "2023-12-09",
+    "customer": "गजू गोरे",
+    "work": "9.30",
+    "bill": 11400,
+    "received": 11400,
+    "pending": 0
+  },
+  {
+    "page": 7,
+    "date": "2023-12-01",
+    "customer": "गजू ढोरे",
+    "work": "9.15",
+    "bill": 11100,
+    "received": 11100,
+    "pending": 0,
+    "remarks": "date inferred Dec 2023 from context"
+  },
+  {
+    "page": 7,
+    "date": "2023-12-01",
+    "customer": "गजू ढोरे",
+    "work": "9 तास",
+    "bill": 10800,
+    "received": 10800,
+    "pending": 0,
+    "remarks": "date inferred Dec 2023 from context"
+  },
+  {
+    "page": 7,
+    "date": "2023-12-02",
+    "customer": "गजू ढोरे",
+    "work": "9 तास",
+    "bill": 10800,
+    "received": 10800,
+    "pending": 0
+  },
+  {
+    "page": 7,
+    "date": "2023-12-02",
+    "customer": "गजू ढोरे",
+    "work": "4 तास 48 मि",
+    "bill": 5760,
+    "received": 5760,
+    "pending": 0
+  },
+  {
+    "page": 7,
+    "date": "2023-12-12",
+    "customer": "गजू ढोरे",
+    "work": "11 तास",
+    "bill": 13200,
+    "received": 13200,
+    "pending": 0
+  },
+  {
+    "page": 7,
+    "date": "2023-12-11",
+    "customer": "गजू ढोरे",
+    "work": "11 तास",
+    "bill": 13200,
+    "received": 13200,
+    "pending": 0
+  },
+  {
+    "page": 7,
+    "date": "2023-12-11",
+    "customer": "गजू ढोरे",
+    "work": "9 तास",
+    "bill": 10800,
+    "received": 10800,
+    "pending": 0
+  },
+  {
+    "page": 7,
+    "date": "2023-12-11",
+    "customer": "गजू ढोरे",
+    "work": "4 तास 30 मि",
+    "bill": 5400,
+    "received": 5400,
+    "pending": 0
+  },
+  {
+    "page": 8,
+    "date": "2024-03-14",
+    "customer": "शिवाजी पांचाळ",
+    "work": "98 ट्रीप @170",
+    "bill": 16660,
+    "received": 16660,
+    "pending": 0
+  },
+  {
+    "page": 8,
+    "date": "2024-03-14",
+    "customer": "पिंटू ठाकूर",
+    "work": "12 खड्डे",
+    "bill": 4400,
+    "received": 4400,
+    "pending": 0
+  },
+  {
+    "page": 8,
+    "date": "2024-03-14",
+    "customer": "वामन ठौरे",
+    "work": "498 @150",
+    "bill": 75000,
+    "received": 65000,
+    "pending": 10000,
+    "remarks": "10000 बाकी"
+  },
+  {
+    "page": 8,
+    "date": "2024-03-14",
+    "customer": "राजू ठौरे",
+    "work": "20 ट्रीप",
+    "bill": 3000,
+    "received": 3000,
+    "pending": 0
+  },
+  {
+    "page": 8,
+    "date": "2024-03-14",
+    "customer": "रंगनाथ अंभोरे",
+    "work": "298 ट्रीप @160",
+    "bill": 47700,
+    "received": 23850,
+    "pending": 23850,
+    "remarks": "23850 बाकी"
+  },
+  {
+    "page": 8,
+    "date": "2024-03-14",
+    "customer": "श्यामा शिंदे",
+    "work": "200 ट्रीप @170",
+    "bill": 34000,
+    "received": 10000,
+    "pending": 24000,
+    "remarks": "24000 बाकी"
+  },
+  {
+    "page": 8,
+    "date": "2024-03-14",
+    "customer": "आसम ठौरे",
+    "work": "444 @120",
+    "bill": 53280,
+    "received": 53280,
+    "pending": 0
+  },
+  {
+    "page": 8,
+    "date": "2024-03-14",
+    "customer": "नान्नाजी ठौरे",
+    "work": "330 @150",
+    "bill": 49500,
+    "received": 37000,
+    "pending": 12500,
+    "remarks": "12500 बाकी"
+  },
+  {
+    "page": 8,
+    "date": "2024-03-14",
+    "customer": "बाळू हरीभाऊ बर्वे",
+    "work": "313 @125",
+    "bill": 39125,
+    "received": 30000,
+    "pending": 9125,
+    "remarks": "9125 बाकी"
+  },
+  {
+    "page": 8,
+    "date": "2024-03-14",
+    "customer": "शिवा आबा",
+    "work": "341 @125",
+    "bill": 42625,
+    "received": 0,
+    "pending": 42625,
+    "remarks": "42625 बाकी - fully pending"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "लहानकर गिरी",
+    "work": "200 @125",
+    "bill": 25000,
+    "received": 25000,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "भागवत नसोला",
+    "work": "199 @130",
+    "bill": 25870,
+    "received": 25870,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "विठ्ठल भानुदास",
+    "work": "271 @130",
+    "bill": 35000,
+    "received": 35000,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "ढवळे मामा",
+    "work": "300 @130",
+    "bill": 39000,
+    "received": 39000,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "सरवाजी लोखंडे",
+    "work": "444 @150",
+    "bill": 66600,
+    "received": 66600,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "लोखंडे धार",
+    "work": "300 @130",
+    "bill": 39000,
+    "received": 39000,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "हिवरा",
+    "work": "284 @130",
+    "bill": 36900,
+    "received": 36900,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "अतिष शेख",
+    "work": "275 @120",
+    "bill": 33000,
+    "received": 33000,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "मजू नुरे",
+    "work": "350 @180 ट्रीप",
+    "bill": 63000,
+    "received": 63000,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "महादु गंवढे",
+    "work": "950 @130",
+    "bill": 123500,
+    "received": 123500,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 9,
+    "date": "2024-03-14",
+    "customer": "बबलू धार",
+    "work": "550 @110",
+    "bill": 60500,
+    "received": 60500,
+    "pending": 0,
+    "remarks": "date inferred from preceding page"
+  },
+  {
+    "page": 10,
+    "date": "2024-03-14",
+    "customer": "सुरेश नाना",
+    "work": "13 ट्रीप",
+    "bill": 2600,
+    "received": 2600,
+    "pending": 0,
+    "remarks": "date inferred from preceding pages"
+  },
+  {
+    "page": 10,
+    "date": "2024-03-14",
+    "customer": "बळी ठोंरे",
+    "work": "10 ट्रीप",
+    "bill": 2500,
+    "received": 2500,
+    "pending": 0,
+    "remarks": "date inferred from preceding pages"
+  },
+  {
+    "page": 10,
+    "date": "2024-03-14",
+    "customer": "उद्धव रावसाहेब बर्वे",
+    "work": "166 @130",
+    "bill": 21000,
+    "received": 21000,
+    "pending": 0,
+    "remarks": "date inferred from preceding pages"
+  },
+  {
+    "page": 10,
+    "date": "2024-03-14",
+    "customer": "भागवत ठोंरे",
+    "work": "50 @130",
+    "bill": 6500,
+    "received": 6500,
+    "pending": 0,
+    "remarks": "date inferred from preceding pages"
+  },
+  {
+    "page": 10,
+    "date": "2024-03-14",
+    "customer": "उत्तम ठोंरे",
+    "work": "34 ट्रीप @110",
+    "bill": 3700,
+    "received": 3700,
+    "pending": 0,
+    "remarks": "date inferred from preceding pages"
+  },
+  {
+    "page": 10,
+    "date": "2024-03-14",
+    "customer": "रामा अंभोरे",
+    "work": "40 @200",
+    "bill": 8000,
+    "received": 8000,
+    "pending": 0,
+    "remarks": "date inferred from preceding pages"
+  }
+]

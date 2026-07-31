@@ -1,0 +1,28 @@
+M2 Income Ledger - Book 2 Extraction Summary
+================================================
+Pages processed: 10
+Total entries: 92
+Sum bill: 1,302,490
+Sum received: 1,180,090
+Sum pending: 122,400
+Years used: 2023, 2024
+
+Entries per page:
+  Page 1: 11 entries
+  Page 2: 10 entries
+  Page 3: 3 entries
+  Page 4: 10 entries
+  Page 5: 11 entries
+  Page 6: 12 entries
+  Page 7: 8 entries
+  Page 8: 10 entries
+  Page 9: 11 entries
+  Page 10: 6 entries
+
+Skipped:
+- Page totals (37520, 22460, 64000)
+- Page 3 accounting summary (एकूण जमा, डिझेल खर्च, net total)
+- Page 3 पांगरा सती 49800 (site total)
+- Page 2 विजूकाका (no amount)
+- Page 8 पांडुसाहेब बर्वे 212 trips (no amount)
+- Page 10 entries without amounts (Satish Barve, Balu Barve, Balu Thonre, Shivaji Gangavade, Bali Barve)

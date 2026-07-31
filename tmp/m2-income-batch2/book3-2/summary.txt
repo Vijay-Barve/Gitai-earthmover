@@ -1,0 +1,50 @@
+M2 Income Register — book3-2 Extraction Summary
+==================================================
+
+Total entries: 239
+Pages processed: 27 (18 readable, 9 placeholder/corrupted)
+Pages with entries: 18
+Entries with dates: 9
+Entries without dates (null): 230
+Entries with pending balance: 2
+
+Entries per page:
+  Page  1: 15 entries
+  Page  2: 15 entries
+  Page  3: 15 entries
+  Page  4: 15 entries
+  Page  5: 17 entries
+  Page  6: 16 entries
+  Page  7: 16 entries
+  Page  8: 16 entries
+  Page  9: 17 entries
+  Page 10: 19 entries
+  Page 11: 10 entries
+  Page 12: 10 entries
+  Page 13: 10 entries
+  Page 14: 11 entries
+  Page 15: 11 entries
+  Page 16: 11 entries
+  Page 17: 6 entries
+  Page 18: 9 entries
+  Page 19: 0 entries (corrupted/blank placeholder image)
+  Page 20: 0 entries (corrupted/blank placeholder image)
+  Page 21: 0 entries (corrupted/blank placeholder image)
+  Page 22: 0 entries (corrupted/blank placeholder image)
+  Page 23: 0 entries (corrupted/blank placeholder image)
+  Page 24: 0 entries (corrupted/blank placeholder image)
+  Page 25: 0 entries (corrupted/blank placeholder image)
+  Page 26: 0 entries (corrupted/blank placeholder image)
+  Page 27: 0 entries (corrupted/blank placeholder image)
+
+Financial totals:
+  Total bill:     ₹922,190
+  Total received: ₹895,690
+  Total pending:  ₹26,500
+
+Notes:
+- Pages 1–17: name/amount lists with no dates on page (date=null).
+- Page 18: Gaju Sarpanch Degav Wat dated Jun–Jul 2024 (year inferred as 2024).
+- Pages 19–27: 512×512 placeholder JPEGs (~6 KB), not ledger scans — skipped.
+- Page 7 and 8 appear to be near-duplicate scans with minor name differences.
+- Uncertain readings flagged in individual entry remarks.
