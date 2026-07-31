@@ -12,6 +12,12 @@ const IncomeModule = (function () {
     return /date assumed/i.test(String(r.Remarks || ''));
   }
 
+  function customerLabel(r) {
+    return typeof CustomerAliases !== 'undefined'
+      ? CustomerAliases.canonicalize(r.Customer)
+      : String(r.Customer || '');
+  }
+
   function getFilteredData() {
     const from = document.getElementById('incomeFilterFrom')?.value;
     const to = document.getElementById('incomeFilterTo')?.value;
@@ -24,9 +30,12 @@ const IncomeModule = (function () {
       if (from && (!d || d < from)) return false;
       if (to && (!d || d > to)) return false;
       if (machine && r.Machine !== machine) return false;
-      if (customer && !String(r.Customer || '').toLowerCase().includes(customer)) return false;
+      const cust = customerLabel(r);
+      if (customer && !cust.toLowerCase().includes(customer) && !String(r.Customer || '').toLowerCase().includes(customer)) {
+        return false;
+      }
       if (q && !matchesSearch(q, [
-        r.ID, r.Customer, r.Machine, r.Site, r.HoursWorked,
+        r.ID, cust, r.Customer, r.Machine, r.Site, r.HoursWorked,
         r.BillAmount, r.ReceivedAmount, r.PendingAmount, r.Remarks
       ], [r.Date])) return false;
       return true;
@@ -72,7 +81,9 @@ const IncomeModule = (function () {
       if (machineEl.disabled) machineEl.disabled = false;
       const data = {
         Date: dateVal,
-        Customer: document.getElementById('incomeCustomer').value.trim(),
+        Customer: typeof CustomerAliases !== 'undefined'
+          ? CustomerAliases.canonicalize(document.getElementById('incomeCustomer').value.trim())
+          : document.getElementById('incomeCustomer').value.trim(),
         Machine: machineEl.value,
         Site: document.getElementById('incomeSite').value,
         HoursWorked: document.getElementById('incomeHours').value === ''
@@ -124,7 +135,7 @@ const IncomeModule = (function () {
       <tr>
         <td>${r.ID}</td>
         <td>${formatDate(r.Date)}${isAssumedDate(r) ? ' <span class="badge text-bg-secondary" title="Date was missing in register; assigned to avoid clashing with real dates">assumed</span>' : ''}</td>
-        <td>${r.Customer}</td>
+        <td>${customerLabel(r)}</td>
         <td>${r.Machine}</td>
         <td>${r.Site || '—'}</td>
         <td>${r.HoursWorked || '—'}</td>
@@ -150,7 +161,8 @@ const IncomeModule = (function () {
     }
     document.getElementById('incomeId').value = r.ID;
     document.getElementById('incomeDate').value = r.Date || '';
-    document.getElementById('incomeCustomer').value = r.Customer || '';
+    document.getElementById('incomeCustomer').value =
+      (typeof CustomerAliases !== 'undefined' ? CustomerAliases.canonicalize(r.Customer) : r.Customer) || '';
     document.getElementById('incomeMachine').value = r.Machine || '';
     document.getElementById('incomeSite').value = r.Site || '';
     document.getElementById('incomeHours').value =

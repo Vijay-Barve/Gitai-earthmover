@@ -134,10 +134,13 @@ const App = (function () {
       const matches = [];
 
       AppData.income.forEach(r => {
-        if (matchesSearch(q, [r.Customer, r.Machine, r.Site, r.Remarks, r.BillAmount], [r.Date])) {
+        const customer = typeof CustomerAliases !== 'undefined'
+          ? CustomerAliases.canonicalize(r.Customer)
+          : r.Customer;
+        if (matchesSearch(q, [customer, r.Customer, r.Machine, r.Site, r.Remarks, r.BillAmount], [r.Date])) {
           matches.push({
             module: 'Income',
-            label: `${formatDate(r.Date)} · ${r.Customer} — ${formatCurrency(r.BillAmount)}`,
+            label: `${formatDate(r.Date)} · ${customer} — ${formatCurrency(r.BillAmount)}`,
             section: 'income', id: r.ID
           });
         }

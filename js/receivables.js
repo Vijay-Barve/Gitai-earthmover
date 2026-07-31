@@ -18,6 +18,9 @@ const ReceivablesModule = (function () {
   }
 
   function customerKey(name) {
+    if (typeof CustomerAliases !== 'undefined') {
+      return CustomerAliases.ledgerKey(name);
+    }
     return String(name || '')
       .trim()
       .replace(/\s+/g, ' ')
@@ -25,6 +28,9 @@ const ReceivablesModule = (function () {
   }
 
   function displayName(name) {
+    if (typeof CustomerAliases !== 'undefined') {
+      return CustomerAliases.canonicalize(name) || '(No customer name)';
+    }
     const n = String(name || '').trim().replace(/\s+/g, ' ');
     return n || '(No customer name)';
   }
@@ -150,7 +156,7 @@ const ReceivablesModule = (function () {
 
     const note = document.getElementById('receivablesNote');
     if (note) {
-      note.textContent = 'Pending = Bill − Received from Income entries. Same name with different spelling (English vs Marathi) is listed separately. Use machine scope (All / M1 / M2) to filter.';
+      note.textContent = 'Pending = Bill − Received from Income. Aliases merge known spellings (e.g. Gajanan Sarpanch / गजानन सरपंच → Gajanan Nannaji Dhore). Machine scope (All / M1 / M2) still filters.';
     }
 
     document.getElementById('ageingCards').innerHTML = Object.entries(ageing).map(([bucket, amt]) => `
