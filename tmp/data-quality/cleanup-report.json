@@ -1,0 +1,199 @@
+{
+  "removedIncomeTwins": [
+    {
+      "drop": "55",
+      "keep": "54",
+      "date": "2022-02-23",
+      "customer": "Dharkar Vitthal",
+      "bill": "6000"
+    },
+    {
+      "drop": "672",
+      "keep": "671",
+      "date": "2023-06-06",
+      "customer": "parganbai",
+      "bill": "840"
+    },
+    {
+      "drop": "852",
+      "keep": "846",
+      "date": "2024-01-10",
+      "customer": "Milind Mahapur",
+      "bill": "2000"
+    },
+    {
+      "drop": "917",
+      "keep": "915",
+      "date": "2024-02-14",
+      "customer": "Khaire Sanjay",
+      "bill": "5700"
+    },
+    {
+      "drop": "1405",
+      "keep": "1401",
+      "date": "2024-05-19",
+      "customer": "Gangadhar and Baban",
+      "bill": "3000"
+    },
+    {
+      "drop": "1455",
+      "keep": "1454",
+      "date": "2024-05-21",
+      "customer": "Gajanan Sarpanch",
+      "bill": "10500"
+    },
+    {
+      "drop": "1495",
+      "keep": "1494",
+      "date": "2024-05-23",
+      "customer": "Vitthal Chavan",
+      "bill": "1200"
+    },
+    {
+      "drop": "1496",
+      "keep": "1494",
+      "date": "2024-05-23",
+      "customer": "Vitthal Chavan",
+      "bill": "1200"
+    },
+    {
+      "drop": "1636",
+      "keep": "1629",
+      "date": "2024-10-25",
+      "customer": "खंडारे",
+      "bill": "1000"
+    },
+    {
+      "drop": "1683",
+      "keep": "1682",
+      "date": "2025-01-01",
+      "customer": "पंडीत देशमुख",
+      "bill": "1500"
+    },
+    {
+      "drop": "1706",
+      "keep": "1705",
+      "date": "2025-01-11",
+      "customer": "बाबू भालेराव",
+      "bill": "1000"
+    },
+    {
+      "drop": "1739",
+      "keep": "1738",
+      "date": "2025-01-27",
+      "customer": "पंडीत देशमुख",
+      "bill": "1000"
+    },
+    {
+      "drop": "1758",
+      "keep": "1757",
+      "date": "2025-02-22",
+      "customer": "माऊली मोहिते",
+      "bill": "1000"
+    },
+    {
+      "drop": "2002",
+      "keep": "2001",
+      "date": "2025-06-19",
+      "customer": "खंडारे",
+      "bill": "1000"
+    },
+    {
+      "drop": "2005",
+      "keep": "2004",
+      "date": "2025-06-19",
+      "customer": "खंडारे",
+      "bill": "2000"
+    },
+    {
+      "drop": "2007",
+      "keep": "2001",
+      "date": "2025-06-19",
+      "customer": "खंडारे",
+      "bill": "1000"
+    },
+    {
+      "drop": "2084",
+      "keep": "2081",
+      "date": "2025-11-29",
+      "customer": "खंडारे",
+      "bill": "1000"
+    },
+    {
+      "drop": "2091",
+      "keep": "2090",
+      "date": "2025-11-30",
+      "customer": "तुलबा राजू",
+      "bill": "1200"
+    }
+  ],
+  "movedPreM2DieselToM1": [
+    {
+      "id": "98",
+      "date": "2022-03-13",
+      "amount": "1050",
+      "clash": false
+    },
+    {
+      "id": "155",
+      "date": "2022-04-23",
+      "amount": "4680",
+      "clash": false
+    },
+    {
+      "id": "156",
+      "date": "2022-04-23",
+      "amount": "2829",
+      "clash": false
+    },
+    {
+      "id": "214",
+      "date": "2022-05-15",
+      "amount": "26304",
+      "clash": false
+    },
+    {
+      "id": "241",
+      "date": "2022-05-28",
+      "amount": "1048",
+      "clash": false
+    },
+    {
+      "id": "273",
+      "date": "2022-06-18",
+      "amount": "8770",
+      "clash": false
+    }
+  ],
+  "taggedAssumed": 695,
+  "keptSameDayDiesel": 0,
+  "removedExpenseTwins": [
+    {
+      "drop": "777",
+      "keep": "774",
+      "date": "2024-05-31",
+      "amount": "3300",
+      "type": "Diesel"
+    },
+    {
+      "drop": "848",
+      "keep": "847",
+      "date": "2024-10-10",
+      "amount": "3300",
+      "type": "Diesel"
+    },
+    {
+      "drop": "851",
+      "keep": "850",
+      "date": "2024-10-23",
+      "amount": "3300",
+      "type": "Diesel"
+    }
+  ],
+  "incomeAfter": 2084,
+  "expenseAfter": 1020,
+  "m1Inc": 1169,
+  "m2Inc": 915,
+  "m1Exp": 795,
+  "m2Exp": 225
+}
