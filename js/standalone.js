@@ -12,15 +12,15 @@ const StandaloneModule = (function () {
     if (dirty) {
       el.className = 'badge bg-warning text-dark';
       el.textContent = 'Unsaved changes';
-      el.title = 'Click Save Excel and replace Gitai.xlsx in your project folder';
+      el.title = 'Click Save to Excel, replace files in project folder, then Sync from Excel when you edit Excel outside';
     } else if (meta.lastSavedAt) {
       el.className = 'badge bg-success';
-      el.textContent = 'Saved to Excel';
-      el.title = 'Last saved: ' + formatDateTime(meta.lastSavedAt);
+      el.textContent = 'In sync';
+      el.title = 'Last saved: ' + formatDateTime(meta.lastSavedAt) + ' — Sync from Excel to pull disk changes';
     } else {
       el.className = 'badge bg-secondary';
       el.textContent = 'Loaded from file';
-      el.title = 'Data loaded from Gitai.xlsx';
+      el.title = 'Data loaded from Gitai.xlsx — Sync from Excel to reload';
     }
   }
 
@@ -35,15 +35,20 @@ const StandaloneModule = (function () {
     });
 
     document.getElementById('saveStatusBadge')?.addEventListener('click', () => {
-      document.getElementById('btnSaveExcel')?.click();
+      if (ApiClient.isDirty()) {
+        document.getElementById('btnSaveExcel')?.click();
+      } else {
+        document.getElementById('btnSyncExcel')?.click();
+      }
     });
 
     document.getElementById('connectionBadge')?.addEventListener('click', () => {
-      if (ApiClient.isDirty()) {
-        App.showAlert('You have unsaved changes. Click <strong>Save Excel</strong> and replace Gitai.xlsx in your project folder.', 'warning');
-      } else {
-        App.showAlert('Standalone mode — database file: <strong>Gitai.xlsx</strong> in this project folder.', 'info');
-      }
+      App.showAlert(
+        '<strong>Save to Excel</strong> = App → files<br>' +
+        '<strong>Sync from Excel</strong> = Gitai.xlsx on disk → App<br>' +
+        'Edit <code>Gitai.xlsx</code> in Excel, save the file, then click Sync.',
+        'info'
+      );
     });
   }
 

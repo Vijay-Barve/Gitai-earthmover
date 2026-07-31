@@ -200,6 +200,14 @@ const DashboardModule = (function () {
   }
 
   function render() {
+    const header = document.querySelector('#section-dashboard .section-header p');
+    if (header) {
+      if (typeof MachineScope !== 'undefined' && !MachineScope.isAll()) {
+        header.textContent = `Dedicated view — ${MachineScope.shortLabel(MachineScope.getSelectedMachineName())} only`;
+      } else {
+        header.textContent = 'Business overview — audit-ready metrics (all machines)';
+      }
+    }
     renderCards();
     renderEmiWarnings();
     if (typeof AlertCenter !== 'undefined') AlertCenter.render('dashboardAlerts', 5);

@@ -9,9 +9,9 @@ const BackupModule = (function () {
     const timestamp = new Date().toISOString();
 
     if (type === 'excel' && CONFIG.DATA_MODE === 'excel') {
-      await ApiClient.saveToExcel();
-      await logBackup('Excel', CONFIG.EXCEL_FILE, timestamp, user);
-      App.showAlert('Downloaded ' + CONFIG.EXCEL_FILE);
+      const result = await ApiClient.saveToExcel();
+      await logBackup('Excel', (result.files || [CONFIG.EXCEL_FILE]).join(', '), timestamp, user);
+      App.showAlert('Downloaded ' + (result.files || [CONFIG.EXCEL_FILE]).join(', ') + ' — replace them in the project folder');
       return;
     }
 

@@ -6,13 +6,25 @@ const CONFIG = {
   DATA_MODE: 'excel',
   STANDALONE: true,
   EXCEL_FILE: 'Gitai.xlsx',
+  /** Dedicated per-machine workbooks (downloaded with Save Excel) */
+  MACHINE_EXCEL_FILES: {
+    M1: 'Gitai-M1.xlsx',
+    M2: 'Gitai-M2.xlsx'
+  },
   LEGACY_MACHINE_NAME: 'M1- Mahindra earthmaster sx iv 2022',
 
   USE_LOCAL_STORAGE: true,
   LOCAL_STORAGE_KEY: 'earthmovers-data-v1',
-  DATA_SNAPSHOT_VERSION: '9',
+  DATA_SNAPSHOT_VERSION: '12',
 
   EMI_PAYMENT_MODES: ['Business', 'Partner', 'Split'],
+
+  /**
+   * Profit/loss split among partners.
+   * 'equal' = same % for every partner (funding amounts may differ)
+   * 'capital' = proportional to investment (legacy)
+   */
+  PARTNER_SHARE_MODE: 'equal',
 
   APP_VERSION: '2.0.0',
   BUSINESS_START_DATE: '2022-01-01',

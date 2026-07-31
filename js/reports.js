@@ -83,7 +83,7 @@ const ReportsModule = (function () {
       </table>
       <p class="text-muted small mt-2">
         Formula: Partner Balance = Investments − Withdrawals + Profit Share + EMI paid personally by partner<br>
-        Profit Share = Net Profit × (Partner Investment ÷ Total Investment)
+        Profit / Loss Share = Net Profit ÷ number of partners <strong>(equal share)</strong> — funding amounts may differ
       </p>
     `;
     showReport('Partner Settlement Report', html);
@@ -290,7 +290,7 @@ const ReportsModule = (function () {
               </tr>
             `).join('')}</tbody>
           </table>
-          <p class="small text-muted">Formula: Settlement = Capital + Additional Capital − Withdrawals + Profit Share − Loss Share + EMI paid by partner</p>
+          <p class="small text-muted">Formula: Settlement = Capital − Withdrawals + Profit/Loss Share (equal among partners) + EMI paid by partner</p>
 
           <h6 class="mt-3">5. Attachments Summary</h6>
           <p>${docCount} documents on file across ${CONFIG.DOCUMENT_CATEGORIES.length} categories.</p>

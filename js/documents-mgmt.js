@@ -129,8 +129,8 @@ const PartnerSettlementEngine = (function () {
   function calculate() {
     const netProfit = App.getNetProfit();
     const isLoss = netProfit < 0;
-    const totalCapital = App.getTotalPartnerInvestment();
     const emiContribs = EmiPaymentHelper.partnerContributions(AppData.emi || []);
+    const shareMode = CONFIG.PARTNER_SHARE_MODE || 'equal';
 
     const partners = {};
     AppData.partners.forEach(p => {
@@ -152,10 +152,19 @@ const PartnerSettlementEngine = (function () {
       partners[name].emiPaidByPartner += amount;
     });
 
-    Object.values(partners).forEach(p => {
+    const list = Object.values(partners);
+    const count = list.length || 1;
+    const equalRatio = 1 / count;
+    const totalCapital = App.getTotalPartnerInvestment();
+
+    list.forEach(p => {
       const totalInv = p.capitalIntroduced + p.additionalCapital;
-      const ratio = totalCapital > 0 ? totalInv / totalCapital : 0;
+      const ratio = shareMode === 'capital' && totalCapital > 0
+        ? totalInv / totalCapital
+        : equalRatio;
+
       p.sharePercent = (ratio * 100).toFixed(1);
+      p.shareMode = shareMode;
 
       if (isLoss) {
         p.lossShare = Math.abs(netProfit) * ratio;
@@ -165,11 +174,12 @@ const PartnerSettlementEngine = (function () {
         p.lossShare = 0;
       }
 
-      p.settlement = totalInv + p.additionalCapital - p.withdrawals + p.profitShare - p.lossShare + p.emiPaidByPartner;
+      // Capital returned + P&L share + personal EMI advances
+      p.settlement = totalInv - p.withdrawals + p.profitShare - p.lossShare + p.emiPaidByPartner;
       p.netCapital = totalInv - p.withdrawals;
     });
 
-    return Object.values(partners);
+    return list;
   }
 
   function renderContributionCharts() {

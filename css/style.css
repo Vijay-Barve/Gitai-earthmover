@@ -739,6 +739,61 @@ table.dataTable thead th {
   cursor: pointer;
 }
 
+.machine-scope-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.machine-scope-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--card-bg, var(--bg-secondary, #1a1a1a));
+}
+
+.machine-scope-btn {
+  border: none;
+  background: transparent;
+  color: var(--text-muted, #aaa);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.machine-scope-btn + .machine-scope-btn {
+  border-left: 1px solid var(--border-color);
+}
+
+.machine-scope-btn:hover {
+  color: var(--text-color, #fff);
+  background: rgba(245, 197, 24, 0.08);
+}
+
+.machine-scope-btn.active {
+  background: var(--accent, #f5c518);
+  color: #111;
+}
+
+.machine-scope-label {
+  font-size: 0.75rem;
+  color: var(--text-muted, #aaa);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .machine-scope-label {
+    display: none !important;
+  }
+  .machine-scope-btn {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.75rem;
+  }
+}
+
 @media (max-width: 576px) {
   .detail-grid {
     grid-template-columns: 1fr;

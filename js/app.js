@@ -222,18 +222,60 @@ const App = (function () {
     if (!el) return;
     const inc = AppData.income?.length || 0;
     const exp = AppData.expenses?.length || 0;
+    const scope = typeof MachineScope !== 'undefined' && !MachineScope.isAll()
+      ? MachineScope.shortLabel(MachineScope.getSelectedMachineName())
+      : 'All';
     el.className = 'badge bg-primary connection-badge-btn';
-    el.textContent = inc || exp ? `Standalone · ${inc}/${exp}` : 'Standalone · Gitai.xlsx';
-    el.title = 'Local database: Gitai.xlsx in project folder';
+    el.textContent = `${scope} · ${inc}/${exp}`;
+    el.title = scope === 'All'
+      ? 'Company view — both machines (Gitai.xlsx)'
+      : `Dedicated ${scope} view — filtered from Gitai.xlsx`;
+  }
+
+  async function syncFromExcel(options = {}) {
+    const force = options.force === true;
+    const silentConfirm = options.silentConfirm === true;
+
+    if (ApiClient.isDirty() && !force) {
+      const ok = silentConfirm
+        ? false
+        : confirm(
+          'You have unsaved app changes.\n\n' +
+          'Sync from Excel will discard them and load Gitai.xlsx from the project folder.\n\n' +
+          'Continue? (Click Save to Excel first if you want to keep app edits.)'
+        );
+      if (!ok) return { success: false, cancelled: true };
+    }
+
+    showLoading(true);
+    try {
+      localStorage.removeItem(CONFIG.LOCAL_STORAGE_KEY);
+      await ApiClient.reloadFromExcel();
+      await loadData();
+      StandaloneModule.updateSaveStatus();
+      const when = new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' });
+      showAlert(
+        'Synced from <strong>' + CONFIG.EXCEL_FILE + '</strong> at ' + when +
+        ' — Excel changes are now in the app.',
+        'success'
+      );
+      return { success: true };
+    } catch (err) {
+      showAlert('Sync failed: ' + err.message, 'danger');
+      return { success: false, error: err.message };
+    } finally {
+      showLoading(false);
+    }
   }
 
   function initExcelControls() {
     document.getElementById('btnSaveExcel')?.addEventListener('click', async () => {
       try {
-        await ApiClient.saveToExcel();
+        const result = await ApiClient.saveToExcel();
         StandaloneModule.updateSaveStatus();
+        const files = (result.files || [CONFIG.EXCEL_FILE]).join(', ');
         showAlert(
-          'Downloaded <strong>' + CONFIG.EXCEL_FILE + '</strong>. Replace the file in your project folder to keep data on disk.',
+          'Downloaded <strong>' + files + '</strong>. Replace those files in your project folder, then use <strong>Sync from Excel</strong> anytime you edit them outside the app.',
           'success'
         );
       } catch (err) {
@@ -241,13 +283,9 @@ const App = (function () {
       }
     });
 
-    document.getElementById('btnReloadExcel')?.addEventListener('click', async () => {
-      if (!confirm('Reload from ' + CONFIG.EXCEL_FILE + '? Unsaved browser changes will be lost.')) return;
-      localStorage.removeItem(CONFIG.LOCAL_STORAGE_KEY);
-      await ApiClient.reloadFromExcel();
-      await loadData();
-      showAlert('Reloaded from ' + CONFIG.EXCEL_FILE);
-    });
+    document.getElementById('btnSyncExcel')?.addEventListener('click', () => syncFromExcel());
+
+    document.getElementById('btnReloadExcel')?.addEventListener('click', () => syncFromExcel());
 
     document.getElementById('excelFileImport')?.addEventListener('change', async (e) => {
       const file = e.target.files?.[0];
@@ -312,7 +350,11 @@ const App = (function () {
       'incomeMachine', 'expenseMachine', 'emiMachine', 'loanMachine',
       'incomeFilterMachine', 'expenseFilterMachine'
     ];
-    const options = AppData.machines.map(m =>
+    const scopedMachine = typeof MachineScope !== 'undefined' ? MachineScope.getSelectedMachineName() : '';
+    const list = scopedMachine
+      ? AppData.machines.filter(m => m.MachineName === scopedMachine)
+      : AppData.machines;
+    const options = list.map(m =>
       `<option value="${m.MachineName}">${m.MachineName}</option>`
     ).join('');
 
@@ -321,9 +363,20 @@ const App = (function () {
       if (!el) return;
       const isFilter = id.includes('Filter');
       el.innerHTML = (isFilter ? '<option value="">All Machines</option>' : '') +
-        (id === 'expenseMachine' ? '<option value="">General / N/A</option>' : '') +
+        (id === 'expenseMachine' && !scopedMachine ? '<option value="">General / N/A</option>' : '') +
         options;
+      if (scopedMachine && !isFilter) {
+        el.value = scopedMachine;
+        el.disabled = true;
+      } else {
+        el.disabled = false;
+      }
     });
+  }
+
+  function renderCurrentSection() {
+    renderSection(currentSection);
+    updateConnectionBadge();
   }
 
   function populateExpenseTypes() {
@@ -410,14 +463,7 @@ const App = (function () {
     initPartnerModalTriggers();
     initExcelControls();
     StandaloneModule.init();
-
-    document.getElementById('refreshData').addEventListener('click', async () => {
-      if (ApiClient.isDirty() && !confirm('Reload from Gitai.xlsx? Unsaved changes will be lost.')) return;
-      localStorage.removeItem(CONFIG.LOCAL_STORAGE_KEY);
-      ApiClient.resetStore();
-      await loadData();
-      showAlert('Reloaded from Gitai.xlsx');
-    });
+    if (typeof MachineScope !== 'undefined') MachineScope.init();
 
     MonthLockModule.init();
     PartnersModule.init();
@@ -457,7 +503,10 @@ const App = (function () {
     getTotalPartnerWithdrawals,
     getCurrentAssetValue,
     getPartnerBalances,
-    loadData
+    loadData,
+    syncFromExcel,
+    populateMachineSelects,
+    renderCurrentSection
   };
 })();
 

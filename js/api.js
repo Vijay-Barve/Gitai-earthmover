@@ -238,9 +238,16 @@ const ApiClient = (function () {
 
   async function saveToExcel(filename) {
     await ensureReady();
-    ExcelStore.download(store, filename || CONFIG.EXCEL_FILE);
+    let downloaded = [];
+    if (typeof MachineScope !== 'undefined' && MachineScope.downloadAllWorkbooks && !filename) {
+      downloaded = await MachineScope.downloadAllWorkbooks(store);
+    } else {
+      const name = filename || CONFIG.EXCEL_FILE;
+      ExcelStore.download(store, name);
+      downloaded = [name];
+    }
     persist({ markSaved: true });
-    return { success: true };
+    return { success: true, files: downloaded };
   }
 
   function isDirty() {
@@ -289,7 +296,7 @@ const ApiClient = (function () {
   };
 })();
 
-/** Global application data cache */
+/** Global application data cache (scoped view) + full company snapshot */
 const AppData = {
   partners: [],
   machines: [],
@@ -308,10 +315,17 @@ const AppData = {
   utilization: [],
   documentversions: [],
   backups: [],
+  _all: null,
 
   async refresh() {
     const data = await ApiClient.fetchAll();
-    Object.assign(this, data);
+    if (typeof MachineScope !== 'undefined') {
+      MachineScope.publishToAppData(data);
+      MachineScope.updateToggleUI();
+    } else {
+      this._all = data;
+      Object.assign(this, data);
+    }
     return this;
   }
 };

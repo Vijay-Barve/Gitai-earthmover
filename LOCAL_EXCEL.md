@@ -19,7 +19,8 @@ Login: **admin / admin123**
 |--------|----------------|
 | First open | Loads `Gitai.xlsx` from this folder |
 | Add/edit records | Saved in browser cache automatically |
-| **Save Excel** (top bar) | Downloads updated `Gitai.xlsx` — replace the file in this folder |
+| **Save to Excel** | App → downloads `Gitai.xlsx` + `Gitai-M1.xlsx` + `Gitai-M2.xlsx` — replace them in this folder |
+| **Sync from Excel** | Disk → App — reloads `Gitai.xlsx` from this folder (use after editing Excel) |
 | **Reload Gitai.xlsx** (Backup) | Discards cache, reloads from file |
 | **Import Excel** (Backup) | Load a different `.xlsx` file |
 
@@ -46,14 +47,15 @@ When editing an EMI, choose payment mode:
 
 ## Fleet (confirmed)
 
-| | **M1 — Earth Master SX IV 2022** | **M2 — Earth Master SX IV 2023** |
+| | **M1 — Earth Master SX IV 2022** | **M2 — Earth Master SX 2023** |
 |---|----------------------------------|----------------------------------|
 | Purchase | 27 Jan 2022 | 14 Jan 2023 |
 | Cost | ₹26.72L | ₹28L |
-| Loan | **₹22.22L (Cholamandalam)** | **₹25L** (add lender) |
+| Loan | **₹22.22L Chola** `X0CENDD00004530947` | **₹24.36L Chola** `X0CENDD00005335473` |
+| EMI | ₹48,399 | ₹52,960 |
 | Income register | **559 income + 190 expense** | — (add when available) |
-| EMIs | **61 from Chola PDF** | — |
-| RC | MH-38-AD-0794 | Add when available |
+| EMIs | **61 from Chola PDF** | Schedule pending (42 paid / 18 left) |
+| RC | MH-38-AD-0794 | **MH-38-AD-4046** |
 
 **Partners:** Gajanan Barve & Baliram Barve — ₹1L each (Jan 2022)
 

@@ -29,8 +29,8 @@ Login: **admin / admin123**
 | 1 | Start app → data loads from `Gitai.xlsx` |
 | 2 | Add/edit income, expenses, EMI, etc. |
 | 3 | Top bar shows **Unsaved changes** (yellow) when you edit |
-| 4 | Click **Save Excel** → download `Gitai.xlsx` |
-| 5 | **Replace** the old `Gitai.xlsx` in this project folder |
+| 4 | Click **Save Excel** → downloads `Gitai.xlsx` + `Gitai-M1.xlsx` + `Gitai-M2.xlsx` |
+| 5 | **Replace** those three files in this project folder |
 | 6 | Badge turns **Saved to Excel** (green) |
 
 **Important:** Always use **Save Excel** at end of day so your file on disk is up to date.
@@ -41,7 +41,9 @@ Login: **admin / admin123**
 
 | Location | Purpose |
 |----------|---------|
-| `Gitai.xlsx` | Master database (keep backups!) |
+| `Gitai.xlsx` | Master database (both machines — keep backups!) |
+| `Gitai-M1.xlsx` | Dedicated Machine 1 workbook (auto-built on Save) |
+| `Gitai-M2.xlsx` | Dedicated Machine 2 workbook (auto-built on Save) |
 | Browser cache | Current session only (auto) |
 | `documents/` | Loan PDFs, agreements |
 
